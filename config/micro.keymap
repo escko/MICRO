@@ -15,7 +15,7 @@
 #define MIDDLELEFT 4
 #define BLUE 5
 
-// #define MOUSE_SCROLL_MAX 100
+#define MOUSE_SCROLL_MAX 100
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
