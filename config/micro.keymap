@@ -9,11 +9,12 @@
 
 
 #define MICRO 0
-#define PROCREATE 1
-#define TOPLEFT 2
-#define TOPMIDDLE 3
-#define MIDDLELEFT 4
+#define TOPLEFT 1
+#define TOPMIDDLE 2
+#define MIDDLELEFT 3
+#define MIDDLE 4
 #define BLUE 5
+#define PROCREATE 6
 
 #define MOUSE_SCROLL_MAX 100
 
@@ -51,12 +52,22 @@
     TOPLEFT {
         timeout-ms = <100>;
         key-positions = <0 1>;
-        bindings = <&mo 2>;
+        bindings = <&mo 1>;
         };
     TOPMIDDLE {
         timeout-ms = <100>;
         key-positions = <1 2>;
+        bindings = <&mo 2>;
+        };
+    MIDDLELEFT {
+        timeout-ms = <100>;
+        key-positions = <4 5>;
         bindings = <&mo 3>;
+        };
+    MIDDLE {
+        timeout-ms = <100>;
+        key-positions = <5 6>;
+        bindings = <&mo 4>;
         };
     POLYLINE {
         timeout-ms = <100>;
@@ -77,11 +88,6 @@
         timeout-ms = <100>;
         key-positions = <2 3 10>;
         bindings = <&kp V>;
-        };
-    MIDDLELEFT {
-        timeout-ms = <100>;
-        key-positions = <4 5>;
-        bindings = <&mo 4>;
         };
     MOVE{
         timeout-ms = <100>;
@@ -124,9 +130,9 @@
         bindings = <&bootloader>;
         };
     };
-//  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
-//  | SW5- 4 | SW6-  5 | SW7-  6 |  wheel  |
-//           | SW9-  8 | SW10- 9 | SW11-10 |
+    //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
+    //  | SW5- 4 | SW6-  5 | SW7-  6 |  wheel  |
+    //           | SW9-  8 | SW10- 9 | SW11-10 |
     behaviors {
         scroll: scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
@@ -172,9 +178,9 @@
             };
         };
 
-//  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
-//  | SW5- 4 | SW6-  5 | SW7-  6 |  wheel  |
-//           | SW9-  8 | SW10- 9 | SW11-10 |
+    //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
+    //  | SW5- 4 | SW6-  5 | SW7-  6 |  wheel  |
+    //           | SW9-  8 | SW10- 9 | SW11-10 |
 
 keymap {
     compatible = "zmk,keymap";
@@ -185,23 +191,15 @@ keymap {
     &kp Q &kp W &kp E &mt SPACE R                  
     &mtt A F &kp S &kp D &mt LSHFT N4          
     &mt LCTRL Z &mt RALT X &mt LGUI C>;
-    sensor-bindings = <&scroll SCROLL_DOWN SCROLL_UP &rot_kp DOWN UP>; };
-  
-    PROCREATE { 
-    label = "PROCREATE";    
-    bindings = <
-    &mt LCTRL L &kp B &kp E &mt LC(BACKSPACE) LC(Z)             
-    &kp LC(SEMICOLON) &kp V &kp S &kp LSHFT              
-    &mt LSHFT V &mt RALT X &mt LCMD C>;
-    sensor-bindings = <&rot_kp LBKT RBKT>; };
-  
+    sensor-bindings = <&rot_kp DOWN UP>; };
+    
     TOPLEFT {
     label = "TOPLEFT";    
     bindings = <
     &none &none &kp LG(G) &kp G    
     &kp J &kp K &kp L &none                         
     &kp LA(LG(R)) &kp P &kp LA(LG(C))>;
-    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp LG(E) LA(LG(E))>; };
+    sensor-bindings = <&&rot_kp LG(E) LA(LG(E))>; };
 
     TOPMIDDLE {
     label = "TOPMIDDLE";    
@@ -209,22 +207,38 @@ keymap {
     &kp LSHFT &none &none &kp LA(R)    
     &kp SEMICOLON &kp LA(LG(V)) &kp V &none                       
     &kp LSHFT &kp RALT &kp LCMD>;
-    sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT) &rot_kp LEFT RIGHT>; };
+    sensor-bindings = <&scroll SCROLL_DOWN SCROLL_UP>; };
 
     MIDDLELEFT {
     label = "MIDDLELEFT";     
     bindings = <
-    &mo BLUE &tog 1 &mtt LC(LA(LS(LG(X)))) LC(LA(LS(LG(Z)))) &mtt LC(LA(LS(LG(C)))) LC(LA(LS(LG(V))))              
+    &mo BLUE &tog 6 &mtt LC(LA(LS(LG(X)))) LC(LA(LS(LG(Z)))) &mtt LC(LA(LS(LG(C)))) LC(LA(LS(LG(V))))              
     &none &none &mtt LC(LA(LS(LG(S)))) LC(LA(LS(LG(A)))) &kp LG(LC(LA(X)))       
     &mtt LC(UP) LG(LC(LA(C))) &kp LC(LA(LG(Z))) &mtt LG(LC(LA(X))) C_PLAY_PAUSE>;
-    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON)) &rot_kp LEFT RIGHT>; };
+    sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT)>; };
+
+    MIDDLE {
+    label = "MIDDLE";   
+    bindings = <
+    &kp LSHFT &none &none &none    
+    &none &none &none &kp LSHFT                       
+    &kp LCTRL &kp RALT &kp LCMD>;
+    sensor-bindings = <&&rot_kp LEFT RIGHT>; };
             
     BLUE {
     label = "BLUE";     
     bindings = <       
-    &none &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none
-    &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &none            
-    &ext_power EP_TOG &bt BT_SEL 1 &bt BT_CLR  &out OUT_TOG>; 
-    sensor-bindings = <&rgb_encoder &rgb_encoder1>; };
+    &none &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_SAI
+    &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD            
+    &ext_power EP_TOG &bt BT_SEL 1 &bt BT_CLR &out OUT_TOG>; 
+    sensor-bindings = <&rgb_encoder1>; };
+
+    PROCREATE { 
+    label = "PROCREATE";    
+    bindings = <
+    &mt LCTRL L &kp B &kp E &mt LC(BACKSPACE) LC(Z)             
+    &kp LC(SEMICOLON) &kp V &kp S &kp LSHFT              
+    &mt LSHFT V &mt RALT X &mt LCMD C>;
+    sensor-bindings = <&rot_kp LBKT RBKT>; };
     };
 };
