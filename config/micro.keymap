@@ -185,7 +185,7 @@ keymap {
     &kp Q &kp W &kp E &mt SPACE R                  
     &mtt A F &kp S &kp D &mt LSHFT N4          
     &mt LCTRL Z &mt RALT X &mt LGUI C>;
-    sensor-bindings = <&inc_dec_kp SCROLL_DOWN SCROLL_UP &rot_kp DOWN UP>; };
+    sensor-bindings = <&scroll SCROLL_DOWN SCROLL_UP &rot_kp DOWN UP>; };
   
     PROCREATE { 
     label = "PROCREATE";    
