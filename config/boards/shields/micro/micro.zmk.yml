@@ -1,0 +1,9 @@
+file_format: "1"
+id: MICRO
+name: MICRO
+type: shield
+url: https://github.com/escko/MICRO
+requires: [nice!nano]
+features:
+  - keys
+  - encoder

@@ -1,0 +1,5 @@
+if SHIELD_MICRO
+
+config ZMK_KEYBOARD_NAME
+    default "micro"
+endif
