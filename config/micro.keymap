@@ -73,7 +73,7 @@
         key-positions = <2 3>;
         bindings = <&kp LGUI>;
         };
-      V {
+    K_V {
         timeout-ms = <100>;
         key-positions = <2 3 10>;
         bindings = <&kp V>;
