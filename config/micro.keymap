@@ -68,12 +68,12 @@
         key-positions = <0 3>;
         bindings = <&kp T>;
         };
-    COMMAND{
+    COMMAND {
         timeout-ms = <110>;
         key-positions = <2 3>;
         bindings = <&kp LGUI>;
         };
-    V {
+      V {
         timeout-ms = <100>;
         key-positions = <2 3 10>;
         bindings = <&kp V>;
