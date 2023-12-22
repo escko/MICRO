@@ -11,8 +11,8 @@
 #define MICRO 0
 #define TOPLEFT 1
 #define TOPMIDDLE 2
-#define MIDDLELEFT 3
-#define MIDDLE 4
+#define CENTERLEFT 3
+#define CENTER 4
 #define BLUE 5
 #define PROCREATE 6
 
@@ -59,12 +59,12 @@
         key-positions = <1 2>;
         bindings = <&mo 2>;
         };
-    MIDDLELEFT {
+    CENTERLEFT {
         timeout-ms = <100>;
         key-positions = <4 5>;
         bindings = <&mo 3>;
         };
-    MIDDLE {
+    CENTER {
         timeout-ms = <100>;
         key-positions = <5 6>;
         bindings = <&mo 4>;
@@ -188,11 +188,11 @@ keymap {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &kp Q &kp W &kp E &mt SPACE R                  
-    &mtt A F &kp S &kp D &mt LSHFT N4          
+    &kp Q &kp W &kp E &kp SPACE                  
+    &mtt A F &kp S &kp D &kp LSHFT          
     &mt LCTRL Z &mt RALT X &mt LGUI C>;
     
-    sensor-bindings = <&rot_kp DOWN UP>; };
+    sensor-bindings = <&rot_kp LEFT RIGHT &rot_kp DOWN UP>; };
     
     TOPLEFT {
     label = "TOPLEFT";    
@@ -201,7 +201,7 @@ keymap {
     &kp J &kp K &kp L &none                         
     &kp LA(LG(R)) &kp P &kp LA(LG(C))>;
     
-    sensor-bindings = <&rot_kp LG(E) LA(LG(E))>; };
+    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp LG(E) LA(LG(E))>; };
 
     TOPMIDDLE {
     label = "TOPMIDDLE";
@@ -210,25 +210,25 @@ keymap {
     &kp SEMICOLON &kp LA(LG(V)) &kp V &mt LSHFT N0
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&scroll SCROLL_DOWN SCROLL_UP>; };
+    sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT) &scroll SCROLL_DOWN SCROLL_UP>; };
 
-    MIDDLELEFT {
-    label = "MIDDLELEFT";
+    CENTERLEFT {
+    label = "CENTERLEFT";
     bindings = <
     &mo BLUE &tog 6 &mtt LC(LA(LS(LG(X)))) LC(LA(LS(LG(Z)))) &mtt LC(LA(LS(LG(C)))) LC(LA(LS(LG(V))))            
     &none &none &mtt LC(LA(LS(LG(S)))) LC(LA(LS(LG(A)))) &kp LG(LC(LA(X)))
     &mtt LC(UP) LG(LC(LA(C))) &kp LC(LA(LG(Z))) &mtt LG(LC(LA(X))) C_PLAY_PAUSE>;
     
-    sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT)>; };
+    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON)) &rot_kp LEFT RIGHT>; };
 
-    MIDDLE {
-    label = "MIDDLE";
+    CENTER {
+    label = "CENTER";
     bindings = <
     &kp LSHFT &none &none &none
     &kp LSHFT  &none &none &kp LG(LA(N1))
     &kp LCTRL &kp RALT &kp LCMD>;  
     
-    sensor-bindings = <&rot_kp LEFT RIGHT>; };
+    sensor-bindings = <&rot_kp LA(LEFT) LA(RIGHT) &rot_kp LEFT RIGHT>; };
             
     BLUE {
     label = "BLUE";
@@ -237,7 +237,7 @@ keymap {
     &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD       
     &ext_power EP_TOG &bt BT_SEL 1 &bt BT_CLR &out OUT_TOG>;
     
-    sensor-bindings = <&rgb_encoder1>; };
+    sensor-bindings = <&rgb_encoder &rgb_encoder1>; };
 
     PROCREATE {
     label = "PROCREATE";
@@ -246,6 +246,6 @@ keymap {
     &kp LC(SEMICOLON) &kp V &kp S &kp LSHFT      
     &mt LSHFT V &mt RALT X &mt LCMD C>;
     
-    sensor-bindings = <&rot_kp LBKT RBKT>; };
+    sensor-bindings = <&rot_kp LG(LBKT) LG(RBKT) &rot_kp LBKT RBKT>; };
     };
 };
