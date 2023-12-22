@@ -11,8 +11,8 @@
 #define MICRO 0
 #define TOPLEFT 1
 #define TOPMIDDLE 2
-#define CENTERLEFT 3
-#define CENTER 4
+#define CENTER 3
+#define CENTERLEFT 4
 #define BLUE 5
 #define PROCREATE 6
 
@@ -59,15 +59,15 @@
         key-positions = <1 2>;
         bindings = <&mo 2>;
         };
+    TOPRIGHT {
+        timeout-ms = <100>;
+        key-positions = <2 3>;
+        bindings = <&mo 4>;
+        };
     CENTERLEFT {
         timeout-ms = <100>;
         key-positions = <4 5>;
         bindings = <&mo 3>;
-        };
-    CENTER {
-        timeout-ms = <100>;
-        key-positions = <5 6>;
-        bindings = <&mo 4>;
         };
     POLYLINE {
         timeout-ms = <100>;
@@ -78,11 +78,6 @@
         timeout-ms = <100>;
         key-positions = <0 3>;
         bindings = <&kp T>;
-        };
-    COMMAND {
-        timeout-ms = <110>;
-        key-positions = <2 3>;
-        bindings = <&kp LGUI>;
         };
     K_V {
         timeout-ms = <100>;
@@ -212,6 +207,15 @@ keymap {
     
     sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT) &scroll SCROLL_DOWN SCROLL_UP>; };
 
+     TOPRIGHT{
+    label = "TOPRIGHT";
+    bindings = <
+    &kp LSHFT &none &none &none
+    &kp LSHFT  &none &none &kp LG(LA(N1))
+    &kp LCTRL &kp RALT &kp LCMD>;  
+    
+    sensor-bindings = <&rot_kp LA(LEFT) LA(RIGHT) &rot_kp LEFT RIGHT>; };
+
     CENTERLEFT {
     label = "CENTERLEFT";
     bindings = <
@@ -220,15 +224,6 @@ keymap {
     &mtt LC(UP) LG(LC(LA(C))) &kp LC(LA(LG(Z))) &mtt LG(LC(LA(X))) C_PLAY_PAUSE>;
     
     sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON)) &rot_kp LEFT RIGHT>; };
-
-    CENTER {
-    label = "CENTER";
-    bindings = <
-    &kp LSHFT &none &none &none
-    &kp LSHFT  &none &none &kp LG(LA(N1))
-    &kp LCTRL &kp RALT &kp LCMD>;  
-    
-    sensor-bindings = <&rot_kp LA(LEFT) LA(RIGHT) &rot_kp LEFT RIGHT>; };
             
     BLUE {
     label = "BLUE";
