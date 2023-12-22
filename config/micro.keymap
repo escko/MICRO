@@ -207,7 +207,7 @@ keymap {
     
     sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT) &scroll SCROLL_DOWN SCROLL_UP>; };
 
-     TOPRIGHT{
+    TOPRIGHT{
     label = "TOPRIGHT";
     bindings = <
     &kp LSHFT &none &none &none
