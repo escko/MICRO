@@ -189,7 +189,7 @@ keymap {
     label = "MICRO";
     bindings = <     
     &kp Q &kp W &kp E &kp SPACE                  
-    &mtt A F &kp S &kp D &kp LSHFT          
+    &mtt A F &kp S &kp D &mt LSHFT R         
     &mt LCTRL Z &mt RALT X &mt LGUI C>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT &rot_kp DOWN UP>; };
