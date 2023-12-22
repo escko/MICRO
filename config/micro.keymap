@@ -69,12 +69,7 @@
         key-positions = <4 5>;
         bindings = <&mo 3>;
         };
-    POLYLINE {
-        timeout-ms = <100>;
-        key-positions = <3 6>;
-        bindings = <&kp U>;
-        };
-    TRANSFORMFREE {
+    K_T {
         timeout-ms = <100>;
         key-positions = <0 3>;
         bindings = <&kp T>;
@@ -84,32 +79,32 @@
         key-positions = <2 3 10>;
         bindings = <&kp V>;
         };
-    MOVE{
+    K_H{
         timeout-ms = <100>;
         key-positions = <5 6>;
         bindings = <&kp H>;
         };
-    WAND {
+    K_Y {
         timeout-ms = <100>;
         key-positions = <6 9>;
         bindings = <&kp Y>;
         };
-    TRANSFORMTOOLS {
+    COMMA {
         timeout-ms = <100>;
         key-positions = <5 10>;
         bindings = <&kp COMMA>;
+        };
+    PERIOD {
+        timeout-ms = <100>;
+        key-positions = <6 10>;
+        bindings = <&kp PERIOD>;
         };
     BLENDMODES {
         timeout-ms = <100>;
         key-positions = <4 10>;
         bindings = <&kp B>;
         };
-    MISC {
-        timeout-ms = <100>;
-        key-positions = <6 10>;
-        bindings = <&kp PERIOD>;
-        };
-    TOOL1 {
+    K_I {
         timeout-ms = <80>;
         key-positions = <5 8>;
         bindings = <&kp I>;
