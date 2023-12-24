@@ -177,7 +177,7 @@ keymap {
     TOPMIDDLE {
     label = "TOPMIDDLE";
     bindings = <
-    &kp LSHFT &none &none &k SPACE
+    &kp LSHFT &none &none &kp SPACE
     &kp SEMICOLON &kp LA(LG(V)) &none &kp LSHFT
     &kp LCTRL &kp RALT &kp LCMD>;
     
