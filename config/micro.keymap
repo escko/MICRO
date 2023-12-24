@@ -75,6 +75,11 @@
         key-positions = <4 5>;
         bindings = <&mo 5>;
         };
+    K_I {
+        timeout-ms = <100>;
+        key-positions = <1 6>;
+        bindings = <&kp I>;
+        };
     K_T {
         timeout-ms = <100>;
         key-positions = <2 6>;
@@ -84,11 +89,6 @@
         timeout-ms = <100>;
         key-positions = <6 7>;
         bindings = <&kp Y>;
-        };
-    K_I {
-        timeout-ms = <100>;
-        key-positions = <1 6>;
-        bindings = <&kp I>;
         };
     K_F {
         timeout-ms = <100>;
