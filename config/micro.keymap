@@ -77,13 +77,18 @@
         };
     K_T {
         timeout-ms = <100>;
-        key-positions = <3 7>;
+        key-positions = <2 6>;
         bindings = <&kp T>;
         };
-    K_V {
+    K_Y {
         timeout-ms = <100>;
-        key-positions = <2 3 10>;
-        bindings = <&kp V>;
+        key-positions = <1 6>;
+        bindings = <&kp Y>;
+        };
+    K_F {
+        timeout-ms = <100>;
+        key-positions = <4 6>;
+        bindings = <&kp F>;
         };
     K_H{
         timeout-ms = <100>;
@@ -160,7 +165,7 @@ keymap {
     label = "MICRO";
     bindings = <     
     &kp Q &kp W &kp E &kp SPACE                  
-    &mtt A F &kp S &kp D &mt LSHFT R         
+    &kp A &kp S &kp D &mt LSHFT R         
     &mt LCTRL Z &mt RALT X &mt LGUI C>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT &rot_kp DOWN UP>; };
@@ -199,7 +204,7 @@ keymap {
     &kp LSHFT  &none &none &none
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp LBKT RBKT>; };
+    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp K L>; };
 
     CENTERLEFT {
     label = "CENTERLEFT";
