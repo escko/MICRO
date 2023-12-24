@@ -63,7 +63,7 @@
     TOPRIGHT {
         timeout-ms = <100>;
         key-positions = <2 3>;
-        bindings = <&mo 4>;
+        bindings = <&mo 3>;
         };
     TOPSPLIT {
         timeout-ms = <100>;
@@ -73,7 +73,7 @@
     CENTERLEFT {
         timeout-ms = <100>;
         key-positions = <4 5>;
-        bindings = <&mo 3>;
+        bindings = <&mo 5>;
         };
     K_T {
         timeout-ms = <100>;
@@ -177,7 +177,7 @@ keymap {
     &kp J &kp K &kp L &kp LSHFT                         
     &kp LG(Z) &kp LG(X) &kp LG(C)>;
     
-    sensor-bindings = <&rot_kp LA(LEFT) LA(RIGHT) &rot_kp LS(DOWN) LS(UP)>; };
+    sensor-bindings = <&rot_kp LA(LEFT) LA(RIGHT) &rot_kp LG(E) LA(LG(E))>; };
 
     TOPMIDDLE {
     label = "TOPMIDDLE";
@@ -195,7 +195,7 @@ keymap {
     &kp LSHFT  &none &none &none
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp LG(E) LA(LG(E))>; };
+    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp K L>; };
 
     TOPSPLIT{
     label = "TOPSPLIT";
@@ -204,7 +204,7 @@ keymap {
     &kp LSHFT  &none &none &none
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp K L>; };
+    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp LS(DOWN) LS(UP)>; };
 
     CENTERLEFT {
     label = "CENTERLEFT";
