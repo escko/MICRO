@@ -173,9 +173,9 @@ keymap {
     TOPLEFT {
     label = "TOPLEFT";    
     bindings = <
-    &none &none &kp LG(G) &kp G  
-    &kp J &kp K &kp L &kp LSHFT                         
-    &kp LG(Z) &kp LG(X) &kp LG(C)>;
+    &none &none &kp LS(LG(X)) &kp LS(LG(C))  
+    &none &none &kp G &mt LSHFT LG(G)                       
+    &mt LCTRL LG(Z) &mt RALT LG(X) &mt LGUI LG(C)>;
     
     sensor-bindings = <&rot_kp LG(E) LS(LG(E))>; };
 
@@ -183,7 +183,7 @@ keymap {
     label = "TOPMIDDLE";
     bindings = <
     &kp LSHFT &none &none &mt SPACE N0
-    &kp SEMICOLON &kp LA(LG(V)) &none &kp N0
+    &kp LA(LG(V)) &none &kp V &mt LSHFT N0
     &kp LCTRL &kp RALT &kp LCMD>;
     
     sensor-bindings = <&scroll SCROLL_DOWN SCROLL_UP>; };
@@ -201,7 +201,7 @@ keymap {
     label = "TOPSPLIT";
     bindings = <
     &none &none &none &none
-    &kp LSHFT  &none &none &none
+    &kp LSHFT  &none &none &kp N9
     &kp LCTRL &kp RALT &kp LCMD>;
     
     sensor-bindings = <&rot_kp LS(DOWN) LS(UP)>; };
@@ -209,8 +209,8 @@ keymap {
     CENTERLEFT {
     label = "CENTERLEFT";
     bindings = <
-    &mo BLUE &tog 7 &kp LG(LC(LA(C))) &kp LG(LC(LA(X)))            
-    &none &none &mtt LC(LA(LS(LG(S)))) LC(LA(LS(LG(A)))) &kp LC(LA(LG(Z)))
+    &mo BLUE &tog 7 &kp LC(LA(LG(Z))) &kp LG(LC(LA(C)))             
+    &none &none &mtt LC(LA(LS(LG(S)))) LC(LA(LS(LG(A)))) &kp LG(LC(LA(X)))
     &kp LC(UP) &kp LC(DOWN) &kp C_PLAY_PAUSE>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
