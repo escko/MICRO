@@ -177,7 +177,7 @@ keymap {
     &kp J &kp K &kp L &kp LSHFT                         
     &kp LG(Z) &kp LG(X) &kp LG(C)>;
     
-    sensor-bindings = <&rot_kp LG(E) LA(LG(E))>; };
+    sensor-bindings = <&rot_kp LG(E) LS(LG(E))>; };
 
     TOPMIDDLE {
     label = "TOPMIDDLE";
