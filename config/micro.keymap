@@ -168,7 +168,7 @@ keymap {
     &kp A &kp S &kp D &mt LSHFT R         
     &mt LCTRL Z &mt RALT X &mt LGUI C>;
     
-    sensor-bindings = <&rot_kp LEFT RIGHT &rot_kp DOWN UP>; };
+    sensor-bindings = <&rot_kp DOWN UP>; };
     
     TOPLEFT {
     label = "TOPLEFT";    
@@ -177,7 +177,7 @@ keymap {
     &kp J &kp K &kp L &kp LSHFT                         
     &kp LG(Z) &kp LG(X) &kp LG(C)>;
     
-    sensor-bindings = <&rot_kp LA(LEFT) LA(RIGHT) &rot_kp LG(E) LA(LG(E))>; };
+    sensor-bindings = <&rot_kp LG(E) LA(LG(E))>; };
 
     TOPMIDDLE {
     label = "TOPMIDDLE";
@@ -186,7 +186,7 @@ keymap {
     &kp SEMICOLON &kp LA(LG(V)) &none &kp N0
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT) &scroll SCROLL_DOWN SCROLL_UP>; };
+    sensor-bindings = <&scroll SCROLL_DOWN SCROLL_UP>; };
 
     TOPRIGHT{
     label = "TOPRIGHT";
@@ -195,7 +195,7 @@ keymap {
     &kp LSHFT  &none &none &kp SEMICOLON
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp K L>; };
+    sensor-bindings = <&rot_kp K L>; };
 
     TOPSPLIT{
     label = "TOPSPLIT";
@@ -204,7 +204,7 @@ keymap {
     &kp LSHFT  &none &none &none
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp LS(DOWN) LS(UP)>; };
+    sensor-bindings = <&rot_kp LS(DOWN) LS(UP)>; };
 
     CENTERLEFT {
     label = "CENTERLEFT";
@@ -213,7 +213,7 @@ keymap {
     &none &none &mtt LC(LA(LS(LG(S)))) LC(LA(LS(LG(A)))) &kp LC(LA(LG(Z)))
     &kp LC(UP) &kp LC(DOWN) &kp C_PLAY_PAUSE>;
     
-    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON)) &rot_kp LEFT RIGHT>; };
+    sensor-bindings = <&rot_kp LEFT RIGHT>; };
             
     BLUE {
     label = "BLUE";
@@ -222,7 +222,7 @@ keymap {
     &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD       
     &ext_power EP_TOG &bt BT_SEL 1 &bt BT_CLR &out OUT_TOG>;
     
-    sensor-bindings = <&rgb_encoder &rgb_encoder1>; };
+    sensor-bindings = <&rgb_encoder1>; };
 
     PROCREATE {
     label = "PROCREATE";
@@ -231,6 +231,6 @@ keymap {
     &kp LC(SEMICOLON) &kp V &kp S &kp LSHFT      
     &mt LSHFT V &mt RALT X &mt LCMD C>;
     
-    sensor-bindings = <&rot_kp LG(LBKT) LG(RBKT) &rot_kp LBKT RBKT>; };
+    sensor-bindings = <&rot_kp LBKT RBKT>; };
     };
 };
