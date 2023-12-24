@@ -188,7 +188,7 @@ keymap {
     
     sensor-bindings = <&scroll SCROLL_DOWN SCROLL_UP>; };
 
-    TOPRIGHT{
+    TOPRIGHT {
     label = "TOPRIGHT";
     bindings = <
     &kp LSHFT &none &none &none
@@ -197,7 +197,7 @@ keymap {
     
     sensor-bindings = <&rot_kp K L>; };
 
-    TOPSPLIT{
+    TOPSPLIT {
     label = "TOPSPLIT";
     bindings = <
     &none &none &none &none
