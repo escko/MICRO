@@ -171,7 +171,7 @@ keymap {
     bindings = <     
     &kp Q &kp W &kp E &mt SPACE N0                 
     &kp A &kp S &kp D &mt LSHFT R         
-    &mt LCTRL Z &mt RALT X &mt LGUI C>;
+    &mt LCTRL Z &mt RALT X &mt LCMD C>;
     
     sensor-bindings = <&rot_kp DOWN UP>; };
     
@@ -180,7 +180,7 @@ keymap {
     bindings = <
     &none &none &kp LS(LG(X)) &kp LS(LG(C))  
     &none &none &kp G &mt LSHFT LG(G)                       
-    &mt LCTRL LG(Z) &mt RALT LG(X) &mt LGUI LG(C)>;
+    &mt LCTRL LG(Z) &mt RALT LG(X) &mt LCMD LG(C)>;
     
     sensor-bindings = <&rot_kp LG(E) LS(LG(E))>; };
 
