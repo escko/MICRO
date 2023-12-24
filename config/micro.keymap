@@ -164,7 +164,7 @@ keymap {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &kp Q &kp W &kp E &kp SPACE                  
+    &kp Q &kp W &kp E &mt SPACE N0                 
     &kp A &kp S &kp D &mt LSHFT R         
     &mt LCTRL Z &mt RALT X &mt LGUI C>;
     
@@ -182,8 +182,8 @@ keymap {
     TOPMIDDLE {
     label = "TOPMIDDLE";
     bindings = <
-    &kp LSHFT &none &none &kp SPACE
-    &kp SEMICOLON &kp LA(LG(V)) &none &kp LSHFT
+    &kp LSHFT &none &none &mt SPACE N0
+    &kp SEMICOLON &kp LA(LG(V)) &none &kp N0
     &kp LCTRL &kp RALT &kp LCMD>;
     
     sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT) &scroll SCROLL_DOWN SCROLL_UP>; };
@@ -192,7 +192,7 @@ keymap {
     label = "TOPRIGHT";
     bindings = <
     &kp LSHFT &none &none &none
-    &kp LSHFT  &none &none &none
+    &kp LSHFT  &none &none &kp SEMICOLON
     &kp LCTRL &kp RALT &kp LCMD>;
     
     sensor-bindings = <&rot_kp LS(DOWN) LS(UP) &rot_kp K L>; };
