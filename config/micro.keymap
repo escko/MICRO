@@ -224,7 +224,7 @@ keymap {
     label = "BLUE";
     bindings = <
     &none &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_SAI
-    &mtt &bt BT_SEL 0 &bt BT_SEL 1 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD      
+    &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD      
     &bt BT_CLR &out OUT_TOG &ext_power EP_TOG>;
     
     sensor-bindings = <&rgb_encoder1>; };
