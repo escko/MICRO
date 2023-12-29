@@ -14,8 +14,9 @@
 #define TOPRIGHT 3
 #define TOPSPLIT 4
 #define CENTERLEFT 5
-#define BLUE 6
-#define PROCREATE 7
+#define ZOOM 6
+#define BLUE 7
+#define PROCREATE 8
 
 #define MOUSE_SCROLL_MAX 100
 
@@ -29,13 +30,6 @@
 #define SCROLL_RIGHT SCROLL_HOR(MOUSE_SCROLL_MAX)
 
 
-// time to max speed ms was 1000 //
-&mwh {
-  time-to-max-speed-ms = <250>;
-  acceleration-exponent = <0>;
-  delay-ms = <0>;
-};
-
 &lt {
     tapping-term-ms = <120>;
     quick-tap-ms = <120>;
@@ -47,7 +41,22 @@
     flavor = "tap-preferred";
 };
 
+// time to max speed ms was 1000 //
+&mwh {
+  time-to-max-speed-ms = <250>;
+  acceleration-exponent = <0>;
+  delay-ms = <0>;
+};
+
+&encoder_1 {
+    steps = <36>;
+};
+
 / { 
+
+    sensors {
+      triggers-per-rotation = <18>;
+    };
     combos {
     compatible = "zmk,combos";           
     TOPLEFT {
@@ -75,6 +84,11 @@
         key-positions = <4 5>;
         bindings = <&mo 5>;
         };
+    ZOOM {
+      timeout-ms = <110>;
+      key-positions = <0 1 2 3>;
+      bindings = <&mo 6>;
+      };
     K_I {
         timeout-ms = <100>;
         key-positions = <1 6>;
@@ -102,68 +116,63 @@
         };
     RESET {
         timeout-ms = <100>;
-        key-positions = <4 5 6 9>;
-        bindings = <&sys_reset>;
-        };
-    BOOTLOADER {
-        timeout-ms = <100>;
         key-positions = <4 5 6 8>;
-        bindings = <&bootloader>;
+        bindings = <&sys_reset>;
         };
     };
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
     //  | SW5- 4 | SW6-  5 | SW7-  6 | SW7-  7 |
     //           | SW9-  8 | SW10- 9 | SW11-10 |
-    behaviors {
-        scroll: scroll {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCROLL";
-            #sensor-binding-cells = <2>;
-            bindings = <&mwh>, <&mwh>;
-            };
-        rot_kp: behavior_sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "ENC_KP";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            };
-        mtt: mod_tap_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred"; // was hold-preferred
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            bindings = <&kp>, <&kp>;
-            }; 
-        mkp_kp: mouse_click {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOUSE_CLICK";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-            bindings = <&mkp>, <&kp>;
-            };
-        rgb_encoder: rgb_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
-            };        
-        rgb_encoder1: rgb_encoder1 {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER1";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-            };
-        };
+behaviors {
+    rot_scroll: rot_scroll {
+      compatible = "zmk,behavior-sensor-rotate-var";
+      label = "ROT_SCROLL";
+      #sensor-binding-cells = <2>;
+      bindings = <&mwh>, <&mwh>;
+      };
+    rot_23: rot_23 {
+      compatible = "zmk,behavior-sensor-rotate";
+      label = "ROT_23";
+      #sensor-binding-cells = <0>;
+      bindings = <&kp N2>, <&kp N3>;
+      };  
+    rot_kp: rot_kp {
+      compatible = "zmk,behavior-sensor-rotate-var";
+      label = "ROT_KP";
+      #sensor-binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      };
+    mtt: mod_tap_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_TAP";
+      #binding-cells = <2>;
+      flavor = "tap-preferred"; // was hold-preferred
+      tapping-term-ms = <200>;
+      quick-tap-ms = <150>;
+      bindings = <&kp>, <&kp>;
+      }; 
+    mkp_kp: mouse_click {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOUSE_CLICK";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick-tap-ms = <100>;
+      flavor = "tap-preferred";
+      bindings = <&mkp>, <&kp>;
+      };       
+    rgb_encoder: rgb_encoder {
+      compatible = "zmk,behavior-sensor-rotate";
+      label = "RGB_ENCODER";
+      #sensor-binding-cells = <0>;
+      bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+      };
+  };
 
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
     //  | SW5- 4 | SW6-  5 | SW7-  6 | SW7-  7 |
     //           | SW9-  8 | SW10- 9 | SW11-10 |
 
-keymap {
+ keymap {
     compatible = "zmk,keymap";
 
     MICRO {
@@ -173,13 +182,13 @@ keymap {
     &kp A &kp S &kp D &mt LSHFT N0        
     &mt LCTRL Z &mt RALT X &mt LCMD C>;
     
-    sensor-bindings = <&rot_kp DOWN UP>; };
+    sensor-bindings = <&rot_23>; };
     
     TOPLEFT {
     label = "TOPLEFT";    
     bindings = <
-    &none &none &kp LS(LG(X)) &kp LS(LG(C))  
-    &none &none &kp G &mt LSHFT LG(G)                       
+    &none &none &kp LG(G) &kp G  
+    &none &none &kp LS(LG(X)) &mt LSHFT LS(LG(C))                       
     &mt LCTRL LG(Z) &mt RALT LG(X) &mt LCMD LG(C)>;
     
     sensor-bindings = <&rot_kp LG(E) LS(LG(E))>; };
@@ -191,7 +200,7 @@ keymap {
     &kp LA(LG(V)) &none &kp V &mt LSHFT N0
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&scroll SCROLL_DOWN SCROLL_UP>; };
+    sensor-bindings = <&rot_scroll SCROLL_UP SCROLL_DOWN>; };
 
     TOPRIGHT {
     label = "TOPRIGHT";
@@ -209,16 +218,25 @@ keymap {
     &kp LSHFT  &none &none &kp N5
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&rot_kp LS(DOWN) LS(UP)>; };
+    sensor-bindings = <&rot_kp N1 N4>; };
 
     CENTERLEFT {
     label = "CENTERLEFT";
     bindings = <
-    &mo BLUE &tog 7 &kp LC(LA(LG(Z))) &kp LG(LC(LA(C)))             
-    &none &none &mtt LC(LA(LS(LG(S)))) LC(LA(LS(LG(A)))) &kp LG(LC(LA(X)))
-    &kp LC(UP) &kp LC(DOWN) &kp C_PLAY_PAUSE>;
+    &mo BLUE &tog 8 &mtt LC(LA(LS(LG(X)))) LC(LA(LS(LG(Z)))) &mtt LC(LA(LS(LG(C)))) LC(LA(LS(LG(V))))            
+    &none &none &kp LC(UP) &mt LSHFT C_PLAY_PAUSE
+    &mt LCTRL LC(LA(LG(Z))) &mt RALT LG(LC(LA(X))) &mt LCMD LG(LC(LA(C)))>; 
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
+
+    ZOOM {
+    label = "ZOOM";
+    bindings = <
+    &none &none &none &none
+    &kp LSHFT  &none &none &kp LG(N0)
+    &kp LCTRL &kp RALT &kp LC(LA(LS(LG(A))))>;
+    
+    sensor-bindings = <&rot_kp LG(MINUS) LG(LS(PLUS))>; };
             
     BLUE {
     label = "BLUE";
@@ -227,7 +245,7 @@ keymap {
     &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD      
     &bt BT_CLR &out OUT_TOG &ext_power EP_TOG>;
     
-    sensor-bindings = <&rgb_encoder1>; };
+    sensor-bindings = <&rgb_encoder>; };
 
     PROCREATE {
     label = "PROCREATE";
