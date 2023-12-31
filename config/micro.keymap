@@ -49,7 +49,7 @@
 };
 
 &encoder_1 {
-    steps = <36>;
+    steps = <72>;
 };
 
 / { 
