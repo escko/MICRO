@@ -48,15 +48,8 @@
   delay-ms = <0>;
 };
 
-&encoder_1 {
-    steps = <36>;
-};
-
 / { 
 
-    sensors {
-      triggers-per-rotation = <36>;
-    };
     combos {
     compatible = "zmk,combos";           
     TOPLEFT {
