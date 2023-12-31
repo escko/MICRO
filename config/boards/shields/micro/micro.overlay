@@ -45,13 +45,13 @@
         a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
-        steps = <18>;
+        steps = <54>;
         status = "okay";
     };
 
     sensors {
       compatible = "zmk,keymap-sensors";
       sensors = <&encoder_1>;
-      1 { triggers-per-rotation = <18>; };
+      1 { triggers-per-rotation = <36>; };
       };
 };
