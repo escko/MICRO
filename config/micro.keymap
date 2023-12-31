@@ -49,13 +49,13 @@
 };
 
 &encoder_1 {
-    steps = <36>;
+    steps = <30>;
 };
 
 / { 
 
     sensors {
-      triggers-per-rotation = <20>;
+      triggers-per-rotation = <18>;
     };
     combos {
     compatible = "zmk,combos";           
