@@ -55,7 +55,7 @@
 / { 
 
     sensors {
-      triggers-per-rotation = <16>;
+      triggers-per-rotation = <19>;
     };
     combos {
     compatible = "zmk,combos";           
@@ -176,7 +176,7 @@ behaviors {
     &kp A &kp S &kp D &mt LSHFT LG(N0)        
     &mt LCTRL Z &mt RALT X &mt LCMD C>;
     
-    sensor-bindings = <&rot_kp UP DOWN>; };
+    sensor-bindings = <&rot_kp DOWN UP>; };
     
     TOPLEFT {
     label = "TOPLEFT";    
