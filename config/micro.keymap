@@ -55,7 +55,7 @@
 / { 
 
     sensors {
-      triggers-per-rotation = <18>;
+      triggers-per-rotation = <20>;
     };
     combos {
     compatible = "zmk,combos";           
@@ -75,7 +75,7 @@
         bindings = <&mo 3>;
         };
     TOPSPLIT {
-        timeout-ms = <100>;
+        timeout-ms = <120>;
         key-positions = <0 3>;
         bindings = <&mo 4>;
         };
@@ -86,22 +86,22 @@
         };
     ZOOM {
       timeout-ms = <110>;
-      key-positions = <0 1 2 3>;
+      key-positions = <0 1 2>;
       bindings = <&mo 6>;
       };
     K_I {
         timeout-ms = <100>;
-        key-positions = <1 6>;
+        key-positions = <1 7>;
         bindings = <&kp I>;
         };
     K_T {
         timeout-ms = <100>;
-        key-positions = <2 6>;
+        key-positions = <2 7>;
         bindings = <&kp T>;
         };
     K_Y {
         timeout-ms = <100>;
-        key-positions = <6 7>;
+        key-positions = <6 10>;
         bindings = <&kp Y>;
         };
     K_F {
@@ -129,13 +129,7 @@ behaviors {
       label = "ROT_SCROLL";
       #sensor-binding-cells = <2>;
       bindings = <&mwh>, <&mwh>;
-      };
-    rot_23: rot_23 {
-      compatible = "zmk,behavior-sensor-rotate";
-      label = "ROT_23";
-      #sensor-binding-cells = <0>;
-      bindings = <&kp N2>, <&kp N3>;
-      };  
+      }; 
     rot_kp: rot_kp {
       compatible = "zmk,behavior-sensor-rotate-var";
       label = "ROT_KP";
@@ -179,10 +173,10 @@ behaviors {
     label = "MICRO";
     bindings = <     
     &kp Q &kp W &kp E &mt SPACE R                 
-    &kp A &kp S &kp D &mt LSHFT N0        
+    &kp A &kp S &kp D &mt LSHFT LG(N0)        
     &mt LCTRL Z &mt RALT X &mt LCMD C>;
     
-    sensor-bindings = <&rot_23>; };
+    sensor-bindings = <&rot_kp UP DOWN>; };
     
     TOPLEFT {
     label = "TOPLEFT";    
@@ -191,13 +185,13 @@ behaviors {
     &none &none &kp LS(LG(X)) &mt LSHFT LS(LG(C))                       
     &mt LCTRL LG(Z) &mt RALT LG(X) &mt LCMD LG(C)>;
     
-    sensor-bindings = <&rot_kp LG(E) LS(LG(E))>; };
+    sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
 
     TOPMIDDLE {
     label = "TOPMIDDLE";
     bindings = <
     &kp LSHFT &none &none &mt SPACE R
-    &kp LA(LG(V)) &none &kp V &mt LSHFT N0
+    &kp LA(LG(V)) &none &kp V &mt LSHFT LG(N0)
     &kp LCTRL &kp RALT &kp LCMD>;
     
     sensor-bindings = <&rot_scroll SCROLL_UP SCROLL_DOWN>; };
@@ -206,16 +200,16 @@ behaviors {
     label = "TOPRIGHT";
     bindings = <
     &kp LSHFT &none &none &none
-    &kp LSHFT  &none &none &kp SEMICOLON
+    &kp LSHFT  &none &none &kp LG(N0)
     &kp LCTRL &kp RALT &kp LCMD>;
     
-    sensor-bindings = <&rot_kp K L>; };
+    sensor-bindings = <&rot_kp LG(E) LS(LG(E))>; };
 
     TOPSPLIT {
     label = "TOPSPLIT";
     bindings = <
     &none &none &none &none
-    &kp LSHFT  &none &none &kp N5
+    &kp LSHFT  &none &none &kp LG(MINUS)
     &kp LCTRL &kp RALT &kp LCMD>;
     
     sensor-bindings = <&rot_kp N1 N4>; };
@@ -224,7 +218,7 @@ behaviors {
     label = "CENTERLEFT";
     bindings = <
     &mo BLUE &tog 8 &mtt LC(LA(LS(LG(X)))) LC(LA(LS(LG(Z)))) &mtt LC(LA(LS(LG(C)))) LC(LA(LS(LG(V))))            
-    &none &none &kp LC(UP) &mt LSHFT C_PLAY_PAUSE
+    &none &none &mtt LC(LS(DOWN)) LC(LS(UP)) &kp C_PLAY_PAUSE
     &mt LCTRL LC(LA(LG(Z))) &mt RALT LG(LC(LA(X))) &mt LCMD LG(LC(LA(C)))>; 
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
@@ -232,11 +226,11 @@ behaviors {
     ZOOM {
     label = "ZOOM";
     bindings = <
-    &none &none &none &none
-    &kp LSHFT  &none &none &kp LG(N0)
+    &none &none &none &mkp MCLK
+    &none &none &none &kp LG(N0)
     &kp LCTRL &kp RALT &kp LC(LA(LS(LG(A))))>;
     
-    sensor-bindings = <&rot_kp LG(MINUS) LG(LS(PLUS))>; };
+    sensor-bindings = <&rot_kp LG(MINUS) LG(LS(SEMICOLON))>; };
             
     BLUE {
     label = "BLUE";
