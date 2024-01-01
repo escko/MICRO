@@ -18,7 +18,7 @@
 #define BLUE 7
 #define PROCREATE 8
 
-#define MOUSE_SCROLL_MAX 288
+#define MOUSE_SCROLL_MAX 100
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
