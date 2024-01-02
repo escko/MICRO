@@ -71,7 +71,6 @@ encoder: &qdec0 {
     pinctrl-names = "default";
 };
 
-
 / { 
 
     combos {

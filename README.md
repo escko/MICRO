@@ -1,1 +1,1 @@
-# MICRO Macropad. its a shortcut left handed keyboard with 2 encoders and 14 keys to use for drawing programs.
+# MICRO Macropad. its a shortcut left handed keyboard with 1 encoders and 11 keys to use for drawing programs.
