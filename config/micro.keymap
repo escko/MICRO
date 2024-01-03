@@ -238,7 +238,7 @@ behaviors {
     label = "SPLIT";
     bindings = <
     &none &none &none &none
-    &kp LSHFT  &none &none &kp CARET
+    &kp LSHFT  &none &none &kp LA(N0)
     &kp LCTRL &kp RALT &kp LCMD>;
     
     sensor-bindings = <&rot_kp N1 N4>; };
