@@ -30,7 +30,6 @@
 #define SCROLL_LEFT SCROLL_HOR(-MOUSE_SCROLL_MAX)
 #define SCROLL_RIGHT SCROLL_HOR(MOUSE_SCROLL_MAX)
 
-
 &lt {
     tapping-term-ms = <120>;
     quick-tap-ms = <120>;
@@ -41,7 +40,6 @@
     quick-tap-ms = <120>;
     flavor = "tap-preferred";
 };
-
 // time to max speed ms was 1000 //
 &mwh {
   time-to-max-speed-ms = <0>;
@@ -85,7 +83,6 @@ encoder: &qdec0 {
 };
 
 / { 
-
     combos {
     compatible = "zmk,combos";           
     TOPLEFT {
@@ -195,11 +192,9 @@ behaviors {
       bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
       };
   };
-
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
     //  | SW5- 4 | SW6-  5 | SW7-  6 | SW7-  7 |
     //           | SW9-  8 | SW10- 9 | SW11-10 |
-
  keymap {
     compatible = "zmk,keymap";
 
@@ -243,7 +238,7 @@ behaviors {
     label = "BROWSER";
     bindings = <
     &none &none &none &mkp_kp MCLK LCLK
-    &&kp F19 &kp LC(LA(LS(LG(W)))) &mtt LG(INT1) LC(LA(LG(V))) &mtt LSHFT C_PLAY_PAUSE   
+    &kp F19 &kp LC(LA(LS(LG(W)))) &mtt LG(INT1) LC(LA(LG(V))) &mtt LSHFT C_PLAY_PAUSE   
     &mt LCTRL LC(LA(LG(Z))) &mt RALT LG(LC(LA(X))) &mt LCMD LG(LC(LA(C)))>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
