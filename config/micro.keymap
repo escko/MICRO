@@ -12,8 +12,8 @@
 #define TOPLEFT 1
 #define TOPMIDDLE 2
 #define TOPRIGHT 3
-#define BROWSER 4
-#define TOPSPLIT 5
+#define SPLIT 4
+#define BROWSER 5
 #define CENTERLEFT 6
 #define ZOOM 7
 #define BLUE 8
@@ -100,14 +100,14 @@ encoder: &qdec0 {
     key-positions = <2 3>;
     bindings = <&mo 3>;
         };
+    SPLIT {
+    timeout-ms = <110>;
+    key-positions = <0 3>;
+    bindings = <&mo 4>;
+        };
     BROWSER {
     timeout-ms = <110>;
     key-positions = <0 1 2>;
-    bindings = <&mo 4>;
-        };
-    TOPSPLIT {
-    timeout-ms = <110>;
-    key-positions = <0 3>;
     bindings = <&mo 5>;
         };
     CENTERLEFT {
@@ -234,6 +234,15 @@ behaviors {
     
     sensor-bindings = <&rot_kp LG(E) LS(LG(E))>; };
 
+    SPLIT {
+    label = "SPLIT";
+    bindings = <
+    &none &none &none &none
+    &kp LSHFT  &none &none &kp LG(MINUS)
+    &kp LCTRL &kp RALT &kp LCMD>;
+    
+    sensor-bindings = <&rot_kp N1 N4>; };
+
     BROWSER {
     label = "BROWSER";
     bindings = <
@@ -242,15 +251,6 @@ behaviors {
     &mt LCTRL LC(LA(LG(Z))) &mt RALT LG(LC(LA(X))) &mt LCMD LG(LC(LA(C)))>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
-
-    TOPSPLIT {
-    label = "TOPSPLIT";
-    bindings = <
-    &none &none &none &none
-    &kp LSHFT  &none &none &kp LG(MINUS)
-    &kp LCTRL &kp RALT &kp LCMD>;
-    
-    sensor-bindings = <&rot_kp N1 N4>; };
 
     CENTERLEFT {
     label = "CENTERLEFT";
