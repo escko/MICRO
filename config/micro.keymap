@@ -12,11 +12,12 @@
 #define TOPLEFT 1
 #define TOPMIDDLE 2
 #define TOPRIGHT 3
-#define TOPSPLIT 4
-#define CENTERLEFT 5
-#define ZOOM 6
-#define BLUE 7
-#define PROCREATE 8
+#define BROWSER 4
+#define TOPSPLIT 5
+#define CENTERLEFT 6
+#define ZOOM 7
+#define BLUE 8
+#define PROCREATE 9
 
 #define MOUSE_SCROLL_MAX 250
 
@@ -60,6 +61,17 @@
             bias-pull-up;
         };
     };
+
+
+// need second set of pins defined if deep sleep is enabled
+    qdec_sleep: qdec_sleep {
+        group1 {
+            psels = <NRF_PSEL(QDEC_A, 1, 4)>,
+                    <NRF_PSEL(QDEC_B, 1, 6)>;
+            bias-pull-up; // TODO: find out if this makes sense with low-power-enable
+            low-power-enable;
+        };
+    };
 };
 
 // Set up the QDEC hardware based driver and give it the same label as the deleted node.
@@ -76,64 +88,69 @@ encoder: &qdec0 {
     combos {
     compatible = "zmk,combos";           
     TOPLEFT {
-        timeout-ms = <100>;
-        key-positions = <0 1>;
-        bindings = <&mo 1>;
+    timeout-ms = <100>;
+    key-positions = <0 1>;
+    bindings = <&mo 1>;
         };
     TOPMIDDLE {
-        timeout-ms = <100>;
-        key-positions = <1 2>;
-        bindings = <&mo 2>;
+    timeout-ms = <100>;
+    key-positions = <1 2>;
+    bindings = <&mo 2>;
         };
     TOPRIGHT {
-        timeout-ms = <100>;
-        key-positions = <2 3>;
-        bindings = <&mo 3>;
+    timeout-ms = <100>;
+    key-positions = <2 3>;
+    bindings = <&mo 3>;
+        };
+    BROWSER {
+    timeout-ms = <110>;
+    key-positions = <0 1 2>;
+    bindings = <&mo 4>;
         };
     TOPSPLIT {
-        timeout-ms = <120>;
-        key-positions = <0 3>;
-        bindings = <&mo 4>;
+    timeout-ms = <110>;
+    key-positions = <0 3>;
+    bindings = <&mo 5>;
         };
     CENTERLEFT {
-        timeout-ms = <100>;
-        key-positions = <4 5>;
-        bindings = <&mo 5>;
+    timeout-ms = <100>;
+    key-positions = <4 5>;
+    bindings = <&mo 6>;
         };
     ZOOM {
-      timeout-ms = <110>;
-      key-positions = <0 1 2>;
-      bindings = <&mo 6>;
-      };
+    timeout-ms = <110>;
+    key-positions = <0 1 2 3>;
+    bindings = <&mo 7>;
+        };
     K_I {
-        timeout-ms = <100>;
-        key-positions = <1 7>;
-        bindings = <&kp I>;
+    timeout-ms = <100>;
+    key-positions = <1 7>;
+    bindings = <&kp I>;
         };
     K_T {
-        timeout-ms = <100>;
-        key-positions = <2 7>;
-        bindings = <&kp T>;
+    timeout-ms = <100>;
+    key-positions = <2 7>;
+    bindings = <&kp T>;
         };
     K_Y {
-        timeout-ms = <100>;
-        key-positions = <6 10>;
-        bindings = <&kp Y>;
+    timeout-ms = <100>;
+    key-positions = <6 10>;
+    bindings = <&kp Y>;
         };
     K_F {
-        timeout-ms = <100>;
-        key-positions = <4 5 6>;
-        bindings = <&kp F>;
+    timeout-ms = <100>;
+    key-positions = <4 5 6>;
+    bindings = <&kp F>;
         };
-    K_H{
-        timeout-ms = <100>;
-        key-positions = <5 6>;
-        bindings = <&kp H>;
+    K_H {
+    timeout-ms = <100>;
+    key-positions = <5 6>;
+    bindings = <&kp H>;
         };
     RESET {
-        timeout-ms = <100>;
-        key-positions = <4 5 6 8>;
-        bindings = <&sys_reset>;
+    timeout-ms = <100>;
+    key-positions = <4 5 6 8>;
+    bindings = <&sys_reset>;
         };
     };
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
@@ -168,7 +185,7 @@ behaviors {
       tapping-term-ms = <150>;
       quick-tap-ms = <100>;
       flavor = "tap-preferred";
-      bindings = <&mkp>, <&kp>;
+      bindings = <&mkp>, <&mkp>;
       };       
     rgb_encoder: rgb_encoder {
       compatible = "zmk,behavior-sensor-rotate";
@@ -215,11 +232,20 @@ behaviors {
     TOPRIGHT {
     label = "TOPRIGHT";
     bindings = <
-    &kp LSHFT &none &none &none
+    &kp RALT &none &none &none
     &kp LSHFT  &none &none &kp LG(N0)
     &kp LCTRL &kp RALT &kp LCMD>;
     
     sensor-bindings = <&rot_kp LG(E) LS(LG(E))>; };
+
+    BROWSER {
+    label = "BROWSER";
+    bindings = <
+    &none &none &none &mkp_kp MCLK LCLK
+    &&kp F19 &kp LC(LA(LS(LG(W)))) &mtt LG(INT1) LC(LA(LG(V))) &mtt LSHFT C_PLAY_PAUSE   
+    &mt LCTRL LC(LA(LG(Z))) &mt RALT LG(LC(LA(X))) &mt LCMD LG(LC(LA(C)))>;
+    
+    sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     TOPSPLIT {
     label = "TOPSPLIT";
@@ -233,18 +259,18 @@ behaviors {
     CENTERLEFT {
     label = "CENTERLEFT";
     bindings = <
-    &mo BLUE &tog 8 &mtt LC(LA(LS(LG(X)))) LC(LA(LS(LG(Z)))) &mtt LC(LA(LS(LG(C)))) LC(LA(LS(LG(V))))            
-    &none &none &mtt LC(LS(DOWN)) LC(LS(UP)) &kp C_PLAY_PAUSE
-    &mt LCTRL LC(LA(LG(Z))) &mt RALT LG(LC(LA(X))) &mt LCMD LG(LC(LA(C)))>; 
+    &mo BLUE &tog 9 &mtt LC(LA(LS(LG(X)))) LC(LS(DOWN)) &mtt LC(LA(LS(LG(C)))) LC(LS(UP))            
+    &none &none &mtt LC(LA(LS(LG(A)))) LC(LA(LS(LG(D)))) &mtt LC(LA(LS(LG(S)))) C_PLAY_PAUSE
+    &kp LC(LA(LS(LG(B)))) &kp LC(LA(LS(LG(Z)))) &kp LC(LA(LS(LG(V))))>;  
     
-    sensor-bindings = <&rot_kp LEFT RIGHT>; };
+    sensor-bindings = <&rot_kp LC(LA(LS(LG(N)))) LC(LA(LS(LG(M))))>; };
 
     ZOOM {
     label = "ZOOM";
     bindings = <
-    &none &none &none &mkp MCLK
+    &none &none &none &none
     &none &none &none &kp LG(N0)
-    &kp LCTRL &kp RALT &kp LC(LA(LS(LG(A))))>;
+    &kp LCTRL &kp RALT &kp LG(R)>;
     
     sensor-bindings = <&rot_kp LG(MINUS) LG(LS(SEMICOLON))>; };
             
