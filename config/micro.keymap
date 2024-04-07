@@ -265,7 +265,7 @@ behaviors {
     &kp LA(LG(V)) &none &kp V &mt LSHFT LG(N0)
     &kp LCTRL &kp RALT &mt LCMD H>;
     
-    sensor-bindings = <&rot_scroll SCROLL_DOWN SCROLL_UP>; };
+    sensor-bindings = <&rot_scroll SCROL_DOWN SCROL_UP>; };
 
     SCROLLUNDO {
     label = "SCROLLUNDO";
