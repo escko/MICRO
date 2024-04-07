@@ -243,9 +243,9 @@ behaviors {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &kp K &kp B &kp E &kp LS(B)          
+    &mt3 LCMD K &kp B &kp E &kp LS(B)          
     &kp F &kp V &mt3 W L &mt LALT C      
-    &mt3 BACKSLASH SLASH &mt LSHFT T &mt LCMD O>;
+    &mt3 BACKSLASH SLASH &mt LSHFT T &mt O LCMD>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
@@ -271,7 +271,7 @@ behaviors {
     label = "SCROLLUNDO";
     bindings = <
     &none &none &none &none
-    &kp LSHFT  &none &none &kp LS(LS(Z))
+    &kp LSHFT  &none &none &kp LS(LG(Z))
     &kp LCTRL &kp RALT &kp LG(Z)>;
     
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
