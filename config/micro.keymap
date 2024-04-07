@@ -243,8 +243,8 @@ behaviors {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &mt3 LCMD K &kp B &kp E &kp LS(B)          
-    &kp F &kp V &mt3 W L &mt LALT C      
+    &mt3 LCMD LS(B) &kp K &kp E &kp B          
+    &mt3 G F &kp V &mt3 W L &mt LALT C      
     &mt3 BACKSLASH SLASH &mt LSHFT T &mt O LCMD>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
