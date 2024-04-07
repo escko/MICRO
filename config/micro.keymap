@@ -243,9 +243,9 @@ behaviors {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &mt3 LCMD LS(B) &kp K &kp E &kp B          
+    &mt3 LCMD LS(B) &kp K &kp E &mt1 O B          
     &mt3 G F &kp V &mt3 W L &mt LALT C      
-    &mt3 BACKSLASH SLASH &mt LSHFT T &mt O LCMD>;
+    &mt3 BACKSLASH SLASH &mt LSHFT T &mt2 LCMD H>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
@@ -254,7 +254,7 @@ behaviors {
     bindings = <
     &none &none &kp LG(D) &kp ENTER  
     &none &none &kp LS(LG(I)) &mt LSHFT LG(N)                       
-    &mt3 LCTRL LG(V) &mt3 RALT LG(X) &mt LCMD LG(C)>;
+    &mt3 LCTRL LG(V) &mt3 RALT LG(X) &mt3 LCMD LG(C)>;
     
     sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
 
@@ -262,8 +262,8 @@ behaviors {
     label = "VIEW";
     bindings = <
     &kp LSHFT &none &none &mt SPACE R
-    &kp LA(LG(V)) &none &kp V &mt LSHFT LG(N0)
-    &kp LCTRL &kp RALT &mt LCMD H>;
+    &kp LA(LG(V)) &none &kp V &mt3 LSHFT LG(N0)
+    &kp LCTRL &kp RALT &mt3 LCMD H>;
     
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
@@ -323,9 +323,9 @@ behaviors {
     FRESCO {
     label = "FRESCO";
     bindings = <
-    &kp H &kp V &mt TILDE E &mt3 B P          
-    &kp G &kp LG(T) &mt3 W L &mt LALT I      
-    &mt3 LG(L) LG(LS(DELETE)) &mt LSHFT LG(COMMA) &mt LCMD LS(H)>;
+    &kp H &kp V &mt3 TILDE E &mt3 B P          
+    &kp G &kp LG(T) &mt3 W L &mt3 LALT I      
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt2 LSHFT LG(COMMA) &mt2 LCMD LS(H)>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     };
