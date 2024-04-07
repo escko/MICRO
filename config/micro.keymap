@@ -17,7 +17,7 @@
 #define VOLUME 6
 #define CENTERLEFT 7
 #define BLUE 8
-#define PROCREATE 9
+#define FRESCO 9
 
 
 &lt {
@@ -320,7 +320,7 @@ behaviors {
     
     sensor-bindings = <&rgb_encoder>; };
 
-    PROCREATE {
+    FRESCO {
     label = "FRESCO";
     bindings = <
     &kp H &kp V &mt TILDE E &mt3 B P          
