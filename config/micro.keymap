@@ -114,15 +114,15 @@ encoder: &qdec0 {
     key-positions = <4 5>;
     bindings = <&mo 8>;
       };
-    K_I {
+    COLORTONE {
     timeout-ms = <100>;
-    key-positions = <1 7>;
-    bindings = <&kp I>;
+    key-positions = <3 10>;
+    bindings = <&kp LG(U)>;
       };
     K_TRANSFORM {
     timeout-ms = <100>;
     key-positions = <2 3>;
-    bindings = <&mt1 LG(T) V>;
+    bindings = <&mt LG(T) V>;
       };
     K_INVERT {
     timeout-ms = <100>;
@@ -250,7 +250,7 @@ behaviors {
     label = "MICRO";
     bindings = <     
     &mt3 LCMD LS(B) &kp K &kp E &kp B          
-    &mt3 G F &kp V &mt3 W L &mt LALT C      
+    &mt3 G F &kp W &kp L &mt LALT C      
     &mt3 BACKSLASH SLASH &mt LSHFT T &mt2 LCMD H>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
@@ -259,7 +259,7 @@ behaviors {
     label = "FRESCO";
     bindings = <
     &kp H &kp V &mt3 TILDE E &mt3 B P          
-    &kp G &kp LG(T) &mt3 W L &mt3 LALT I      
+    &kp G &kp W &kp L &mt3 LALT I      
     &mt3 LG(L) LG(LS(BACKSPACE)) &mt2 LSHFT LG(COMMA) &mt2 LCMD LS(H)>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
@@ -267,7 +267,7 @@ behaviors {
     LAYERS {
     label = "LAYERS";    
     bindings = <
-    &none &none &mt3 LG(U) LG(D) &mt3 LG(B) ENTER  
+    &none &none &kp LG(D) &kp ENTER  
     &none &none &kp LS(LG(I)) &mt LSHFT LG(N)                       
     &mt3 LCTRL LG(V) &mt3 RALT LG(X) &mt3 LCMD LG(C)>;
     
