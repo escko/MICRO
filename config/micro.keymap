@@ -124,6 +124,11 @@ encoder: &qdec0 {
     key-positions = <2 3>;
     bindings = <&mt1 LG(T) V>;
       };
+    K_O {
+    timeout-ms = <100>;
+    key-positions = <3 7>;
+    bindings = <&kp O>;
+      };
     K_INVERT {
     timeout-ms = <100>;
     key-positions = <5 6>;
