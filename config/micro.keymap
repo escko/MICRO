@@ -121,18 +121,18 @@ encoder: &qdec0 {
       };
     K_T {
     timeout-ms = <100>;
-    key-positions = <2 7>;
-    bindings = <&kp T>;
+    key-positions = <2 3>;
+    bindings = <&kp LG(Z)>;
       };
     K_Y {
     timeout-ms = <100>;
     key-positions = <6 10>;
     bindings = <&kp Y>;
       };
-    K_G {
+    K_F {
     timeout-ms = <100>;
     key-positions = <4 5 6>;
-    bindings = <&kp G>;
+    bindings = <&kp F>;
       };
     TOGGLE {
     timeout-ms = <100>;
@@ -267,7 +267,7 @@ behaviors {
     LAYERS {
     label = "LAYERS";    
     bindings = <
-    &none &none &kp LG(D) &kp ENTER  
+    &none &none &mt3 LG(U) LG(D) &mt3 LG(B) ENTER  
     &none &none &kp LS(LG(I)) &mt LSHFT LG(N)                       
     &mt3 LCTRL LG(V) &mt3 RALT LG(X) &mt3 LCMD LG(C)>;
     
