@@ -122,7 +122,7 @@ encoder: &qdec0 {
     K_TRANSFORM {
     timeout-ms = <100>;
     key-positions = <2 3>;
-    bindings = <&mt LG(T) V>;
+    bindings = <&mt1 LG(T) V>;
       };
     K_INVERT {
     timeout-ms = <100>;
