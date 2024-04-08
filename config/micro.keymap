@@ -119,7 +119,7 @@ encoder: &qdec0 {
     key-positions = <1 7>;
     bindings = <&kp I>;
       };
-    K_V {
+    K_TRANSFORM {
     timeout-ms = <100>;
     key-positions = <2 3>;
     bindings = <&mt1 LG(T) V>;
