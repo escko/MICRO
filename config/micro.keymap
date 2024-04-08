@@ -119,15 +119,15 @@ encoder: &qdec0 {
     key-positions = <1 7>;
     bindings = <&kp I>;
       };
-    K_T {
+    K_O {
     timeout-ms = <100>;
     key-positions = <2 3>;
-    bindings = <&kp LG(Z)>;
+    bindings = <&kp O>;
       };
-    K_Y {
+    K_INVERT {
     timeout-ms = <100>;
-    key-positions = <6 10>;
-    bindings = <&kp Y>;
+    key-positions = <5 6>;
+    bindings = <&kp LS(LG(I))>;
       };
     K_F {
     timeout-ms = <100>;
@@ -249,7 +249,7 @@ behaviors {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &mt3 LCMD LS(B) &kp K &kp E &mt1 O B          
+    &mt3 LCMD LS(B) &kp K &kp E &kp B          
     &mt3 G F &kp V &mt3 W L &mt LALT C      
     &mt3 BACKSLASH SLASH &mt LSHFT T &mt2 LCMD H>;
     
