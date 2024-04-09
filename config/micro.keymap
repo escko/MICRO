@@ -255,17 +255,17 @@ behaviors {
     label = "MICRO";
     bindings = <     
     &mt3 LCMD LS(B) &kp K &kp E &kp B          
-    &mt3 G F &kp W &kp L &mt LALT C      
-    &mt3 BACKSLASH SLASH &mt LSHFT T &mt2 LCMD H>;
+    &mt3 G F &kp W &kp L &mt1 LCMD C      
+    &mt3 BACKSLASH SLASH &mt LSHFT T &kp LALT>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     label = "FRESCO";
     bindings = <
-    &kp H &kp V &mt3 TILDE E &mt3 B P          
-    &kp G &kp W &kp L &mt3 LALT I      
-    &mt3 LG(L) LG(LS(BACKSPACE)) &mt2 LSHFT LG(COMMA) &mt2 LCMD LS(H)>;
+    &kp H &kp V &mt3 TILDE E &kp P          
+    &kp G &kp W &kp L &mt1 LCMD B      
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt2 LSHFT LG(COMMA) &mt1 LALT I>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
