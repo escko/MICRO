@@ -116,7 +116,7 @@ encoder: &qdec0 {
     LASSO_T {
     timeout-ms = <100>;
     key-positions = <2 3>;
-    bindings = <&mt3 V L>;
+    bindings = <&mt4 V L>;
       };
     INVERT {
     timeout-ms = <100>;
@@ -195,6 +195,15 @@ behaviors {
       tapping-term-ms = <200>;
       quick-tap-ms = <110>;
       bindings = <&kp>, <&kp>;
+      };
+    mt4: mt4 {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_TAP3";
+      #binding-cells = <2>;
+      flavor = "tap-preferred"; // was hold-preferred
+      tapping-term-ms = <220>;
+      quick-tap-ms = <110>;
+      bindings = <&kp>, <&kp>;
       }; 
     kp_mkp: kp_mkp {
       compatible = "zmk,behavior-hold-tap";
@@ -248,18 +257,18 @@ behaviors {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &kp K &kp E &kp B &mt2 LSHFT LS(B)         
-    &kp F &kp G &kp W &mt2 LCMD C      
-    &mt3 BACKSLASH SLASH &mt2 LSHFT T &kp LALT>;
+    &kp K &kp E &kp B &mt3 LSHFT LS(B)         
+    &kp F &kp G &kp W &mt3 LCMD C      
+    &mt3 BACKSLASH SLASH &mt3 LSHFT T &kp LALT>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     label = "FRESCO";
     bindings = <
-    &mt3 H V &mt3 TILDE E &kp P &mt2 LSHFT B          
-    &kp G &kp LG(T) &mt3 W L &mt2 LCMD LS(F)      
-    &mt3 LG(L) LG(LS(BACKSPACE)) &mt2 LSHFT LG(COMMA) &mt2 LALT I>;
+    &mt3 H V &mt3 TILDE E &kp P &mt3 LSHFT B          
+    &kp G &kp LG(T) &mt3 W L &mt3 LCMD LS(F)      
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LALT I>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
@@ -295,7 +304,7 @@ behaviors {
     bindings = <
     &none &none &none &none
     &kp F19 &kp LC(LA(LS(LG(W)))) &mt3 LG(INT1) LC(LA(LG(V))) &mt3 LSHFT C_PLAY_PAUSE   
-    &mt LCTRL LC(LA(LG(Z))) &mt RALT LG(LC(LA(X))) &mt LCMD LG(LC(LA(C)))>;
+    &mt3 LCTRL LC(LA(LG(Z))) &mt3 RALT LG(LC(LA(X))) &mt3 LCMD LG(LC(LA(C)))>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
