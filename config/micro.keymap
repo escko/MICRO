@@ -12,7 +12,7 @@
 #define FRESCO 1
 #define LAYERS 2
 #define VIEW 3
-#define SCROLLUNDO 4
+#define COPYPASTE 4
 #define CONTROLS 5
 #define VOLUME 6
 #define CENTERLEFT 7
@@ -116,7 +116,7 @@ encoder: &qdec0 {
     LASSO_T {
     timeout-ms = <100>;
     key-positions = <2 3>;
-    bindings = <&mt2 V L>;
+    bindings = <&mt3 V L>;
       };
     INVERT {
     timeout-ms = <100>;
@@ -248,18 +248,18 @@ behaviors {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &kp K &kp E &kp B &mt1 LSHFT LS(B)         
-    &kp F &kp G &kp W &mt1 LCMD LG(Z)      
-    &mt3 BACKSLASH SLASH &mt2 LSHFT T &mt LALT C>;
+    &kp K &kp E &kp B &mt2 LSHFT LS(B)         
+    &kp F &kp G &kp W &mt2 LCMD C      
+    &mt3 BACKSLASH SLASH &mt2 LSHFT T &kp LALT>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     label = "FRESCO";
     bindings = <
-    &mt3 H V &mt3 TILDE E &kp P &mt1 LSHFT B          
-    &kp G &kp LG(T) &mt1 W L &mt1 LCMD LG(Z)      
-    &mt3 LG(L) LG(LS(BACKSPACE)) &mt2 LSHFT LG(COMMA) &mt1 LALT I>;
+    &mt3 H V &mt3 TILDE E &kp P &mt2 LSHFT B          
+    &kp G &kp LG(T) &mt3 W L &mt2 LCMD LS(F)      
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt2 LSHFT LG(COMMA) &mt2 LALT I>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
@@ -267,8 +267,8 @@ behaviors {
     label = "LAYERS";    
     bindings = <
     &none &none &kp LG(D) &kp ENTER  
-    &none &none &kp LS(LG(I)) &mt LSHFT LG(N)                       
-    &mt3 LCTRL LG(V) &mt3 RALT LG(X) &mt3 LCMD LG(C)>;
+    &none &none &none &mt LCMD LG(N)                       
+    &kp LCTRL &mt3 LSHFT LS(LG(Z)) &mt3 LALT LG(Z)>;
     
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
@@ -281,12 +281,12 @@ behaviors {
     
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
-    SCROLLUNDO {
-    label = "SCROLLUNDO";
+    COPYPASTE {
+    label = "COPYPASTE";
     bindings = <
     &none &none &none &none
-    &kp LSHFT  &none &none &kp LS(LG(Z))
-    &kp LCTRL &kp RALT &kp LG(Z)>;
+    &kp LSHFT  &none &none &MT3 LCMD LG(C)
+    &mt3 LG(V) LG(C) &mt3 LSHFT LG(V) &mt3 LALT LG(X)>;
     
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
