@@ -285,8 +285,8 @@ behaviors {
     label = "COPYPASTE";
     bindings = <
     &none &none &none &none
-    &kp LSHFT  &none &none &MT3 LCMD LG(C)
-    &mt3 LG(V) LG(C) &mt3 LSHFT LG(V) &mt3 LALT LG(X)>;
+    &kp LSHFT  &none &none &mt3 LCMD LG(V)
+    &mt3 LG(V) LG(C) &mt3 LSHFT LG(X) &mt3 LALT LG(C)>;
     
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
