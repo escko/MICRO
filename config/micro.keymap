@@ -13,11 +13,10 @@
 #define LAYERS 2
 #define VIEW 3
 #define SCROLLUNDO 4
-#define ROTATE 5
-#define CONTROLS 6
-#define VOLUME 7
-#define CENTERLEFT 8
-#define BLUE 9
+#define CONTROLS 5
+#define VOLUME 6
+#define CENTERLEFT 7
+#define BLUE 8
 
 
 
@@ -94,45 +93,40 @@ encoder: &qdec0 {
     key-positions = <0 1 2>;
     bindings = <&mo 4>;
       };
-    ROTATE {
-    timeout-ms = <100>;
-    key-positions = <1 2 3>;
-    bindings = <&mo 5>;
-      };
     CONTROLS {
     timeout-ms = <100>;
     key-positions = <0 1 2 3>;
-    bindings = <&mo 6>;
+    bindings = <&mo 5>;
       };
     VOLUME {
     timeout-ms = <100>;
     key-positions = <0 3>;
-    bindings = <&mo 7>;
+    bindings = <&mo 6>;
       };
     CENTERLEFT {
     timeout-ms = <100>;
     key-positions = <4 5>;
-    bindings = <&mo 8>;
+    bindings = <&mo 7>;
       };
     COLORTONE {
     timeout-ms = <100>;
-    key-positions = <3 10>;
+    key-positions = <2 7>;
     bindings = <&kp LG(U)>;
       };
-    K_TRANSFORM {
+    LASSO_T {
     timeout-ms = <100>;
     key-positions = <2 3>;
-    bindings = <&mt2 LG(T) V>;
+    bindings = <&mt2 V L>;
+      };
+    INVERT {
+    timeout-ms = <100>;
+    key-positions = <1 2 3>;
+    bindings = <&kp LS(LG(I))>;
       };
     K_O {
     timeout-ms = <100>;
     key-positions = <3 7>;
     bindings = <&kp O>;
-      };
-    K_INVERT {
-    timeout-ms = <100>;
-    key-positions = <5 6>;
-    bindings = <&kp LS(LG(I))>;
       };
     K_F {
     timeout-ms = <100>;
@@ -141,12 +135,12 @@ encoder: &qdec0 {
       };
     TOGGLE {
     timeout-ms = <100>;
-    key-positions = <2 3 7 10>;
+    key-positions = <0 1 7 10>;
     bindings = <&tog 1>;
       };
     RESET {
     timeout-ms = <100>;
-    key-positions = <0 3 7 10>;
+    key-positions = <4 5 6 8>;
     bindings = <&sys_reset>;
       };
     };
@@ -254,17 +248,17 @@ behaviors {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &mt3 LCMD LS(B) &kp K &kp E &kp B          
-    &mt3 G F &kp W &kp L &mt1 LCMD C      
-    &mt3 BACKSLASH SLASH &mt LSHFT T &kp LALT>;
+    &mt3 LCMD K &kp E &kp B &mt2 LSHFT LS(B)         
+    &kp F &kp G &kp W &mt1 LCMD LG(Z)      
+    &mt3 BACKSLASH SLASH &mt LSHFT T &kp LALT C>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     label = "FRESCO";
     bindings = <
-    &kp H &kp V &mt3 TILDE E &kp P          
-    &kp G &kp W &kp L &mt1 LCMD B      
+    &mt3 H V &mt3 TILDE E &kp P &mt2 LSHFT B          
+    &kp G &kp LG(T) &mt1 W L &mt1 LCMD LG(Z)      
     &mt3 LG(L) LG(LS(BACKSPACE)) &mt2 LSHFT LG(COMMA) &mt1 LALT I>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
@@ -276,7 +270,7 @@ behaviors {
     &none &none &kp LS(LG(I)) &mt LSHFT LG(N)                       
     &mt3 LCTRL LG(V) &mt3 RALT LG(X) &mt3 LCMD LG(C)>;
     
-    sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
+    sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
     VIEW {
     label = "VIEW";
@@ -295,15 +289,6 @@ behaviors {
     &kp LCTRL &kp RALT &kp LG(Z)>;
     
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
-
-    ROTATE {
-    label = "ROTATE";
-    bindings = <
-    &none &none &none &none
-    &kp LSHFT  &none &none &kp LA(N0)
-    &kp LCTRL &kp RALT &kp LCMD>;
-    
-    sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     CONTROLS {
     label = "CONTROLS";
