@@ -31,10 +31,6 @@
     flavor = "tap-preferred";
 };
 
-&mt4 {
-    retro-tap;
-};
-
 // time to max speed ms was 1000 //
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 300    // 10
 //#define MOUSE_SCROLL_MAX 250
@@ -271,7 +267,7 @@ behaviors {
     label = "FRESCO";
     bindings = <
     &mt3 H V &mt3 TILDE E &kp P &mt3 LSHFT B          
-    &kp G &kp LG(T) &mt3 W L &mt3 LCMD LS(F)      
+    &kp G &kp LG(T) &mt4 W L &mt3 LCMD LS(F)      
     &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LALT I>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
