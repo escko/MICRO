@@ -257,7 +257,7 @@ behaviors {
     MICRO {
     label = "MICRO";
     bindings = <     
-    &kp LS(B) &kp K &mt2 TILDE E &mt3 LSHFT B        
+    &kp LS(B) &kp K &mt2 LG(E) E &mt3 LSHFT B        
     &kp F &kp G &kp W &mt3 LCMD C      
     &mt3 BACKSLASH SLASH &mt3 LSHFT T &kp LALT>;
     
