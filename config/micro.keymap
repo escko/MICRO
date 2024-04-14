@@ -76,7 +76,12 @@ encoder: &qdec0 {
 
 / { 
     combos {
-    compatible = "zmk,combos";           
+    compatible = "zmk,combos"; 
+    TOGGLE {
+    timeout-ms = <100>;
+    key-positions = <4 5 6 7>;
+    bindings = <&tog 1>;
+      };          
     LAYERS {
     timeout-ms = <100>;
     key-positions = <0 1>;
@@ -86,16 +91,6 @@ encoder: &qdec0 {
     timeout-ms = <100>;
     key-positions = <1 2>;
     bindings = <&mo 3>;
-      };
-    PATH {
-    timeout-ms = <100>;
-    key-positions = <0 1 2>;
-    bindings = <&mt4 U P >;
-      };
-    ENTER_DESELECT {
-    timeout-ms = <100>;
-    key-positions = <1 2 3>;
-    bindings = <&mt4 LG(D) ENTER>;
       };
     CONTROLS {
     timeout-ms = <100>;
@@ -112,20 +107,30 @@ encoder: &qdec0 {
     key-positions = <4 5>;
     bindings = <&mo 6>;
       };
+    INVERT {
+    timeout-ms = <100>;
+    key-positions = <0 1 2>;
+    bindings = <&kp LS(LG(I))>;
+      };
+    ENTER_DESELECT {
+    timeout-ms = <100>;
+    key-positions = <1 2 3>;
+    bindings = <&mt4 LG(D) ENTER>;
+      };
+    PATH {
+    timeout-ms = <100>;
+    key-positions = <0 1 2>;
+    bindings = <&mt4 U P >;
+      };
     COLORTONE {
     timeout-ms = <100>;
-    key-positions = <2 7>;
+    key-positions = <2 10>;
     bindings = <&kp LG(U)>;
       };
     LASSO_T {
     timeout-ms = <100>;
     key-positions = <2 3>;
     bindings = <&mt4 V L>;
-      };
-    INVERT {
-    timeout-ms = <100>;
-    key-positions = <2 3 7>;
-    bindings = <&kp LS(LG(I))>;
       };
     K_O {
     timeout-ms = <100>;
@@ -136,11 +141,6 @@ encoder: &qdec0 {
     timeout-ms = <100>;
     key-positions = <4 5 6>;
     bindings = <&kp F>;
-      };
-    TOGGLE {
-    timeout-ms = <100>;
-    key-positions = <4 5 6 7>;
-    bindings = <&tog 1>;
       };
     RESET {
     timeout-ms = <100>;
@@ -262,8 +262,8 @@ behaviors {
     label = "MICRO";
     bindings = <     
     &mt3 A LS(B) &mt3 J K &mt2 LG(E) E &mt3 M B        
-    &kp F &kp G &kp W &mt LCMD C     
-    &mt3 BACKSLASH SLASH &mt3 LSHFT PERIOD &mt2 LALT T>;   
+    &kp F &kp G &kp W &mt LALT C     
+    &mt3 BACKSLASH SLASH &mt3 LSHFT PERIOD &mt2 LCMD T>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -271,8 +271,8 @@ behaviors {
     label = "FRESCO";
     bindings = <
     &kp B &mt3 H V &kp E &mt3 LSHFT P          
-    &kp G &kp LG(T) &mt4 W L &mt3 LCMD LS(F)      
-    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LALT I>;
+    &kp G &kp LG(T) &mt4 W L &mt3 LALT LS(F)      
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LCMD I>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
@@ -280,8 +280,8 @@ behaviors {
     label = "LAYERS";    
     bindings = <
     &none &none &mt3 LG(V) LG(X) &mt3 LG(V) LG(C)  
-    &none &none &none &mt LCMD LG(Z)                       
-    &mt3 LCTRL I &mt3 LSHFT P &mt3 LALT LS(LG(Z))>;
+    &none &none &none &mt LALT LG(Z)                       
+    &mt3 LCTRL I &mt3 LSHFT P &mt3 LCMD LS(LG(Z))>;
     
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
@@ -289,8 +289,8 @@ behaviors {
     label = "VIEW";
     bindings = <
     &kp LSHFT &none &none &mt SPACE R
-    &kp LA(LG(V)) &none &kp V &mt3 LSHFT LG(N0)
-    &kp LCTRL &kp RALT &mt3 LCMD H>;
+    &kp LA(LG(V)) &none &kp V &mt SPACE LG(N0)
+    &kp LCTRL &kp LALT &mt3 LCMD H>;
     
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
