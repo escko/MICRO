@@ -115,12 +115,7 @@ encoder: &qdec0 {
     ENTER_DESELECT {
     timeout-ms = <100>;
     key-positions = <1 2 3>;
-    bindings = <&mt4 LG(D) ENTER>;
-      };
-    PATH {
-    timeout-ms = <100>;
-    key-positions = <0 1 2>;
-    bindings = <&mt4 U P >;
+    bindings = <&mt5 LG(D) ENTER>;
       };
     COLORTONE {
     timeout-ms = <100>;
@@ -206,6 +201,15 @@ behaviors {
       #binding-cells = <2>;
       flavor = "tap-preferred"; // was hold-preferred
       tapping-term-ms = <220>;
+      quick-tap-ms = <110>;
+      bindings = <&kp>, <&kp>;
+      };
+    mt5: mt5 {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_TAP3";
+      #binding-cells = <2>;
+      flavor = "tap-preferred"; // was hold-preferred
+      tapping-term-ms = <250>;
       quick-tap-ms = <110>;
       bindings = <&kp>, <&kp>;
       }; 
