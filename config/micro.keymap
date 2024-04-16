@@ -190,7 +190,12 @@ behaviors {
     //  | SW5- 4 | SW6-  5 | SW7-  6 | SW7-  7 |
     //           | SW9-  8 | SW10- 9 | SW11-10 |
 combos {
-    compatible = "zmk,combos"; 
+    compatible = "zmk,combos";
+    INFINITE {
+    timeout-ms = <100>;
+    key-positions = <4 5 6 10>;
+    bindings = <&tog 1>;
+      }; 
     ARTSTUDIO {
     timeout-ms = <100>;
     key-positions = <4 5 6 9>;
@@ -306,7 +311,7 @@ combos {
     bindings = <
     &none &none &kp LG(D) &kp ENTER  
     &none &none &none &mt LALT LG(Z)                       
-     &mt3 LG(V) LG(X) &mt3 LG(V) LG(C) &mt3 LSHFT LS(LG(Z))>;
+     &mt3 LG(V) LG(X) &mt3 LG(V) LG(C) &mt3 LCMD LS(LG(Z))>;
     
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
@@ -315,7 +320,7 @@ combos {
     bindings = <
     &kp LSHFT &none &none &mt SPACE R
     &kp LA(LG(V)) &none &kp V &mt SPACE LG(N0)
-    &kp LALT &mt3 LCMD LG(LS(BACKSPACE)) &mt3 LSHFT H>;
+    &kp LALT &mt3 LSHFT LG(LS(BACKSPACE)) &mt3 LCMD H>;
     
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
