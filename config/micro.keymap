@@ -8,14 +8,15 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 
-#define MICRO 0
-#define FRESCO 1
-#define LAYERS 2
-#define VIEW 3
-#define CONTROLS 4
-#define VOLUME 5
-#define CENTERLEFT 6
-#define BLUE 7
+#define INFINITE 0
+#define ARTSTUDIO 1
+#define FRESCO 2
+#define LAYERS 3
+#define VIEW 4
+#define CONTROLS 5
+#define VOLUME 6
+#define CENTERLEFT 7
+#define BLUE 8
 
 
 
@@ -75,77 +76,6 @@ encoder: &qdec0 {
 };
 
 / { 
-    combos {
-    compatible = "zmk,combos"; 
-    TOGGLE {
-    timeout-ms = <100>;
-    key-positions = <4 5 6 7>;
-    bindings = <&tog 1>;
-      };          
-    LAYERS {
-    timeout-ms = <100>;
-    key-positions = <0 1>;
-    bindings = <&mo 2>;
-      };
-    VIEW {
-    timeout-ms = <100>;
-    key-positions = <1 2>;
-    bindings = <&mo 3>;
-      };
-    CONTROLS {
-    timeout-ms = <100>;
-    key-positions = <0 1 2 3>;
-    bindings = <&mo 4>;
-      };
-    VOLUME {
-    timeout-ms = <100>;
-    key-positions = <0 3>;
-    bindings = <&mo 5>;
-      };
-    CENTERLEFT {
-    timeout-ms = <100>;
-    key-positions = <4 5>;
-    bindings = <&mo 6>;
-      };
-    INVERT {
-    timeout-ms = <100>;
-    key-positions = <0 1 2>;
-    bindings = <&kp LS(LG(I))>;
-      };
-    ENTER_DESELECT {
-    timeout-ms = <100>;
-    key-positions = <1 2 3>;
-    bindings = <&mt5 LG(D) ENTER>;
-      };
-    COLORTONE {
-    timeout-ms = <100>;
-    key-positions = <2 10>;
-    bindings = <&kp LG(U)>;
-      };
-    LASSO_T {
-    timeout-ms = <100>;
-    key-positions = <2 3>;
-    bindings = <&mt4 V L>;
-      };
-    K_O {
-    timeout-ms = <100>;
-    key-positions = <3 7>;
-    bindings = <&kp O>;
-      };
-    K_F {
-    timeout-ms = <100>;
-    key-positions = <4 5 6>;
-    bindings = <&kp F>;
-      };
-    RESET {
-    timeout-ms = <100>;
-    key-positions = <4 5 6 10>;
-    bindings = <&sys_reset>;
-      };
-    };
-    //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
-    //  | SW5- 4 | SW6-  5 | SW7-  6 | SW7-  7 |
-    //           | SW9-  8 | SW10- 9 | SW11-10 |
 behaviors {
     rot_scroll: rot_scroll {
       compatible = "zmk,behavior-sensor-rotate-var";
@@ -259,15 +189,106 @@ behaviors {
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
     //  | SW5- 4 | SW6-  5 | SW7-  6 | SW7-  7 |
     //           | SW9-  8 | SW10- 9 | SW11-10 |
+combos {
+    compatible = "zmk,combos"; 
+    ARTSTUDIO {
+    timeout-ms = <100>;
+    key-positions = <4 5 6 9>;
+    bindings = <&tog 1>;
+      };
+    FRESCO {
+    timeout-ms = <100>;
+    key-positions = <4 5 6 8>;
+    bindings = <&tog 2>;
+      };          
+    LAYERS {
+    timeout-ms = <100>;
+    key-positions = <0 1>;
+    bindings = <&mo 3>;
+      };
+    VIEW {
+    timeout-ms = <100>;
+    key-positions = <1 2>;
+    bindings = <&mo 4>;
+      };
+    CONTROLS {
+    timeout-ms = <100>;
+    key-positions = <0 1 2 3>;
+    bindings = <&mo 5>;
+      };
+    VOLUME {
+    timeout-ms = <100>;
+    key-positions = <0 3>;
+    bindings = <&mo 6>;
+      };
+    CENTERLEFT {
+    timeout-ms = <100>;
+    key-positions = <4 5>;
+    bindings = <&mo 7>;
+      };
+    N8 {
+    timeout-ms = <100>;
+    key-positions = <0 2>;
+    bindings = <&kp N8>;
+      };
+    N9 {
+    timeout-ms = <100>;
+    key-positions = <1 3>;
+    bindings = <&kp N9>;
+      };
+    INVERT {
+    timeout-ms = <100>;
+    key-positions = <0 1 2>;
+    bindings = <&kp LS(LG(I))>;
+      };
+    ELASTIFY_MARQUEE {
+    timeout-ms = <100>;
+    key-positions = <1 2 3>;
+    bindings = <&mt5 M P>;
+      };
+    COLORTONE {
+    timeout-ms = <100>;
+    key-positions = <2 10>;
+    bindings = <&kp LG(U)>;
+      };
+    LASSO_T {
+    timeout-ms = <100>;
+    key-positions = <2 3>;
+    bindings = <&mt4 V L>;
+      };
+    K_O {
+    timeout-ms = <100>;
+    key-positions = <3 7>;
+    bindings = <&kp O>;
+      };
+    K_F {
+    timeout-ms = <100>;
+    key-positions = <4 5 6>;
+    bindings = <&kp F>;
+      };
+    };
+    //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
+    //  | SW5- 4 | SW6-  5 | SW7-  6 | SW7-  7 |
+    //           | SW9-  8 | SW10- 9 | SW11-10 |
+
  keymap {
     compatible = "zmk,keymap";
 
-    MICRO {
-    label = "MICRO";
+    INFINITE {
+    label = "INFINITE";
     bindings = <     
-    &mt3 A LS(B) &mt3 J K &mt2 LG(E) E &mt3 M B        
+    &kp LS(B) &kp K &kp E &mt1 LSHFT B        
     &kp F &kp G &kp W &mt LALT C     
-    &mt3 BACKSLASH SLASH &mt3 LSHFT PERIOD &mt2 LCMD T>;   
+    &mt4 LG(U) LG(B) &mt4 BACKSLASH SLASH &mt1 LCMD T>;   
+    
+    sensor-bindings = <&rot_kp LBKT RBKT>; };
+
+    ARTSTUDIO {
+    label = "ARTSTUDIO";
+    bindings = <     
+    &mt3 P R  &mt3 Q K &kp E &mt1 LSHFT B        
+    &kp F &mt3 G A &kp W &mt LALT C     
+    &mt4 COMMA PERIOD &mt4 BACKSLASH SLASH &mt1 LCMD T>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -283,9 +304,9 @@ behaviors {
     LAYERS {
     label = "LAYERS";    
     bindings = <
-    &none &none &mt3 LG(V) LG(X) &mt3 LG(V) LG(C)  
+    &none &none &kp LG(D) &kp ENTER  
     &none &none &none &mt LALT LG(Z)                       
-    &mt3 LCTRL I &mt3 LSHFT P &mt3 LCMD LS(LG(Z))>;
+     &mt3 LG(V) LG(X) &mt3 LG(V) LG(C) &mt3 LSHFT LS(LG(Z))>;
     
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
@@ -294,7 +315,7 @@ behaviors {
     bindings = <
     &kp LSHFT &none &none &mt SPACE R
     &kp LA(LG(V)) &none &kp V &mt SPACE LG(N0)
-    &kp LCTRL &kp LALT &mt3 LCMD H>;
+    &kp LALT &mt3 LCMD LG(LS(BACKSPACE)) &mt3 LSHFT H>;
     
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
