@@ -266,7 +266,7 @@ combos {
       };
     K_G {
     timeout-ms = <100>;
-    key-positions = <3 7>;
+    key-positions = <4 5>;
     bindings = <&kp G>;
       };
     };
