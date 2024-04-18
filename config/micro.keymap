@@ -242,7 +242,7 @@ combos {
     SPACEBAR {
     timeout-ms = <100>;
     key-positions = <0 1 2>;
-    bindings = <&kp SPACEBAR>;
+    bindings = <&kp SPACE>;
       };
     ELASTIFY_MARQUEE {
     timeout-ms = <100>;
