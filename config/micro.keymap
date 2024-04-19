@@ -12,8 +12,8 @@
 #define ARTSTUDIO 1
 #define FRESCO 2
 #define LAYERS 3
-#define CONTROLS 4
-#define VOLUME 5
+#define UNDO_COPY 4
+#define PLAY_PAUSE 5
 #define BLUE 6
 
 
@@ -203,26 +203,21 @@ combos {
     timeout-ms = <100>;
     key-positions = <4 5 6 8>;
     bindings = <&tog 2>;
-      };          
+      };
     LAYERS {
     timeout-ms = <100>;
     key-positions = <0 1>;
     bindings = <&mo 3>;
       };
-    ROTATE {
-    timeout-ms = <100>;
-    key-positions = <0 3>;
-    bindings = <&mo 4>;
-      };
-    VOLUME {
-    timeout-ms = <100>;
-    key-positions = <4 5 6>;
-    bindings = <&mo 5>;
-      };
-    ELASTIFY_ {
+    UNDO_COPY {
     timeout-ms = <100>;
     key-positions = <0 1 2>;
-    bindings = <&kp SEMICOLON>;
+    bindings = <&mo 4>;
+      };
+    PLAY_PAUSE {
+    timeout-ms = <100>;
+    key-positions = <0 3>;
+    bindings = <&mo 5>;
       };
     K_I {
     timeout-ms = <100>;
@@ -239,11 +234,6 @@ combos {
     key-positions = <2 3>;
     bindings = <&mt J V>;
       };
-    POLYLASSO_MARQUEE {
-    timeout-ms = <100>;
-    key-positions = <1 2 3>;
-    bindings = <&mt5 SEMICOLON M>;
-      };
     INVERT {
     timeout-ms = <100>;
     key-positions = <1 2 10>;
@@ -256,18 +246,23 @@ combos {
       };
     ZOOM {
     timeout-ms = <100>;
-    key-positions = <3 7>;
-    bindings = <&mt Z LG(0)>;
+    key-positions = <1 2 3>;
+    bindings = <&kp Z>;
       };
     SPACEBAR {
     timeout-ms = <100>;
     key-positions = <7 10>;
-    bindings = <&kp SPACE>;
+    bindings = <&mt SPACE LG(N0)>;
       };
-    K_G {
+    K_A {
     timeout-ms = <100>;
     key-positions = <4 5>;
-    bindings = <&kp G>;
+    bindings = <&kp A>;
+      };
+    ENTER_DESELECT {
+    timeout-ms = <100>;
+    key-positions = <0 1 2 3>;
+    bindings = <&mt3 LG(D) ENTER>;
       };
     };
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
@@ -285,16 +280,14 @@ combos {
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
-    label = "ARTSTUDIO";
     bindings = <     
-    &mt3 H R &mt3 K Q &kp E &mt1 LC(LALT) B        
-    &kp F &kp A &kp W &mt LALT C     
+    &mt3 H R &mt3 K Q &kp E &mt LC(LALT) B        
+    &kp F &kp G &kp W &mt LALT C     
     &mt4 BACKSLASH SLASH &mt1 LCMD COMMA &mt1 LSHFT T>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
-    label = "FRESCO";
     bindings = <
     &mt4 H B &kp V &kp E &mt3 LSHFT P          
     &kp G &kp LG(T) &mt4 W L &mt3 LALT LS(F)      
@@ -302,35 +295,31 @@ combos {
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
-    OPTIONS {
-    label = "OPTIONS";    
+    LAYERS {   
     bindings = <
-    &none &none &kp LG(D) &kp ENTER  
-    &none &none &none &mt LALT LG(Z)                       
-    &mt3 LG(V) LG(X) &mt3 LG(V) LG(C) &mt3 LSHFT LS(LG(Z))>;
+    &none &none &mt3 LALT S &mt3 LSHFT D  
+    &none &none &none &mt3 LALT LG(N)                       
+    &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 LSHFT LG(M)>;
+
+    sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
+
+    UNDO_COPY {
+    bindings = <
+    &none &none &none &kp LG(Z)
+    &none &none &none &mt4 LALT LS(LG(Z))
+    &mt4 LS(LG(V)) LG(V) &mt4 LS(LG(C)) LG(C) &mt4 LS(LG(X)) LG(X)>;
 
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
-    LAYERS {
-    label = "LAYERS";
+    PLAY_PAUSE {
     bindings = <
     &none &none &none &none
     &none &none &none &kp C_PLAY_PAUSE
-    &kp RCTRL &kp LALT &kp RCMD>;
+    &kp RCTRL &kp C_VOL_DN &kp C_VOL_UP>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
-
-    VOLUME {
-    label = "VOLUME";
-    bindings = <
-    &none &none &none &none
-    &none &none &none &kp C_PLAY_PAUSE
-    &kp RCTRL &kp LALT &kp RCMD>;
-    
-    sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP>; };
             
     BLUE {
-    label = "BLUE";
     bindings = <
     &none &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_SAI
     &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD      
