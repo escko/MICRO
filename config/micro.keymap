@@ -209,19 +209,19 @@ combos {
     key-positions = <0 1>;
     bindings = <&mo 3>;
       };
-    CONTROLS {
+    ROTATE {
     timeout-ms = <100>;
-    key-positions = <4 5 6>;
+    key-positions = <0 3>;
     bindings = <&mo 4>;
       };
     VOLUME {
     timeout-ms = <100>;
-    key-positions = <0 3>;
+    key-positions = <4 5 6>;
     bindings = <&mo 5>;
       };
-    POLYLASSO {
+    ELASTIFY_ {
     timeout-ms = <100>;
-    key-positions = <0 1 2 3>;
+    key-positions = <0 1 2>;
     bindings = <&kp SEMICOLON>;
       };
     K_I {
@@ -234,35 +234,35 @@ combos {
     key-positions = <1 3>;
     bindings = <&kp O>;
       };
-    MOVE {
+    MOVE_TRANSFORM {
     timeout-ms = <100>;
-    key-positions = <1 2>;
-    bindings = <&kp J>;
+    key-positions = <2 3>;
+    bindings = <&mt J V>;
       };
-    SPACEBAR {
-    timeout-ms = <100>;
-    key-positions = <0 1 2>;
-    bindings = <&kp SPACE>;
-      };
-    ELASTIFY_MARQUEE {
+    POLYLASSO_MARQUEE {
     timeout-ms = <100>;
     key-positions = <1 2 3>;
-    bindings = <&mt5 M Y>;
+    bindings = <&mt5 SEMICOLON M>;
       };
     INVERT {
     timeout-ms = <100>;
-    key-positions = <2 3 9>;
+    key-positions = <1 2 10>;
     bindings = <&kp LS(LG(I))>;
       };
-    V_L {
+    LASSO {
     timeout-ms = <100>;
-    key-positions = <2 3>;
-    bindings = <&mt4 V L>;
+    key-positions = <1 2>;
+    bindings = <&kp L>;
       };
     ZOOM {
     timeout-ms = <100>;
     key-positions = <3 7>;
-    bindings = <&mt1 Z LG(0)>;
+    bindings = <&mt Z LG(0)>;
+      };
+    SPACEBAR {
+    timeout-ms = <100>;
+    key-positions = <7 10>;
+    bindings = <&kp SPACE>;
       };
     K_G {
     timeout-ms = <100>;
@@ -277,11 +277,10 @@ combos {
     compatible = "zmk,keymap";
 
     INFINITE {
-    label = "INFINITE";
     bindings = <     
     &mt4 H LS(B) &kp K &kp E &mt1 O B        
     &kp F &kp G &kp W &mt LALT C     
-    &mt4 BACKSLASH SLASH &mt1 LSHFT P &mt1 LCMD T>;   
+    &mt4 BACKSLASH SLASH &mt1 LCMD P &mt1 LSHFT T>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -290,7 +289,7 @@ combos {
     bindings = <     
     &mt3 H R &mt3 K Q &kp E &mt1 LC(LALT) B        
     &kp F &kp A &kp W &mt LALT C     
-    &mt4 BACKSLASH SLASH &mt1 LSHFT COMMA &mt1 LCMD T>;   
+    &mt4 BACKSLASH SLASH &mt1 LCMD COMMA &mt1 LSHFT T>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -299,25 +298,25 @@ combos {
     bindings = <
     &mt4 H B &kp V &kp E &mt3 LSHFT P          
     &kp G &kp LG(T) &mt4 W L &mt3 LALT LS(F)      
-    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LCMD I>;
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LCMD LG(COMMA) &mt3 LSHFT I>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
-    LAYERS {
-    label = "LAYERS";    
+    OPTIONS {
+    label = "OPTIONS";    
     bindings = <
     &none &none &kp LG(D) &kp ENTER  
     &none &none &none &mt LALT LG(Z)                       
-     &mt3 LG(V) LG(X) &mt3 LG(V) LG(C) &mt3 LCMD LS(LG(Z))>;
-    
+    &mt3 LG(V) LG(X) &mt3 LG(V) LG(C) &mt3 LSHFT LS(LG(Z))>;
+
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
-    CONTROLS {
-    label = "CONTROLS";
+    LAYERS {
+    label = "LAYERS";
     bindings = <
     &none &none &none &none
-    &kp F19 &kp LC(LA(LS(LG(W)))) &mt3 LG(INT1) LC(LA(LG(V))) &mt3 LSHFT C_PLAY_PAUSE   
-    &mt3 LCTRL LC(LA(LG(Z))) &mt3 RALT LG(LC(LA(X))) &mt3 LCMD LG(LC(LA(C)))>;
+    &none &none &none &kp C_PLAY_PAUSE
+    &kp RCTRL &kp LALT &kp RCMD>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
@@ -327,6 +326,7 @@ combos {
     &none &none &none &none
     &none &none &none &kp C_PLAY_PAUSE
     &kp RCTRL &kp LALT &kp RCMD>;
+    
     sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP>; };
             
     BLUE {
