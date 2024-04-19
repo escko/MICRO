@@ -216,7 +216,7 @@ combos {
       };
     ENTER_DESELECT {
     timeout-ms = <100>;
-    key-positions = <0 1 2 3>;
+    key-positions = <1 2 3>;
     bindings = <&mt3 LG(D) ENTER>;
       };
     K_I {
@@ -234,10 +234,10 @@ combos {
     key-positions = <1 2>;
     bindings = <&kp L>;
       };
-    ZOOM {
+    SPACEBAR {
     timeout-ms = <100>;
-    key-positions = <1 2 3>;
-    bindings = <&kp Z>;
+    key-positions = <1 2 3 4>;
+    bindings = <&kp SPACE>;
       };
     INVERT {
     timeout-ms = <100>;
@@ -259,10 +259,10 @@ combos {
     key-positions = <4 5>;
     bindings = <&kp A>;
       };
-    SPACEBAR {
+    ZOOM {
     timeout-ms = <100>;
     key-positions = <7 10>;
-    bindings = <&mt SPACE LG(N0)>;
+    bindings = <&mt Z LG(N0)>;
       };
     };
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
