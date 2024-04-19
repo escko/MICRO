@@ -307,7 +307,7 @@ combos {
     bindings = <
     &none &none &none &kp LG(Z)
     &none &none &none &mt4 LALT LS(LG(Z))
-    &mt4 LS(LG(V)) LG(V) &mt4 LS(LG(C)) LG(C) &mt4 LS(LG(X)) LG(X)>;
+    &mt4 LS(LG(V)) LG(V) &mt4 LS(LG(X)) LG(X) &mt4 LS(LG(C)) LG(C)>;
 
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
