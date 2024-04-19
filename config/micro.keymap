@@ -214,30 +214,20 @@ combos {
     key-positions = <0 1 2>;
     bindings = <&mo 4>;
       };
-    PLAY_PAUSE {
+    ENTER_DESELECT {
     timeout-ms = <100>;
-    key-positions = <0 3>;
-    bindings = <&mo 5>;
+    key-positions = <0 1 2 3>;
+    bindings = <&mt3 LG(D) ENTER>;
       };
     K_I {
     timeout-ms = <100>;
     key-positions = <0 2>;
     bindings = <&kp I>;
       };
-    K_O {
+    PLAY_PAUSE {
     timeout-ms = <100>;
-    key-positions = <1 3>;
-    bindings = <&kp O>;
-      };
-    MOVE_TRANSFORM {
-    timeout-ms = <100>;
-    key-positions = <2 3>;
-    bindings = <&mt J V>;
-      };
-    INVERT {
-    timeout-ms = <100>;
-    key-positions = <1 2 10>;
-    bindings = <&kp LS(LG(I))>;
+    key-positions = <0 3>;
+    bindings = <&mo 5>;
       };
     LASSO {
     timeout-ms = <100>;
@@ -249,20 +239,30 @@ combos {
     key-positions = <1 2 3>;
     bindings = <&kp Z>;
       };
-    SPACEBAR {
+    INVERT {
     timeout-ms = <100>;
-    key-positions = <7 10>;
-    bindings = <&mt SPACE LG(N0)>;
+    key-positions = <1 2 10>;
+    bindings = <&kp LS(LG(I))>;
+      };
+    K_O {
+    timeout-ms = <100>;
+    key-positions = <1 3>;
+    bindings = <&kp O>;
+      };
+    MOVE_TRANSFORM {
+    timeout-ms = <100>;
+    key-positions = <2 3>;
+    bindings = <&mt J V>;
       };
     K_A {
     timeout-ms = <100>;
     key-positions = <4 5>;
     bindings = <&kp A>;
       };
-    ENTER_DESELECT {
+    SPACEBAR {
     timeout-ms = <100>;
-    key-positions = <0 1 2 3>;
-    bindings = <&mt3 LG(D) ENTER>;
+    key-positions = <7 10>;
+    bindings = <&mt SPACE LG(N0)>;
       };
     };
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
