@@ -240,10 +240,10 @@ combos {
     key-positions = <1 2>;
     bindings = <&kp O>;
       };
-    K_I {
+    K_M {
     timeout-ms = <100>;
     key-positions = <1 3>;
-    bindings = <&kp I>;
+    bindings = <&kp M>;
       };
     INVERT {
     timeout-ms = <100>;
@@ -255,10 +255,10 @@ combos {
     key-positions = <2 3>;
     bindings = <&kp L>;
       };
-    ELASTIFY_REC {
+    REC_ELASTIFY {
     timeout-ms = <100>;
     key-positions = <2 3 7>;
-    bindings = <&mt3 M Y>;
+    bindings = <&mt3 I Y>;
       };
     K_A {
     timeout-ms = <100>;
