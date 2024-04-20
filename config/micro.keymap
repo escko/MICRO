@@ -257,7 +257,7 @@ combos {
       };
     CLEAR_LAYER {
     timeout-ms = <100>;
-    key-positions = <2 7>;
+    key-positions = <2 7 10>;
     bindings = <&kp LG(LS(BACKSPACE))>;
       };
     REC_ELASTIFY {
