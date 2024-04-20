@@ -230,10 +230,10 @@ combos {
     key-positions = <1 2 3>;
     bindings = <&kp V>;
       };
-    K_U {
+    COMMA_PERIOD {
     timeout-ms = <100>;
     key-positions = <0 2>;
-    bindings = <&kp U>;
+    bindings = <&mt3 COMMA PERIOD>;
       };
     MOVE {
     timeout-ms = <100>;
@@ -254,6 +254,11 @@ combos {
     timeout-ms = <100>;
     key-positions = <2 3>;
     bindings = <&kp L>;
+      };
+    CLEAR_BLENDING {
+    timeout-ms = <100>;
+    key-positions = <2 7>;
+    bindings = <&kp U>;
       };
     REC_ELASTIFY {
     timeout-ms = <100>;
@@ -282,7 +287,7 @@ combos {
 
     ARTSTUDIO {
     bindings = <     
-    &mt3 P Q &kp K &kp E &mt LC(LALT) B        
+    &mt3 P Q &kp K &mt U E &mt LC(LALT) B        
     &kp F &kp G &kp W &mt LALT C     
     &mt4 BACKSLASH SLASH &mt1 LCMD T &mt1 LSHFT R>;   
     
