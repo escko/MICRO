@@ -229,10 +229,10 @@ combos {
     key-positions = <0 3>;
     bindings = <&mo 5>;
       };
-    LASSO {
+    MOVE {
     timeout-ms = <100>;
     key-positions = <1 2>;
-    bindings = <&kp L>;
+    bindings = <&mt J Y>;
       };
     SPACEBAR {
     timeout-ms = <100>;
@@ -241,7 +241,7 @@ combos {
       };
     INVERT {
     timeout-ms = <100>;
-    key-positions = <1 2 10>;
+    key-positions = <2 3 10>;
     bindings = <&kp LS(LG(I))>;
       };
     K_O {
@@ -249,10 +249,10 @@ combos {
     key-positions = <1 3>;
     bindings = <&kp O>;
       };
-    MOVE_TRANSFORM {
+    LASSO_TRANSFORM {
     timeout-ms = <100>;
     key-positions = <2 3>;
-    bindings = <&mt J V>;
+    bindings = <&mt L V>;
       };
     K_A {
     timeout-ms = <100>;
@@ -262,7 +262,7 @@ combos {
     ZOOM {
     timeout-ms = <100>;
     key-positions = <7 10>;
-    bindings = <&mt Z LG(N0)>;
+    bindings = <&mt1 Z LG(N0)>;
       };
     };
     //  | SW1- 0 | SW2-  1 | SW3-  2 | SW4-  3 |
