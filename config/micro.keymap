@@ -323,7 +323,7 @@ combos {
     ZOOM {
     bindings = <
     &none &none &none &none
-    &none &none &none &kp LG(N0)
+    &none &none &none &mt SPACE LG(N0)
     &mo BLUE &kp C_VOL_DN &mt3 LS(H) H>;
     
     sensor-bindings = <&rot_kp LG(MINUS) LG(LS(SEMICOLON))>; };
