@@ -13,8 +13,9 @@
 #define FRESCO 2
 #define LAYERS 3
 #define UNDO_COPY 4
-#define PLAY_PAUSE 5
-#define BLUE 6
+#define MEDIA 5
+#define ZOOM 6
+#define BLUE 7
 
 
 
@@ -214,20 +215,20 @@ combos {
     key-positions = <0 1 2>;
     bindings = <&mo 4>;
       };
-    PLAY_PAUSE {
+    MEDIA {
     timeout-ms = <100>;
     key-positions = <0 3>;
     bindings = <&mo 5>;
       };
     ZOOM {
     timeout-ms = <100>;
-    key-positions = <1 2 3>;
-    bindings = <&kp Z>;
-      };
-    SPACEBAR {
-    timeout-ms = <100>;
     key-positions = <0 1 2 3>;
-    bindings = <&kp SPACE>;
+    bindings = <&mo 6>;
+      };
+    TRANSFORM {
+    timeout-ms = <100>;
+    key-positions = <1 2 3>;
+    bindings = <&kp V>;
       };
     K_I {
     timeout-ms = <100>;
@@ -249,10 +250,10 @@ combos {
     key-positions = <2 3 10>;
     bindings = <&kp LS(LG(I))>;
       };
-    LASSO_TRANSFORM {
+    LASSO {
     timeout-ms = <100>;
     key-positions = <2 3>;
-    bindings = <&mt3 V L>;
+    bindings = <&kp L>;
       };
     ELASTIFY_REC {
     timeout-ms = <100>;
@@ -273,17 +274,17 @@ combos {
 
     INFINITE {
     bindings = <     
-    &mt4 H LS(B) &kp K &kp E &mt1 O B        
+    &kp P &kp K &kp E &mt1 O B        
     &kp F &kp G &kp W &mt LALT C     
-    &mt4 BACKSLASH SLASH &mt1 LCMD P &mt1 LSHFT T>;   
+    &mt4 BACKSLASH SLASH &mt1 LCMD T &mt1 LSHFT LS(B)>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
-    &mt3 H R &mt3 K Q &kp E &mt LC(LALT) B        
+    &kp Q &kp K &kp E &mt LC(LALT) B        
     &kp F &kp G &kp W &mt LALT C     
-    &mt4 BACKSLASH SLASH &mt1 LCMD COMMA &mt1 LSHFT T>;   
+    &mt4 BACKSLASH SLASH &mt1 LCMD T &mt1 LSHFT R>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -311,19 +312,27 @@ combos {
 
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
-    PLAY_PAUSE {
+    MEDIA {
     bindings = <
     &none &none &none &none
     &none &none &none &kp C_PLAY_PAUSE
     &kp RCTRL &kp C_VOL_DN &kp C_VOL_UP>;
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
+
+    ZOOM {
+    bindings = <
+    &none &none &none &none
+    &none &none &none &kp LG(N0)
+    &mo BLUE &kp C_VOL_DN &mt3 LS(H) H>;
+    
+    sensor-bindings = <&rot_kp LG(MINUS) LG(LS(SEMICOLON))>; };
             
     BLUE {
     bindings = <
-    &none &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_SAI
+    &bt BT_CLR &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_SAI
     &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD      
-    &bt BT_CLR &out OUT_TOG &ext_power EP_TOG>;
+    &none &out OUT_TOG &ext_power EP_TOG>;
     
     sensor-bindings = <&rgb_encoder>; };
     };
