@@ -14,7 +14,7 @@
 #define LAYERS 3
 #define UNDO_COPY 4
 #define MEDIA 5
-#define ZOOM 6
+#define VIEW 6
 #define BLUE 7
 
 
@@ -220,7 +220,7 @@ combos {
     key-positions = <0 3>;
     bindings = <&mo 5>;
       };
-    ZOOM {
+    VIEW {
     timeout-ms = <100>;
     key-positions = <0 1 2 3>;
     bindings = <&mo 6>;
@@ -330,11 +330,11 @@ combos {
     
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
-    ZOOM {
+    VIEW {
     bindings = <
     &none &none &none &none
     &none &none &none &mt SPACE LG(N0)
-    &mo BLUE &mt3 LS(J) J &mt3 LS(H) H>;
+    &mo BLUE &mt3 LS(J) J &mt LS(H) H>;
     
     sensor-bindings = <&rot_kp LG(MINUS) LG(LS(SEMICOLON))>; };
             
