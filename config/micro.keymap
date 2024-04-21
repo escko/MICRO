@@ -260,11 +260,6 @@ combos {
     key-positions = <2 7>;
     bindings = <&kp U>;
       };
-    CLEAR_LAYER {
-    timeout-ms = <100>;
-    key-positions = <2 7 10>;
-    bindings = <&kp LG(LS(BACKSPACE))>;
-      };
     K_I {
     timeout-ms = <100>;
     key-positions = <3 7>;
@@ -286,7 +281,7 @@ combos {
     bindings = <     
     &kp P &kp K &kp E &kp B        
     &kp F &kp G &kp W &mt LALT C     
-    &mt4 BACKSLASH SLASH &mt1 LCMD T &mt1 LSHFT LS(B)>;   
+    &mt4 BACKSLASH SLASH &mt1 LSHFT T &mt1 LCMD LS(B)>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -294,7 +289,7 @@ combos {
     bindings = <     
     &mt3 P Q &kp K &kp E &mt LC(LALT) B        
     &kp F &kp G &kp W &mt LALT C     
-    &mt4 BACKSLASH SLASH &mt1 LCMD T &mt1 LSHFT R>;   
+    &mt4 BACKSLASH SLASH &mt1 LSHFT T &mt1 LCMD R>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -302,7 +297,7 @@ combos {
     bindings = <
     &mt4 H B &kp V &kp E &mt3 LSHFT P          
     &kp G &kp LG(T) &mt4 W L &mt3 LALT LS(F)      
-    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LCMD LG(COMMA) &mt3 LSHFT I>;
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LCMD I>;
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
