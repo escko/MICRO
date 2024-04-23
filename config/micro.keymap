@@ -228,12 +228,12 @@ combos {
     TRANSFORM {
     timeout-ms = <100>;
     key-positions = <1 2 3>;
-    bindings = <&kp V>;
+    bindings = <&mt4 LS(LG(I)) V>;
       };
     COMMA_PERIOD {
     timeout-ms = <100>;
     key-positions = <0 2>;
-    bindings = <&mt3 COMMA PERIOD>;
+    bindings = <&mt4 COMMA PERIOD>;
       };
     MOVE {
     timeout-ms = <100>;
@@ -243,7 +243,7 @@ combos {
     K_M {
     timeout-ms = <100>;
     key-positions = <1 3>;
-    bindings = <&mt3 LC(M) M>;
+    bindings = <&mt4 LC(M) M>;
       };
     LASSO {
     timeout-ms = <100>;
@@ -263,7 +263,7 @@ combos {
     K_I {
     timeout-ms = <100>;
     key-positions = <3 7>;
-    bindings = <&mt3 LC(I) I>;
+    bindings = <&mt4 LC(I) I>;
       };
     K_A {
     timeout-ms = <100>;
@@ -303,16 +303,16 @@ combos {
     
     LAYERS {   
     bindings = <
-    &none &none &mt3 D LG(D) &mt3 S ENTER  
+    &none &none &mt4 LS(D) LG(D) &mt4 S ENTER  
     &none &none &none &mt3 LALT LG(N)                       
-    &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 LSHFT LG(M)>;
+    &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 LCMD LG(M)>;
 
     sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
 
     UNDO_COPY {
     bindings = <
-    &none &none &none &kp LG(Z)
-    &none &none &none &mt4 LALT LS(LG(Z))
+    &none &none &none &kp LS(LG(Z))
+    &none &none &none &mt4 LALT LG(Z)
     &mt4 LS(LG(V)) LG(V) &mt4 LS(LG(X)) LG(X) &mt4 LS(LG(C)) LG(C)>;
 
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
@@ -329,7 +329,7 @@ combos {
     bindings = <
     &none &none &none &none
     &none &none &none &mt SPACE LG(N0)
-    &mo BLUE &mt3 LS(J) J &mt LS(H) H>;
+    &mo BLUE &mt4 LS(J) J &mt LS(H) H>;
     
     sensor-bindings = <&rot_kp LG(MINUS) LG(LS(SEMICOLON))>; };
             
