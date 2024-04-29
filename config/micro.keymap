@@ -245,7 +245,7 @@ combos {
       };
     ELASTIFY {
     timeout-ms = <100>;
-    key-positions = <2 3 8 11>;
+    key-positions = <2 3 11>;
     bindings = <&kp Y>;
       };
     ELLIPSE {
