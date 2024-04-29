@@ -283,6 +283,11 @@ combos {
     key-positions = <5 6>;
     bindings = <&kp P>;
       };
+    K_K {
+    timeout-ms = <100>;
+    key-positions = <5 6 11>;
+    bindings = <&kp K>;
+      };
     RESET {
     timeout-ms = <100>;
     key-positions = <4 5 6 11>;
@@ -299,24 +304,21 @@ combos {
     bindings = <     
     &kp P &kp K &kp E &mt 0 B        
     &kp W &kp G &mt4 LG(U) LG(B) &kp LS(B) &mt LALT C  
-    &kp BACKSLASH &mt1 LSHFT SLASH &mt1 LCMD T>;   
-    
+    &kp BACKSLASH &mt1 LSHFT SLASH &mt1 LCMD T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
-    &kp Q &kp W &kp E &mt LC(LALT) B        
-    &mt4 K A &kp S &kp D &mt4 LA(R) R &mt LALT C   
-    &mt4 BACKSLASH SLASH &mt1 LSHFT T &mt1 LCMD X>;   
-    
+    &mt LSHFT Q &kp W &kp E &mt LC(LALT) R        
+    &kp A &kp S &kp D &mt4 LA(LG(B)) B &mt RALT C   
+    &mt3 LCTRL N1 &mt1 LSHFT T &mt1 RCMD X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
     &mt4 H B &kp V &kp E &mt3 LSHFT P          
     &kp W &kp LG(T) &kp L &kp G &mt3 LALT LS(F)     
-    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LCMD I>;
-    
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LCMD I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
     LAYERS {   
@@ -324,7 +326,6 @@ combos {
     &none &none &mt4 LS(LG(I)) LG(D) &mt4 ESCAPE ENTER  
     &none &kp COMMA &kp PERIOD &none &mt3 LALT LS(N)                       
     &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 LCMD LS(M)>;
-
     sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
 
     UNDO_COPY {
@@ -332,38 +333,34 @@ combos {
     &none &none &none &kp LS(LG(Z))
     &none &none &none &none &mt4 LALT LG(Z)
     &mt4 LS(LG(V)) LG(V) &mt4 LS(LG(X)) LG(X) &mt4 LS(LG(C)) LG(C)>;
-
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
-
-    MEDIA {
-    bindings = <
-    &none &none &none &none
-    &none &none &none &mt5 C_MUTE C_PLAY_PAUSE &kp C_VOL_UP
-    &mo BLUE &none &kp C_VOL_DN>;
-    
-    sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     VIEW {
     bindings = <
     &none &none &none &none
     &none &none &none &kp SEMICOLON &mt LA(SPACE) LG(N0)
-    &kp LCTRL &mt4 LS(J) J &mt SPACE H>;
-    
+    &kp LCTRL &mt4 LS(J) J &mt SPACE H>;    
     sensor-bindings = <&rot_kp LG(MINUS) LG(LS(SEMICOLON))>; };
 
     ROTATE {
     bindings = <
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &kp LG(N0) 
-    &kp LS(EQUAL) &kp LC(EQUAL) &kp LG(EQUAL)>;    
+    &kp LS(EQUAL) &kp LC(EQUAL) &kp LG(EQUAL)>;
+    sensor-bindings = <&rot_kp LEFT RIGHT>; };
+
+    MEDIA {
+    bindings = <
+    &none &none &none &none
+    &none &none &none &mt5 C_MUTE C_PLAY_PAUSE &kp C_VOL_UP
+    &mo BLUE &none &kp C_VOL_DN>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
             
     BLUE {
     bindings = <
     &bt BT_CLR &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_SAI
     &bt BT_SEL 0 &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SAD &kp K     
-    &none &out OUT_TOG &ext_power EP_TOG>;
-    
+    &none &out OUT_TOG &ext_power EP_TOG>;    
     sensor-bindings = <&rgb_encoder>; };
     };
 };
