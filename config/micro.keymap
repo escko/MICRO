@@ -223,25 +223,15 @@ combos {
     key-positions = <4 5 6>;
     bindings = <&mo 7>;
       };
-    K_N8 {
-    timeout-ms = <100>;
-    key-positions = <0 2>;
-    bindings = <&mt4 N8 N9>;
-      };
     MOVE {
     timeout-ms = <100>;
     key-positions = <1 2>;
-    bindings = <&kp O>;
+    bindings = <&kp J>;
       };
     TRANSFORM {
     timeout-ms = <100>;
     key-positions = <1 2 3>;
     bindings = <&kp V>;
-      };
-    INVERT {
-    timeout-ms = <100>;
-    key-positions = <1 3>;
-    bindings = <&kp LS(LG(I))>;
       };
     LASSO {
     timeout-ms = <100>;
@@ -258,9 +248,14 @@ combos {
     key-positions = <2 3 8 11>;
     bindings = <&kp Y>;
       };
+    ELLIPSE {
+    timeout-ms = <100>;
+    key-positions = <0 2>;
+    bindings = <&kp O>;
+      };
     MARQUEE {
     timeout-ms = <100>;
-    key-positions = <2 3 11>;
+    key-positions = <1 3>;
     bindings = <&kp M>;
       };
     K_U {
@@ -276,7 +271,17 @@ combos {
     POLYGON {
     timeout-ms = <100>;
     key-positions = <3 8 11>;
-    bindings = <&kp X>;
+    bindings = <&kp LG(I)>;
+      };
+    K_G {
+    timeout-ms = <100>;
+    key-positions = <4 5>;
+    bindings = <&kp G>;
+      };
+    K_P {
+    timeout-ms = <100>;
+    key-positions = <5 6>;
+    bindings = <&kp P>;
       };
     RESET {
     timeout-ms = <100>;
@@ -292,17 +297,17 @@ combos {
 
     INFINITE {
     bindings = <     
-    &kp P &kp K &kp E &kp B        
+    &mt1 LSHFT P &kp K &kp E &kp B        
     &kp W &kp G &mt4 LG(U) LG(B) &kp LS(B) &mt LALT C  
-    &kp BACKSLASH &mt1 LSHFT SLASH &mt1 LCMD T>;   
+    &mt4 BACKSLASH SLASH &mt1 LCMD T &kp O>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
-    &mt3 P Q &kp K &kp E &mt LC(LALT) B        
-    &kp W &kp G &kp A &mt4 LA(R) R &mt LALT C   
-    &mt4 BACKSLASH SLASH &mt1 LSHFT T &mt1 LCMD Z>;   
+    &kp Q &kp W &kp E &mt LC(LALT) B        
+    &mt4 K A &kp S &kp D &mt4 LA(R) R &mt LALT C   
+    &mt4 BACKSLASH SLASH &mt1 LSHFT T &mt1 LCMD X>;   
     
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -316,7 +321,7 @@ combos {
     
     LAYERS {   
     bindings = <
-    &none &none &mt4 LS(D) LG(D) &mt4 S ENTER  
+    &none &none &mt4 LS(LG(I)) LG(D) &mt4 ESCAPE ENTER  
     &none &kp COMMA &kp PERIOD &none &mt3 LALT LS(N)                       
     &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 LCMD LS(M)>;
 
