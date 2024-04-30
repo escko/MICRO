@@ -263,10 +263,20 @@ combos {
     key-positions = <2 8>;
     bindings = <&kp U>;
       };
-    K_F {
+    FILL {
     timeout-ms = <100>;
     key-positions = <3 8>;
     bindings = <&kp F>;
+      };
+    ENCLOSEFILL {
+    timeout-ms = <100>;
+    key-positions = <0 3 8>;
+    bindings = <&kp LS(LG(F))>;
+      };
+    PATHTOOLFILL {
+    timeout-ms = <100>;
+    key-positions = <2 3 8 11>;
+    bindings = <&kp LS(F)>;
       };
     POLYGON {
     timeout-ms = <100>;
