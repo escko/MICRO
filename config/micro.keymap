@@ -303,8 +303,8 @@ combos {
     INFINITE {
     bindings = <     
     &kp P &kp K &kp E &mt 0 B        
-    &kp W &kp G &mt4 LG(U) LG(B) &kp LS(B) &mt LALT C  
-    &kp BACKSLASH &mt1 LSHFT SLASH &mt1 LCMD T>;       
+    &kp W &kp G &mt4 LG(U) LG(B) &kp LS(B) &mt RALT C  
+    &kp BACKSLASH &mt1 LSHFT SLASH &mt1 RCMD T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
@@ -317,15 +317,15 @@ combos {
     FRESCO {
     bindings = <
     &mt4 H B &kp V &kp E &mt3 LSHFT P          
-    &kp W &kp LG(T) &kp L &kp G &mt3 LALT LS(F)     
-    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 LCMD I>;    
+    &kp W &kp LG(T) &kp L &kp G &mt3 RALT LS(F)     
+    &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 RCMD I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
     LAYERS {   
     bindings = <
     &none &none &mt4 LS(LG(I)) LG(D) &mt4 ESCAPE ENTER  
-    &none &kp COMMA &kp PERIOD &none &mt3 LALT LS(N)                       
-    &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 LCMD LS(M)>;
+    &none &kp COMMA &kp PERIOD &mt5 LG(U) LG(B) &mt3 RALT LS(N)                       
+    &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 RCMD LS(M)>;
     sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
 
     UNDO_COPY {
