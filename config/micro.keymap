@@ -351,9 +351,9 @@ combos {
 
     MEDIA {
     bindings = <
-    &none &none &none &none
+    &none &none &kp C_VOL_DN &kp C_VOL_UP 
     &none &none &none &none &mt5 C_MUTE C_PLAY_PAUSE
-    &mo BLUE &kp C_VOL_DN &kp C_VOL_UP>;    
+    &mo BLUE &mt5 LC(LA(LS(V))) LC(LA(LS(C))) &mt4 LC(LA(LS(W))) LC(LA(LS(X)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
             
     BLUE {
