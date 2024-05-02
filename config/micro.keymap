@@ -298,7 +298,7 @@ combos {
     key-positions = <5 6 11>;
     bindings = <&kp K>;
       };
-    SPACEBAR {
+    PAN {
     timeout-ms = <100>;
     key-positions = <0 1 2 3 8>;
     bindings = <&kp SPACE>;
