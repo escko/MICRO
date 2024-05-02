@@ -298,12 +298,12 @@ combos {
     key-positions = <5 6 11>;
     bindings = <&kp K>;
       };
-    ZOOM {
+    SPACEBAR {
     timeout-ms = <100>;
     key-positions = <0 1 2 3 8>;
     bindings = <&kp SPACE>;
       };
-    SPACE {
+    ZOOM {
     timeout-ms = <100>;
     key-positions = <0 1 2 3 11>;
     bindings = <&kp Z>;
