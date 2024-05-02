@@ -298,19 +298,9 @@ combos {
     key-positions = <5 6 11>;
     bindings = <&kp K>;
       };
-    SPACEBAR {
-    timeout-ms = <100>;
-    key-positions = <0 1 2 3 8>;
-    bindings = <&kp SPACE>;
-      };
-    ZOOM {
-    timeout-ms = <100>;
-    key-positions = <0 1 2 3 11>;
-    bindings = <&kp Z>;
-      };
     HUION {
     timeout-ms = <100>;
-    key-positions = <0 4 8 11>;
+    key-positions = <0 3 11>;
     bindings = <&kp LC(LA(LS(Z)))>;
       };
     RESET {
