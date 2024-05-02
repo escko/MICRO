@@ -298,6 +298,16 @@ combos {
     key-positions = <5 6 11>;
     bindings = <&kp K>;
       };
+    ZOOM {
+    timeout-ms = <100>;
+    key-positions = <0 1 2 3 8>;
+    bindings = <&kp SPACE>;
+      };
+    SPACE {
+    timeout-ms = <100>;
+    key-positions = <0 1 2 3 11>;
+    bindings = <&kp Z>;
+      };
     HUION {
     timeout-ms = <100>;
     key-positions = <0 3 8 11>;
@@ -336,7 +346,7 @@ combos {
     &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 RCMD I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
     
-    LAYERS {   
+    LAYERS {     
     bindings = <
     &none &none &mt4 LS(LG(I)) LG(D) &mt4 ESCAPE ENTER  
     &none &kp COMMA &kp PERIOD &mt5 LG(U) LG(B) &mt3 RALT LS(N)                       
@@ -353,16 +363,16 @@ combos {
     VIEW {
     bindings = <
     &none &none &none &none
-    &none &none &none &kp SEMICOLON &mt SPACE LG(N0)
-    &kp LCTRL &mt4 LS(J) J &mt Z H>;    
-    sensor-bindings = <&rot_scroll SCRL_UP SCRL_DOWN>; };
+    &none &none &none &kp SEMICOLON &kp SPACE
+    &mt4 LCTRL LA(H) &mt4 LS(H) H &kp LG(N0) >;    
+    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON))>; };
 
     ROTATE {
     bindings = <
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &kp LG(N0) 
     &kp LS(EQUAL) &kp LC(EQUAL) &kp LG(EQUAL)>;
-    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON))>; };
+    sensor-bindings = <&rot_kp LG(LEFT) LG(RIGHT)>; };
 
     MEDIA {
     bindings = <
