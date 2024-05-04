@@ -312,7 +312,7 @@ combos {
 
     ARTSTUDIO {
     bindings = <     
-    &mt LSHFT Q &kp W &kp E &mt LC(LALT) R        
+    &mt LSHFT Q &kp W &kp E &mt LC(RALT) R        
     &lt 7 A &kp S &kp D &mt4 LA(LG(B)) B &mt RALT C   
     &mt2 LCTRL N1 &mt1 LSHFT T &mt1 RCMD X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
