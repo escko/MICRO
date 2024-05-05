@@ -223,6 +223,11 @@ combos {
     key-positions = <1 2>;
     bindings = <&kp J>;
       };
+    LAYERSELECT {
+    timeout-ms = <100>;
+    key-positions = <1 2 8 11>;
+    bindings = <&kp LA(LG(J))>;
+      };
     TRANSFORM {
     timeout-ms = <100>;
     key-positions = <1 2 3>;
@@ -240,7 +245,7 @@ combos {
       };
     ELASTIFY {
     timeout-ms = <100>;
-    key-positions = <1 2 3 8>;
+    key-positions = <2 3 8 11>;
     bindings = <&kp Y>;
       };
     ELLIPSE {
@@ -260,22 +265,22 @@ combos {
       };
     FILL {
     timeout-ms = <100>;
-    key-positions = <3 8>;
-    bindings = <&kp F>;
+    key-positions = <3 8 11>;
+    bindings = <&kp D>;
       };
     ENCLOSEFILL {
-    timeout-ms = <100>;
-    key-positions = <2 11>;
-    bindings = <&kp LS(F)>;
-      };
-    PATHTOOLFILL {
     timeout-ms = <100>;
     key-positions = <3 11>;
     bindings = <&kp LG(F)>;
       };
+    PATHTOOLFILL {
+    timeout-ms = <100>;
+    key-positions = <3 8>;
+    bindings = <&kp F>;
+      };
     POLYGON {
     timeout-ms = <100>;
-    key-positions = <3 8 11>;
+    key-positions = <1 11>;
     bindings = <&kp LG(I)>;
       };
     K_G {
@@ -348,7 +353,7 @@ combos {
     VIEW {
     bindings = <
     &none &none &none &none
-    &none &none &none &kp LC(N0) &mt0 SPACE LG(N0)
+    &none &none &none &kp TAB &mt0 SPACE LG(N0)
     &mt4 LCTRL LA(H) &kp LS(H) &mt4 LS(LG(N0)) H>;
     sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON))>; };
 
