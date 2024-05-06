@@ -286,7 +286,7 @@ combos {
       };
     POLYGON {
     timeout-ms = <100>;
-    key-positions = <1 11>;
+    key-positions = <1 8>;
     bindings = <&kp LG(I)>;
       };
     K_G {
