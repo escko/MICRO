@@ -366,7 +366,7 @@ combos {
     ROTATE {
     bindings = <
     &none &none &none &none
-    &none &none &none &kp LA(LG(N0)) &kp LG(N0)   
+    &none &none &none &kp LA(LG(N0)) &mt0 SPACE LG(N0)
     &kp LS(EQUAL) &kp LC(EQUAL) &mt4 H LG(EQUAL)>;
     sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON))>; };
 
