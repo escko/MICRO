@@ -14,8 +14,9 @@
 #define UNDO_COPY 4
 #define VIEW 5
 #define ROTATE 6
-#define MEDIA 7
-#define BLUE 8
+#define CENTERLEFT 7
+#define MEDIA 8
+#define BLUE 9
 
 &lt {
     tapping-term-ms = <120>;
@@ -218,6 +219,11 @@ combos {
     key-positions = <0 3>;
     bindings = <&mo 6>;
       };
+    CENTERLEFT {
+    timeout-ms = <100>;
+    key-positions = <4 5>;
+    bindings = <&mo 7>;
+      };
     MOVE {
     timeout-ms = <100>;
     key-positions = <1 2>;
@@ -285,7 +291,7 @@ combos {
       };
     K_G {
     timeout-ms = <100>;
-    key-positions = <4 5>;
+    key-positions = <4 5 6>;
     bindings = <&kp G>;
       };
     K_P {
@@ -318,7 +324,7 @@ combos {
     ARTSTUDIO {
     bindings = <     
     &mt LSHFT Q &kp W &kp E &mt LC(RALT) R        
-    &lt 7 A &kp S &kp D &mt4 LA(LG(B)) B &mt RALT C   
+    &lt 8 A &kp S &kp D &mt4 LA(LG(B)) B &mt RALT C   
     &mt2 LCTRL N1 &mt1 LSHFT T &mt1 RCMD X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -363,6 +369,13 @@ combos {
     &none &none &none &kp LA(LG(N0)) &kp LG(N0)   
     &kp LS(EQUAL) &kp LC(EQUAL) &mt4 H LG(EQUAL)>;
     sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON))>; };
+
+    CENTERLEFT {
+    bindings = <
+    &none &none &kp LC(LA(LS(LEFT_ARROW))) &kp LC(LA(LS(RIGHT_ARROW))) 
+    &none &none &mt5 LC(LS(DOWN)) LC(LS(UP)) &none &mt5 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMICOLON)))  
+    &kp LC(LA(LS(INT1))) &kp LC(LA(LS(UP_ARROW))) &kp LC(LA(LS(DOWN_ARROW)))>;      
+    sensor-bindings = <&rot_kp LC(LA(LS(N))) LC(LA(LS(M)))>; };
 
     MEDIA {
     bindings = <
