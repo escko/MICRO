@@ -263,7 +263,7 @@ combos {
     key-positions = <2 8>;
     bindings = <&kp U>;
       };
-    FILL {
+    OPEN {
     timeout-ms = <100>;
     key-positions = <3 8 11>;
     bindings = <&kp LS(LG(F))>;
