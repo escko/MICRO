@@ -137,7 +137,7 @@ behaviors {
       label = "MOD_TAP_TAP3";
       #binding-cells = <2>;
       flavor = "tap-preferred"; // was hold-preferred
-      tapping-term-ms = <250>;
+      tapping-term-ms = <270>;
       quick-tap-ms = <110>;
       bindings = <&kp>, <&kp>;
       }; 
@@ -351,7 +351,7 @@ combos {
 
     LAYERS {     
     bindings = <
-    &none &none &none &mt4 LG(D) ENTER  
+    &none &none &none &mt5 LG(D) ENTER  
     &none &kp COMMA &kp PERIOD &mt5 LG(U) LG(B) &mt3 RALT LS(N)                       
     &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 RCMD LS(M)>;
     sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
