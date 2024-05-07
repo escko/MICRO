@@ -10,8 +10,8 @@
 #define ARTSTUDIO 0
 #define INFINITE 1
 #define FRESCO 2
-#define LAYERS 3
-#define UNDO_COPY 4
+#define EDITLAYER 3
+#define LAYERS 4
 #define VIEW 5
 #define ROTATE 6
 #define CENTERLEFT 7
@@ -199,12 +199,12 @@ combos {
     key-positions = <4 5 6 10>;
     bindings = <&tog 2>;
       };
-    LAYERS {
+    EDITLAYER {
     timeout-ms = <100>;
     key-positions = <0 1>;
     bindings = <&mo 3>;
       };
-    UNDO_COPY {
+    LAYERS {
     timeout-ms = <100>;
     key-positions = <0 1 2>;
     bindings = <&mo 4>;
@@ -228,6 +228,11 @@ combos {
     timeout-ms = <100>;
     key-positions = <1 2>;
     bindings = <&kp J>;
+      };
+    INVERT {
+    timeout-ms = <100>;
+    key-positions = <2 3 10>;
+    bindings = <&kp LS(LG(I))>;
       };
     LAYERSELECT {
     timeout-ms = <100>;
@@ -341,20 +346,20 @@ combos {
     &kp W &kp LG(T) &kp L &kp G &mt3 RALT LS(F)     
     &mt3 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 RCMD I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
-    
-    LAYERS {     
-    bindings = <
-    &none &none &mt4 LS(LG(I)) LG(D) &mt4 ESCAPE ENTER  
-    &none &kp COMMA &kp PERIOD &mt5 LG(U) LG(B) &mt3 RALT LS(N)                       
-    &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 RCMD LS(M)>;
-    sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
 
-    UNDO_COPY {
+    EDITLAYER {
     bindings = <
-    &none &none &none &mt2 LS(LG(Z)) LG(Z)
+    &none &none &kp LS(LG(Z)) &kp LG(Z)
     &none &none &none &none &mt4 LS(LG(C)) LG(C)
     &kp LS(K) &mt4 LS(LG(X)) LG(X) &mt4 LS(LG(V)) LG(V)>;
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
+
+    LAYERS {     
+    bindings = <
+    &none &none &none &mt4 LG(D) ENTER  
+    &none &kp COMMA &kp PERIOD &mt5 LG(U) LG(B) &mt3 RALT LS(N)                       
+    &mt4 LS(LG(G)) LG(G) &mt4 LA(LG(M)) LA(LG(C)) &mt3 RCMD LS(M)>;
+    sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
 
     VIEW {
     bindings = <
