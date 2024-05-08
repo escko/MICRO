@@ -19,7 +19,7 @@
 #define BLUE 9
 
 &lt {
-    tapping-term-ms = <220>;
+    tapping-term-ms = <150>;
     quick-tap-ms = <120>;
 };
 
@@ -199,6 +199,11 @@ combos {
     key-positions = <4 5 6 10>;
     bindings = <&tog 2>;
       };
+    CONTROL {
+    timeout-ms = <100>;
+    key-positions = <0 10>;
+    bindings = <&kp LCTRL>;
+      };
     EDITLAYER {
     timeout-ms = <100>;
     key-positions = <0 1>;
@@ -206,7 +211,7 @@ combos {
       };
     LAYERS {
     timeout-ms = <100>;
-    key-positions = <0 1 2>;
+    key-positions = <0 1>;
     bindings = <&mo 4>;
       };
     VIEW {
@@ -229,11 +234,6 @@ combos {
     key-positions = <1 2>;
     bindings = <&kp J>;
       };
-    INVERT {
-    timeout-ms = <100>;
-    key-positions = <2 3 10>;
-    bindings = <&kp LS(LG(I))>;
-      };
     LAYERSELECT {
     timeout-ms = <100>;
     key-positions = <1 2 8 11>;
@@ -241,7 +241,7 @@ combos {
       };
     TRANSFORM {
     timeout-ms = <100>;
-    key-positions = <1 2 3>;
+    key-positions = <0 1 2>;
     bindings = <&kp V>;
       };
     LASSO {
@@ -251,8 +251,13 @@ combos {
       };
     POLYGON_LASSO {
     timeout-ms = <100>;
-    key-positions = <2 3 8>;
+    key-positions = <1 2 3>;
     bindings = <&kp I>;
+      };
+    LS_LA_I {
+    timeout-ms = <100>;
+    key-positions = <1 2 3 8>;
+    bindings = <&kp LS(LA(I))>;
       };
     ELASTIFY {
     timeout-ms = <100>;
@@ -274,25 +279,30 @@ combos {
     key-positions = <2 8>;
     bindings = <&kp U>;
       };
-    OPEN {
+    LS_LG_F {
     timeout-ms = <100>;
     key-positions = <3 8 11>;
     bindings = <&kp LS(LG(F))>;
       };
+    FILL {
+    timeout-ms = <100>;
+    key-positions = <2 3 8>;
+    bindings = <&kp LG(F)>;
+      };
     ENCLOSEFILL {
     timeout-ms = <100>;
     key-positions = <3 11>;
-    bindings = <&kp LG(F)>;
+    bindings = <&kp LS(F)>;
       };
     PATHTOOLFILL {
     timeout-ms = <100>;
     key-positions = <3 8>;
     bindings = <&kp F>;
       };
-    POLYGON {
+    LS_LG_W {
     timeout-ms = <100>;
     key-positions = <1 8>;
-    bindings = <&kp LG(I)>;
+    bindings = <&kp LS(LG(W))>;
       };
     K_G {
     timeout-ms = <100>;
@@ -323,9 +333,9 @@ combos {
 
     ARTSTUDIO {
     bindings = <     
-    &mt LSHFT Q &kp W &kp E &mt LC(RALT) R        
+    &lt 3 Q &kp W &kp E &mt LC(RALT) R        
     &lt 8 A &kp S &kp D &mt4 LA(LG(B)) B &mt RALT C   
-    &lt 9 N1 &mt1 LCTRL T &mt1 RCMD X>;       
+    &lt 9 N1 &mt1 LSHFT T &mt1 RCMD X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
@@ -351,7 +361,7 @@ combos {
 
     LAYERS {     
     bindings = <
-    &none &none &none &mt5 LG(D) ENTER  
+    &none &none &mt5 LS(LG(I)) LG(D) &mt5 ESCAPE ENTER  
     &none &kp COMMA &kp PERIOD &mt5 LG(U) LG(B) &mt3 RALT LS(N)                       
     &mt5 LS(LG(G)) LG(G) &mt5 LA(LG(M)) LA(LG(C)) &mt3 RCMD LS(M)>;
     sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
