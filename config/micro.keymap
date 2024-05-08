@@ -304,7 +304,7 @@ combos {
     key-positions = <4 5 6>;
     bindings = <&kp G>;
       };
-    K_P {
+    WAND {
     timeout-ms = <100>;
     key-positions = <5 6>;
     bindings = <&kp P>;
@@ -335,16 +335,16 @@ combos {
 
     INFINITE {
     bindings = <     
-    &kp P &kp K &kp E &mt 0 B        
+    &lt 3 P &kp K &kp E &mt 0 B        
     &lt 8 W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt RALT C  
-    &kp BACKSLASH &mt1 LSHFT SLASH &mt1 RCMD T>;       
+    &lt 9 BACKSLASH &mt1 LSHFT SLASH &mt1 RCMD T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
-    &mt4 H B &kp V &kp E &mt3 LSHFT P          
+    &lt 3 B &mt5 H V &kp E &mt3 LSHFT P          
     &lt 8 W &kp LG(T) &kp L &kp G &mt3 RALT LS(F)     
-    &mt5 LG(L) LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 RCMD I>;    
+    &lt 9 LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 RCMD I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     EDITLAYER {
@@ -357,8 +357,8 @@ combos {
     LAYERS {     
     bindings = <
     &none &none &mt5 LS(LG(I)) LG(D) &mt5 ESCAPE ENTER  
-    &none &kp COMMA &kp PERIOD &mt5 LG(U) LG(B) &mt3 RALT LS(N)                       
-    &mt5 LS(LG(G)) LG(G) &mt5 LA(LG(M)) LA(LG(C)) &mt3 RCMD LS(M)>;
+    &none &kp COMMA &kp PERIOD &mt5 LG(U) LG(B) &mt3 LCMD LS(N)                       
+    &mt5 LS(LG(G)) LG(G) &mt5 LA(LG(M)) LA(LG(C)) &mt3 LALT LS(M)>;
     sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
 
     VIEW {
