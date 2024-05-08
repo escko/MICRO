@@ -137,7 +137,7 @@ behaviors {
       label = "MOD_TAP_TAP3";
       #binding-cells = <2>;
       flavor = "tap-preferred"; // was hold-preferred
-      tapping-term-ms = <270>;
+      tapping-term-ms = <300>;
       quick-tap-ms = <110>;
       bindings = <&kp>, <&kp>;
       }; 
@@ -221,7 +221,7 @@ combos {
       };
     CONTROL {
     timeout-ms = <100>;
-    key-positions = <0 10>;
+    key-positions = <0 4>;
     bindings = <&kp LCTRL>;
       };
     MOVE {
