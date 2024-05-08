@@ -19,12 +19,12 @@
 #define BLUE 9
 
 &lt {
-    tapping-term-ms = <138>;
+    tapping-term-ms = <135>;
     quick-tap-ms = <120>;
 };
 
 &mt {
-    tapping-term-ms = <138>;
+    tapping-term-ms = <135>;
     quick-tap-ms = <120>;
     flavor = "tap-preferred";
 };
