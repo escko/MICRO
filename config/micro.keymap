@@ -183,19 +183,19 @@ behaviors {
       #sensor-binding-cells = <0>;
       bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
       };
-    CCP_PASTE: CCP_PASTE {
+    W_PASTE: CCP_PASTE {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LG(V)>;
             mods = <(MOD_LALT)>;
       };
-    CCP_CUT: CCP_CUT {
+    E_CUT: CCP_CUT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(X)>;
             mods = <(MOD_LALT)>;
       };
-    CCP_COPY: CCP_COPY {
+    R_COPY: CCP_COPY {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp LG(C)>;
@@ -356,7 +356,7 @@ combos {
     compatible = "zmk,keymap";
     KRITA {
     bindings = <
-    &mt LSHFT Q &kp W &kp E &kp R
+    &mt LSHFT Q &W_PASTE &E_CUT &R_COPY
     &mt LCTRL A &kp S &kp D &mt5 LA(LG(B)) B &mt LCMD C 
     &mt5 LG(N1) N1 &mt1 LSHFT T &mt1 LALT X>;   
     sensor-bindings = <&rot_kp  LBKT RBKT>; };
