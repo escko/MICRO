@@ -183,6 +183,12 @@ behaviors {
       #sensor-binding-cells = <0>;
       bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
       };
+    UNDO: CMDZ {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp LG(Z)>;
+            mods = <(MOD_LCMD)>;
+      };
     W_PASTE: CCP_PASTE {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
