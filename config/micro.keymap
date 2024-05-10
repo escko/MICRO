@@ -382,13 +382,6 @@ combos {
     &kp LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 RCMD I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
-    EDITLAYER {
-    bindings = <
-    &none &none &kp LS(LG(Z)) &kp LG(Z)
-    &none &none &none &none &mt5 LS(LG(C)) LG(C)
-    &kp LS(K) &mt5 LS(LG(X)) LG(X) &mt5 LS(LG(V)) LG(V)>;
-    sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
-
     LAYERS {     
     bindings = <
     &none &none &mt5 LS(LG(I)) LG(D) &mt5 ESCAPE ENTER  
