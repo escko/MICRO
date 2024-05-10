@@ -187,7 +187,7 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(Z)>;
-            mods = <(MOD_LCMD)>;
+            mods = <(MOD_LGUI)>;
       };
     W_PASTE: CCP_PASTE {
             compatible = "zmk,behavior-mod-morph";
