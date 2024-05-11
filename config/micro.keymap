@@ -186,19 +186,19 @@ behaviors {
     E_UNDO: CMDZ {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp E>, <&kp LG(Z)>;
-            mods = <(MOD_LCMD)>;
-      };
-    W_PASTE: CCP_PASTE {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp W>, <&kp LG(V)>;
-            mods = <(MOD_LALT)>;
+            bindings = <&E_CUT>, <&kp LG(Z)>;
+            mods = <(MOD_LGUI)>;
       };
     E_CUT: CCP_CUT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(X)>;
+            mods = <(MOD_LALT)>;
+      };
+    W_PASTE: CCP_PASTE {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp LG(V)>;
             mods = <(MOD_LALT)>;
       };
     R_COPY: CCP_COPY {
