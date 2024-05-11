@@ -183,17 +183,18 @@ behaviors {
       #sensor-binding-cells = <0>;
       bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
       };
-    E_UNDO: CMDZ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&E_CUT>, <&kp LG(Z)>;
-            mods = <(MOD_LALT)>;
-      };
     E_CUT: CCP_CUT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(X)>;
             mods = <(MOD_LGUI)>;
+      };
+    E_UNDO: CMDZ {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&E_CUT>, <&kp Z>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LGUI)>;
       };
     W_PASTE: CCP_PASTE {
             compatible = "zmk,behavior-mod-morph";
@@ -204,7 +205,7 @@ behaviors {
     R_COPY: CCP_COPY {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp R>, <&kp LG(C)>;
+            bindings = <&kp R>, <&kp C>;
             mods = <(MOD_LGUI)>;
       };
   };
