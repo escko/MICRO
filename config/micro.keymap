@@ -192,7 +192,7 @@ behaviors {
     E_UNDO: CMDZ {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LG(Z)>, <&E_CUT>;
+            bindings = <&E_CUT>, <&kp LG(Z)>;
             mods = <(MOD_LALT)>;
       };
     W_PASTE: CCP_PASTE {
@@ -362,7 +362,7 @@ combos {
     compatible = "zmk,keymap";
     KRITA {
     bindings = <
-    &mt LSHFT Q &W_PASTE &E_CUT &R_COPY
+    &mt LSHFT Q &W_PASTE &E_UNDO &R_COPY
     &mt LCTRL A &kp S &kp D &mt5 LA(LG(B)) B &mt LCMD C 
     &mt5 LG(N1) N1 &mt1 LSHFT T &mt1 LALT X>;   
     sensor-bindings = <&rot_kp  LBKT RBKT>; };
