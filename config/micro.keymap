@@ -193,7 +193,7 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&E_CUT>, <&kp LG(Z)>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LGUI)>;
       };
     W_PASTE: CCP_PASTE {
             compatible = "zmk,behavior-mod-morph";
