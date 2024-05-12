@@ -187,7 +187,7 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(X)>;
-            mods = <(MOD_LSHFT)>;
+            mods = <(MOD_LSFT)>;
       };
     E_UNDO: CMDZ {
             compatible = "zmk,behavior-mod-morph";
@@ -199,13 +199,13 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LG(V)>;
-            mods = <(MOD_LSHFT)>;
+            mods = <(MOD_LSFT)>;
       };
     R_COPY: CCP_COPY {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp LG(C)>;
-            mods = <(MOD_LSHFT)>;
+            mods = <(MOD_LSFT)>;
       };
   };
 
