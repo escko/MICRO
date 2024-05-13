@@ -195,37 +195,37 @@ behaviors {
             bindings = <&E_CUTUNDO>, <&kp LG(Z)>;
             mods = <(MOD_LGUI)>;
       };
-    W_PASTE: W_PASTE {
+    W_WPASTE: W_WPASTE {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LG(V)>;
             mods = <(MOD_LSFT)>;
       };
-    R_COPY: R_COPY {
+    R_RCOPY: R_RCOPY {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp LG(C)>;
             mods = <(MOD_LSFT)>;
       };
-    K_PASTE: K_PASTE {
+    K_KPASTE: K_KPASTE {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp K>, <&kp LG(V)>;
             mods = <(MOD_LSFT)>;
       };
-    B_COPY: B_COPY {
+    B_BCOPY: B_BCOPY {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp B>, <&kp LG(C)>;
             mods = <(MOD_LSFT)>;
       };
-    H_PASTE: H_PASTE {
+    H_HPASTE: H_HPASTE {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp H>, <&kp LG(V)>;
             mods = <(MOD_LSFT)>;
       };
-    P_COPY: P_COPY {
+    P_PCOPY: P_PCOPY {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp P>, <&kp LG(C)>;
