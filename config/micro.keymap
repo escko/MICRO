@@ -183,28 +183,52 @@ behaviors {
       #sensor-binding-cells = <0>;
       bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
       };
-    E_CUT: CCP_CUT {
+    E_CUTUNDO: E_CUT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(X)>;
             mods = <(MOD_LSFT)>;
       };
-    E_UNDO: CMDZ {
+    E_CUT: CMDZ {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&E_CUT>, <&kp LG(Z)>;
+            bindings = <&E_CUTUNDO>, <&kp LG(Z)>;
             mods = <(MOD_LGUI)>;
       };
-    W_PASTE: CCP_PASTE {
+    W_PASTE: W_PASTE {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LG(V)>;
             mods = <(MOD_LSFT)>;
       };
-    R_COPY: CCP_COPY {
+    R_COPY: R_COPY {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp LG(C)>;
+            mods = <(MOD_LSFT)>;
+      };
+    K_PASTE: K_PASTE {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp K>, <&kp LG(V)>;
+            mods = <(MOD_LSFT)>;
+      };
+    B_COPY: B_COPY {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp LG(C)>;
+            mods = <(MOD_LSFT)>;
+      };
+    H_PASTE: H_PASTE {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp H>, <&kp LG(V)>;
+            mods = <(MOD_LSFT)>;
+      };
+    P_COPY: P_COPY {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&kp LG(C)>;
             mods = <(MOD_LSFT)>;
       };
   };
@@ -284,12 +308,12 @@ combos {
     key-positions = <0 1 2>;
     bindings = <&kp I>;
       };
-    LS_LA_I {
+    COMBO_LS_LA_I {
     timeout-ms = <100>;
     key-positions = <0 1 2 8>;
     bindings = <&kp LS(LA(I))>;
       };
-    LS_LA_V {
+    COMBO_LS_LA_V {
     timeout-ms = <100>;
     key-positions = <1 2 3 8>;
     bindings = <&kp LS(LA(V))>;
@@ -301,32 +325,27 @@ combos {
       };
     ELLIPSE {
     timeout-ms = <100>;
-    key-positions = <0 2>;
+    key-positions = <1 3>;
     bindings = <&kp O>;
       };
     MARQUEE {
     timeout-ms = <100>;
-    key-positions = <1 3>;
+    key-positions = <0 2>;
     bindings = <&kp M>;
       };
-    K_U {
+    COMBO_U {
     timeout-ms = <100>;
-    key-positions = <2 8>;
+    key-positions = <2 11>;
     bindings = <&kp U>;
       };
-    LS_LG_F {
+    COMBO_LG_F {
     timeout-ms = <100>;
     key-positions = <3 8 11>;
-    bindings = <&kp LS(LG(F))>;
-      };
-    FILL {
-    timeout-ms = <100>;
-    key-positions = <2 3 8>;
     bindings = <&kp LG(F)>;
       };
     ENCLOSEFILL {
     timeout-ms = <100>;
-    key-positions = <3 11>;
+    key-positions = <2 3 8>;
     bindings = <&kp LS(F)>;
       };
     PATHTOOLFILL {
@@ -334,12 +353,17 @@ combos {
     key-positions = <3 8>;
     bindings = <&kp F>;
       };
-    LS_LG_W {
+    STUDIOBRUSH {
+    timeout-ms = <100>;
+    key-positions = <3 11>;
+    bindings = <&kp LC(RALT)>;
+      };
+    COMBO_LS_LG_W {
     timeout-ms = <100>;
     key-positions = <1 8>;
     bindings = <&kp LS(LG(W))>;
       };
-    K_G {
+    COMBO_G {
     timeout-ms = <100>;
     key-positions = <4 5 6>;
     bindings = <&kp G>;
@@ -349,7 +373,7 @@ combos {
     key-positions = <5 6>;
     bindings = <&kp P>;
       };
-    K_K {
+    COMBO_K {
     timeout-ms = <100>;
     key-positions = <5 6 11>;
     bindings = <&kp K>;
@@ -362,28 +386,28 @@ combos {
     compatible = "zmk,keymap";
     KRITA {
     bindings = <
-    &mt LSHFT Q &W_PASTE &E_UNDO &R_COPY
+    &mt LSHFT Q &W_PASTE &E_CUT &R_COPY
     &mt LCTRL A &kp S &kp D &mt5 LA(LG(B)) B &mt LCMD C 
     &mt5 LG(N1) N1 &mt1 LSHFT T &mt1 LALT X>;   
     sensor-bindings = <&rot_kp  LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
-    &mt LSHFT Q &kp W &kp E &mt LC(RALT) R        
+    &mt LSHFT Q &W_PASTE &E_CUT &R_COPY        
     &mt LCTRL A &kp S &kp D &mt4 LA(LG(B)) B &mt RALT C   
     &mt5 LG(N1) N1 &mt1 LSHFT T &mt1 RCMD X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
-    &mt LSHFT P &kp K &kp E &mt 0 B        
+    &mt LSHFT P &K_PASTE &E_CUT &B_COPY        
     &mt LCTRL W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt RALT C  
     &kp BACKSLASH &mt1 LSHFT SLASH &mt1 RCMD T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
-    &mt LSHFT B &mt5 H V &kp E &mt3 LSHFT P          
+    &mt LSHFT B &H_PASTE &E_CUT &P_COPY          
     &mt LCTRL W &kp LG(T) &kp L &kp G &mt3 RALT LS(F)     
     &kp LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 RCMD I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
