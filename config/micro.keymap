@@ -386,28 +386,28 @@ combos {
     compatible = "zmk,keymap";
     KRITA {
     bindings = <
-    &mt LSHFT Q &W_PASTE &E_CUT &R_COPY
+    &mt LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
     &mt LCTRL A &kp S &kp D &mt5 LA(LG(B)) B &mt LCMD C 
     &mt5 LG(N1) N1 &mt1 LSHFT T &mt1 LALT X>;   
     sensor-bindings = <&rot_kp  LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
-    &mt LSHFT Q &W_PASTE &E_CUT &R_COPY        
+    &mt LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
     &mt LCTRL A &kp S &kp D &mt4 LA(LG(B)) B &mt RALT C   
     &mt5 LG(N1) N1 &mt1 LSHFT T &mt1 RCMD X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
-    &mt LSHFT P &K_PASTE &E_CUT &B_COPY        
+    &mt LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
     &mt LCTRL W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt RALT C  
     &kp BACKSLASH &mt1 LSHFT SLASH &mt1 RCMD T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
-    &mt LSHFT B &H_PASTE &E_CUT &P_COPY          
+    &mt LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
     &mt LCTRL W &kp LG(T) &kp L &kp G &mt3 RALT LS(F)     
     &kp LG(LS(BACKSPACE)) &mt3 LSHFT LG(COMMA) &mt3 RCMD I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
