@@ -184,7 +184,7 @@ behaviors {
       #sensor-binding-cells = <0>;
       bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
       };
-    LCTRL_R: LCTRL_R {
+    LCTL_R: LCTL_R {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp LG(O)>;
@@ -293,7 +293,7 @@ combos {
     ELLIPSE {
     timeout-ms = <100>;
     key-positions = <1 3>;
-    bindings = <&LCTRL_R>;
+    bindings = <&LCTL_R>;
       };
     MARQUEE {
     timeout-ms = <100>;
