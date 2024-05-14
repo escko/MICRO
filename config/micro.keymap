@@ -188,7 +188,8 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp O>, <&kp LC(O)>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LCTL|MOD_LGUI)>;
+            
       };
     E_CUTUNDO: E_CUT {
             compatible = "zmk,behavior-mod-morph";
