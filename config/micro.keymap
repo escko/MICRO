@@ -344,10 +344,10 @@ combos {
     key-positions = <2 11>;
     bindings = <&kp U>;
       };
-    LG_F {
+    COMBO_O {
     timeout-ms = <100>;
     key-positions = <3 8 11>;
-    bindings = <&kp LG(F)>;
+    bindings = <&kp O>;
       };
     ENCLOSEFILL {
     timeout-ms = <100>;
@@ -395,7 +395,7 @@ combos {
     &mt LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
     &lt MEDIA A &kp S &kp D &mt5 LA(LG(B)) B &mt LCMD C 
     &mt3 LCTRL N1 &mt1 LSHFT T &mt1 LALT X>;   
-    sensor-bindings = <&rot_kp  LBKT RBKT>; };
+    sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
