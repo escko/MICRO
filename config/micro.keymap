@@ -188,8 +188,8 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp O>, <&kp LC(O)>;
-            mods = <(MOD_LGUI|MOD_LCTL)>;
-            
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;   
       };
     E_CUTUNDO: E_CUT {
             compatible = "zmk,behavior-mod-morph";
@@ -383,12 +383,12 @@ combos {
       };
     SAVE {
     timeout-ms = <100>;
-    key-positions = <5 9>;
+    key-positions = <5 10>;
     bindings = <&kp LG(S)>;
       };
     OPEN {
     timeout-ms = <100>;
-    key-positions = <6 9>;
+    key-positions = <6 10>;
     bindings = <&kp LG(O)>;
       };
     COMBO_K {
