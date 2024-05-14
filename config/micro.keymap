@@ -20,7 +20,7 @@
 #define BLUE 10
 
 &lt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <185>;
     quick-tap-ms = <120>;
 };
 
@@ -392,30 +392,30 @@ combos {
     compatible = "zmk,keymap";
     KRITA {
     bindings = <
-    &mt LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
+    &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
     &lt MEDIA A &kp S &kp D &mt5 LA(LG(B)) B &mt LCMD C 
     &mt2 LCTRL N1 &mt2 LSHFT T &mt2 LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
-    &mt LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
+    &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
     &lt MEDIA A &kp S &kp D &mt4 LA(LG(B)) B &mt RALT C   
     &mt2 LCTRL N1 &mt2 LSHFT T &mt2 RCMD X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
-    &mt LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
+    &mt2 LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
     &lt MEDIA W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt RALT C  
     &kp BACKSLASH &mt2 LSHFT SLASH &mt2 RCMD T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
-    &mt LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
-    &lt MEDIA W &kp V &kp G &kp LS(F) &mt3 RALT I     
-    &mt5 LG(LS(BACKSPACE)) LG(L) &mt3 LSHFT LG(COMMA) &mt3 RCMD LG(T)>;    
+    &mt2 LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
+    &lt MEDIA W &kp V &kp G &kp LS(F) &mt2 RALT I     
+    &mt5 LG(LS(BACKSPACE)) LG(L) &mt2 LSHFT LG(COMMA) &mt2 RCMD LG(T)>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
