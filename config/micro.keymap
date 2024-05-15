@@ -400,22 +400,22 @@ combos {
     ARTSTUDIO {
     bindings = <     
     &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
-    &lt MEDIA A &kp S &kp D &mt4 LA(LG(B)) B &mt LCMD C   
-    &mt2 LCTRL N1 &mt2 LSHFT T &mt2 LALT X>;       
+    &lt MEDIA A &kp S &kp D &mt4 LA(LG(B)) B &mt1 LCMD C   
+    &mt2 LCTRL N1 &mt2 LSHFT T &mt LALT X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
     &mt2 LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
-    &lt MEDIA W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt LCMD C  
-    &kp BACKSLASH &mt2 LSHFT SLASH &mt2 LALT T>;       
+    &lt MEDIA W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt1 LCMD C  
+    &kp BACKSLASH &mt2 LSHFT SLASH &mt LALT T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
     &mt2 LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
-    &lt MEDIA W &kp V &kp G &kp LS(F) &mt2 LCMD I     
-    &mt5 LG(LS(BACKSPACE)) LG(L) &mt2 LSHFT LG(COMMA) &mt2 LALT LG(T)>;    
+    &lt MEDIA W &kp V &kp G &kp LS(F) &mt1 LCMD LG(T)     
+    &mt5 LG(LS(BACKSPACE)) LG(L) &mt2 LSHFT LG(COMMA) &mt3 LALT I>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
