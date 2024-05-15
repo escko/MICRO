@@ -274,10 +274,10 @@ combos {
     key-positions = <4 5>;
     bindings = <&mo 7>;
       };
-    MEDIA {
+    LS_LG {
     timeout-ms = <100>;
     key-positions = <0 4>;
-    bindings = <&mo 8>;
+    bindings = <&kp LS(LGUI)>;
       };
     BLUE {
     timeout-ms = <100>;
