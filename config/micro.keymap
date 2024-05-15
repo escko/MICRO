@@ -102,7 +102,7 @@ behaviors {
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
       flavor = "tap-preferred"; // was hold-preferred
-      tapping-term-ms = <160>;
+      tapping-term-ms = <165>;
       quick-tap-ms = <110>;
       bindings = <&kp>, <&kp>;
       }; 
@@ -392,30 +392,30 @@ combos {
     compatible = "zmk,keymap";
     KRITA {
     bindings = <
-    &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
+    &mt1 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
     &lt MEDIA A &kp S &kp D &mt5 LA(LG(B)) B &mt LGUI C 
-    &mt2 LCTRL N1 &mt2 LSHFT T &mt2 LALT X>;   
+    &mt1 LCTRL N1 &mt1 LSHFT T &mt1 LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
-    &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
+    &mt1 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
     &lt MEDIA A &kp S &kp D &mt4 LA(LG(B)) B &mt LALT C   
-    &mt2 LCTRL N1 &mt2 LSHFT T &mt2 LGUI X>;       
+    &mt1 LCTRL N1 &mt1 LSHFT T &mt1 LGUI X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
-    &mt2 LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
+    &mt1 LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
     &lt MEDIA W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt LALT C  
-    &kp BACKSLASH &mt2 LSHFT SLASH &mt2 LGUI T>;       
+    &kp BACKSLASH &mt1 LSHFT SLASH &mt1 LGUI T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
-    &mt2 LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
+    &mt1 LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
     &lt MEDIA W &kp V &kp G &kp LS(F) &mt2 LALT I     
-    &mt5 LG(LS(BACKSPACE)) LG(L) &mt2 LSHFT LG(COMMA) &mt2 LGUI LG(T)>;    
+    &mt5 LG(LS(BACKSPACE)) LG(L) &mt2 LSHFT LG(COMMA) &mt1 LGUI LG(T)>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
