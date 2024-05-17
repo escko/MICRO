@@ -242,37 +242,37 @@ behaviors {
 combos {
     compatible = "zmk,combos";
     ARTSTUDIO {
-    timeout-ms = <60>;
+    timeout-ms = <110>;
     key-positions = <0 1 2 9>;
     bindings = <&tog 1>;
       }; 
     INFINITE {
-    timeout-ms = <60>;
+    timeout-ms = <110>;
     key-positions = <4 5 6 9>;
     bindings = <&tog 2>;
       };
     FRESCO {
-    timeout-ms = <60>;
+    timeout-ms = <110>;
     key-positions = <4 5 9>;
     bindings = <&tog 3>;
       };
     LAYERS {
-    timeout-ms = <60>;
+    timeout-ms = <110>;
     key-positions = <0 1>;
     bindings = <&mo 4>;
       };
     HISTORY {
-    timeout-ms = <60>;
+    timeout-ms = <110>;
     key-positions = <0 3>;
     bindings = <&mo 5>;
       };
     VIEW {
-    timeout-ms = <60>;
+    timeout-ms = <110>;
     key-positions = <0 1 2 3>;
     bindings = <&mo 6>;
       };
     ZOOM_ROTATE {
-    timeout-ms = <60>;
+    timeout-ms = <110>;
     key-positions = <0 1 2>;
     bindings = <&mo 7>;
       };
