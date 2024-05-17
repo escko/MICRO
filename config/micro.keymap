@@ -292,92 +292,92 @@ combos {
     bindings = <&kp K>;
       };
     MARQUEE {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <0 2>;
     bindings = <&kp M>;
       };
     MOVE {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <1 2>;
     bindings = <&kp J>;
       };
     LAYERSELECT {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <1 2 8 11>;
     bindings = <&kp LA(LG(J))>;
       };
     TRANSFORM {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <1 2 3>;
     bindings = <&kp V>;
       };
     LASSO {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <2 3>;
     bindings = <&kp L>;
       };
     POLYGON_LASSO {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <3 8 11>;
     bindings = <&kp I>;
       };
     LS_LA_V {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <1 2 3 8>;
     bindings = <&kp LS(LA(V))>;
       };
     LS_LG_W {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <1 8>;
     bindings = <&kp LS(LG(W))>;
       };
     ELASTIFY {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <2 3 8 11>;
     bindings = <&kp Y>;
       };
     COMBO_U {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <2 11>;
     bindings = <&kp U>;
       };
     COMBO_O {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <2 3 11>;
     bindings = <&kp O>;
       };
     ENCLOSEFILL {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <2 3 8>;
     bindings = <&kp LS(F)>;
       };
     PATHTOOLFILL {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <3 8>;
     bindings = <&kp F>;
       };
     STUDIOBRUSH {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <3 11>;
     bindings = <&kp LC(RALT)>;
       };
     COMBO_G {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <4 5 6>;
     bindings = <&kp G>;
       };
     WAND {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <5 6>;
     bindings = <&kp P>;
       };
     SAVE {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <5 10>;
     bindings = <&kp LG(S)>;
       };
     OPEN {
-    timeout-ms = <60>;
+    timeout-ms = <100>;
     key-positions = <6 10>;
     bindings = <&kp LG(O)>;
       };
