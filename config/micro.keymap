@@ -382,9 +382,9 @@ combos {
     bindings = <&kp LG(O)>;
       };
     };
-    //  | SW1 - 0 | SW2 -  1 | SW3 - 2 | SW4 - 3 |
-    //  | SW5 - 4 | SW6 -  5 | SW7 - 6 | SW8 - 7 | SW9 - 8 |
-    //            | SW10 - 9 | SW11-10 | SW12-11 |
+    // | SW1 - 0 | SW2 -  1 | SW3 - 2 | SW4 - 3 |
+    // | SW5 - 4 | SW6 -  5 | SW7 - 6 | SW8 - 7 | SW9 - 8 |
+    //           | SW10 - 9 | SW11-10 | SW12-11 |
  keymap {
     compatible = "zmk,keymap";
     KRITA {
