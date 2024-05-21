@@ -243,17 +243,17 @@ combos {
     compatible = "zmk,combos";
     ARTSTUDIO {
     timeout-ms = <100>;
-    key-positions = <0 1 2 9>;
+    key-positions = <0 1 2 10>;
     bindings = <&tog 1>;
       }; 
     INFINITE {
     timeout-ms = <100>;
-    key-positions = <4 5 6 9>;
+    key-positions = <4 5 6 10>;
     bindings = <&tog 2>;
       };
     FRESCO {
     timeout-ms = <100>;
-    key-positions = <4 5 9>;
+    key-positions = <4 5 10>;
     bindings = <&tog 3>;
       };
     LAYERS {
@@ -373,12 +373,12 @@ combos {
       };
     SAVE {
     timeout-ms = <100>;
-    key-positions = <5 10>;
+    key-positions = <1 10>;
     bindings = <&kp LG(S)>;
       };
     OPEN {
     timeout-ms = <100>;
-    key-positions = <6 10>;
+    key-positions = <2 10>;
     bindings = <&kp LG(O)>;
       };
     };
