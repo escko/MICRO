@@ -374,7 +374,7 @@ combos {
     LS_B {
     timeout-ms = <100>;
     key-positions = <8 11>;
-    bindings = <&mt LA(LG) LS(B)>;
+    bindings = <&mt LA(LGUI) LS(B)>;
       };
     SAVE {
     timeout-ms = <100>;
