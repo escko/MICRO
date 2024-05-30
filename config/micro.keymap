@@ -409,7 +409,7 @@ combos {
     INFINITE {
     bindings = <     
     &mt2 LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
-    &lt MEDIA W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt LALT C  
+    &lt MEDIA W &kp G &mt5 LG(U) LG(B) &kp B &mt LALT C  
     &kp BACKSLASH &mt1 LSHFT SLASH &mt LGUI T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
