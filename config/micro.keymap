@@ -371,6 +371,11 @@ combos {
     key-positions = <5 6>;
     bindings = <&kp P>;
       };
+    LS_B {
+    timeout-ms = <100>;
+    key-positions = <8 11>;
+    bindings = <&mt LA(LG) LS(B)>;
+      };
     SAVE {
     timeout-ms = <100>;
     key-positions = <1 10>;
@@ -391,28 +396,28 @@ combos {
     bindings = <
     &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
     &lt MEDIA A &kp S &kp D &mt3 LA(LG(B)) B &mt LGUI C 
-    &mt2 LCTRL N1 &mt2 LSHFT T &mt1 LALT X>;   
+    &mt2 LCTRL N1 &mt1 LSHFT T &mt LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
     &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
     &lt MEDIA A &kp S &kp D &mt3 LA(LG(B)) B &mt LALT C   
-    &mt2 LCTRL N1 &mt2 LSHFT T &mt1 LGUI X>;       
+    &mt2 LCTRL N1 &mt1 LSHFT T &mt LGUI X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
     &mt2 LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
     &lt MEDIA W &kp G &mt5 LG(U) LG(B) &kp LS(B) &mt LALT C  
-    &kp BACKSLASH &mt2 LSHFT SLASH &mt1 LGUI T>;       
+    &kp BACKSLASH &mt1 LSHFT SLASH &mt LGUI T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
     &mt2 LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
     &lt MEDIA W &kp V &kp G &kp LS(F) &mt2 LALT I     
-    &mt5 LG(LS(BACKSPACE)) LG(L) &mt2 LSHFT LG(COMMA) &mt1 LGUI LG(T)>;    
+    &mt5 LG(LS(BACKSPACE)) LG(L) &mt1 LSHFT LG(COMMA) &mt LGUI LG(T)>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
