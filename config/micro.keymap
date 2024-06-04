@@ -281,10 +281,25 @@ combos {
     key-positions = <4 5>;
     bindings = <&mo 9>;
       };
+    MEDIA {
+    timeout-ms = <100>;
+    key-positions = <0 4>;
+    bindings = <&lt MEDIA N1>;
+      };
     BLUE {
     timeout-ms = <100>;
     key-positions = <9 10>;
     bindings = <&mo 12>;
+      };
+    HUION {
+    timeout-ms = <100>;
+    key-positions = <0 3 8 11>;
+    bindings = <&kp LC(LA(LS(Z)))>;
+      };
+    COMBO_S {
+    timeout-ms = <100>;
+    key-positions = <4 6>;
+    bindings = <&kp S>;
       };
     TRANSFORM {
     timeout-ms = <120>;
@@ -354,12 +369,12 @@ combos {
     PATHTOOLFILL {
     timeout-ms = <100>;
     key-positions = <3 8>;
-    bindings = <&kp F>;
+    bindings = <&kp LG(F)>;
       };
     STUDIOBRUSH {
     timeout-ms = <100>;
     key-positions = <3 11>;
-    bindings = <&kp LC(RALT)>;
+    bindings = <&kp LC(RALT) LA(R)>;
       };
     COMBO_G {
     timeout-ms = <100>;
@@ -386,6 +401,11 @@ combos {
     key-positions = <2 10>;
     bindings = <&kp LG(O)>;
       };
+    NEW {
+    timeout-ms = <100>;
+    key-positions = <3 10>;
+    bindings = <&kp LG(N)>;
+      };
     };
     // | SW1 - 0 | SW2 -  1 | SW3 - 2 | SW4 - 3 |
     // | SW5 - 4 | SW6 -  5 | SW7 - 6 | SW8 - 7 | SW9 - 8 |
@@ -394,29 +414,29 @@ combos {
     compatible = "zmk,keymap";
     KRITA {
     bindings = <
-    &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
-    &lt MEDIA A &kp S &kp D &mt3 LA(LG(B)) B &mt LGUI C 
-    &mt2 LCTRL N1 &mt1 LSHFT T &mt LALT X>;   
+    &mt1 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
+    &mt1 LCTRL A &kp D &kp F &mt5 LG(U) LG(B) &mt LGUI C 
+    &mt5 BACKSLASH SLASH &mt1 LSHFT T &mt LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <     
-    &mt2 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
-    &lt MEDIA A &kp S &kp D &mt3 LA(LG(B)) B &mt LALT C   
-    &mt2 LCTRL N1 &mt1 LSHFT T &mt LGUI X>;       
+    &mt1 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY        
+    &mt1 LCTRL A &kp D &kp F &mt5 LG(U) LG(B) &mt LALT C   
+    &mt5 BACKSLASH SLASH &mt1 LSHFT T &mt LGUI X>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
-    &mt2 LSHFT P &K_KPASTE &E_CUT &B_BCOPY        
-    &lt MEDIA W &kp G &mt5 LG(U) LG(B) &kp B &mt LALT C  
-    &kp BACKSLASH &mt1 LSHFT SLASH &mt LGUI T>;       
+    &mt5 LG(D) ENTER &kp P &E_CUT &kp B        
+    &kp M &kp W &kp F &mt5 LG(U) LG(B) &mt LALT C  
+    &mt5 BACKSLASH SLASH &mt1 LSHFT K &mt LGUI T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
-    &mt2 LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
-    &lt MEDIA W &kp V &kp G &kp LS(F) &mt2 LALT I     
+    &mt1 LSHFT B &H_HPASTE &E_CUT &P_PCOPY          
+    &kp W &kp V &kp G &kp LS(F) &mt2 LALT I     
     &mt5 LG(LS(BACKSPACE)) LG(L) &mt1 LSHFT LG(COMMA) &mt LGUI LG(T)>;    
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -458,14 +478,14 @@ combos {
     CENTERLEFT {
     bindings = <
     &none &none &kp LC(LA(LS(LEFT_ARROW))) &kp LC(LA(LS(RIGHT_ARROW))) 
-    &none &none &none &none &mt5 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMICOLON)))  
+    &none &none &mt5 LC(LS(DOWN)) LC(LS(UP)) &none &mt5 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMICOLON)))  
     &kp LC(LA(LS(INT1))) &kp LC(LA(LS(UP_ARROW))) &kp LC(LA(LS(DOWN_ARROW)))>;      
     sensor-bindings = <&rot_kp LC(LA(LS(N))) LC(LA(LS(M)))>; };
 
     MEDIA {
     bindings = <
-    &none &kp LC(LA(LS(P))) &mt5 LC(LS(DOWN)) LC(LS(UP)) &kp LC(LA(LS(Z))) 
-    &none &none &none &none &lt VOLUME C_PLAY_PAUSE
+    &none &none &bt BT_SEL 0 &bt BT_SEL 1 
+    &none &none &none &kp LC(LA(LS(P))) &lt VOLUME C_PLAY_PAUSE
     &kp LC(LA(LS(V)))  &kp LC(LA(LS(C))) &mt4 LC(LA(LS(W))) LC(LA(LS(X)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
         
@@ -479,7 +499,7 @@ combos {
     BLUE {
     bindings = <
     &bt BT_SEL 0 &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_EFF
-    &bt BT_SEL 1 &rgb_ug RGB_BRD &rgb_ug RGB_SAD &bt BT_CLR &ext_power EP_TOG    
+    &bt BT_SEL 1 &rgb_ug RGB_BRD &rgb_ug RGB_SAD &bt BT_CLR_ALL &ext_power EP_TOG    
     &none &none &out OUT_TOG>;    
     sensor-bindings = <&rgb_encoder>; };
     };
