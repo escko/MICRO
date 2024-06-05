@@ -253,27 +253,27 @@ combos {
     LAYERS {
     timeout-ms = <100>;
     key-positions = <0 1>;
-    bindings = <&mo 3>;
+    bindings = <&mo LAYERS>;
       };
     ZOOM_ROTATE {
     timeout-ms = <120>;
     key-positions = <0 1 2>;
-    bindings = <&mo 4>;
+    bindings = <&mo ZOOM_ROTATE>;
       };
     VIEW {
     timeout-ms = <100>;
     key-positions = <0 1 2 3>;
-    bindings = <&mo 6>;
+    bindings = <&mo VIEW>;
       };
     HISTORY {
     timeout-ms = <100>;
     key-positions = <0 3>;
-    bindings = <&mo 7>;
+    bindings = <&mo HISTORY>;
       };
     CENTERLEFT {
     timeout-ms = <100>;
     key-positions = <4 5>;
-    bindings = <&mo 8>;
+    bindings = <&mo CENTERLEFT>;
       };
     MEDIA {
     timeout-ms = <100>;
@@ -283,7 +283,7 @@ combos {
     BLUE {
     timeout-ms = <100>;
     key-positions = <9 10>;
-    bindings = <&mo 11>;
+    bindings = <&mo BLUE>;
       };
     HUION {
     timeout-ms = <100>;
