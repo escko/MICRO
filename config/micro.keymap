@@ -249,30 +249,35 @@ combos {
     key-positions = <4 5 6 10>;
     bindings = <&tog 2>;
       };
+    LAYERS {
+    timeout-ms = <100>;
+    key-positions = <0 1>;
+    bindings = <&mo LAYERS>;
+      };
+    MOVE {
+    timeout-ms = <100>;
+    key-positions = <1 2>;
+    bindings = <&kp J>;
+      };
+    HISTORY {
+    timeout-ms = <100>;
+    key-positions = <0 3>;
+    bindings = <&mo HISTORY>;
+      };
     VIEW {
     timeout-ms = <100>;
     key-positions = <0 1 2 3>;
     bindings = <&mo VIEW>;
       };
-    MOVE {
-    timeout-ms = <120>;
-    key-positions = <1 2>;
-    bindings = <&kp J>;
-      };
     ZOOM_ROTATE {
-    timeout-ms = <120>;
+    timeout-ms = <100>;
     key-positions = <0 1 2>;
     bindings = <&mo ZOOM_ROTATE>;
       };
-    LAYERS {
-    timeout-ms = <120>;
-    key-positions = <0 1>;
-    bindings = <&mo LAYERS>;
-      };
-    HISTORY {
-    timeout-ms = <120>;
-    key-positions = <0 3>;
-    bindings = <&mo HISTORY>;
+    TRANSFORM {
+    timeout-ms = <100>;
+    key-positions = <1 2 3>;
+    bindings = <&kp V>;
       };
     CENTERLEFT {
     timeout-ms = <100>;
@@ -299,11 +304,7 @@ combos {
     key-positions = <4 6>;
     bindings = <&kp S>;
       };
-    TRANSFORM {
-    timeout-ms = <120>;
-    key-positions = <1 2 3>;
-    bindings = <&kp V>;
-      };
+
     ELLIPSE {
     timeout-ms = <100>;
     key-positions = <1 3>;
