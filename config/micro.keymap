@@ -195,7 +195,7 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&E_CUTUNDO>, <&kp LG(Z)>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
       };
     W_WPASTE: W_WPASTE {
             compatible = "zmk,behavior-mod-morph";
@@ -266,7 +266,7 @@ combos {
     bindings = <&mo VIEW>;
       };
     HISTORY {
-    timeout-ms = <100>;
+    timeout-ms = <120>;
     key-positions = <0 3>;
     bindings = <&mo HISTORY>;
       };
@@ -363,7 +363,7 @@ combos {
     PATHTOOLFILL {
     timeout-ms = <100>;
     key-positions = <3 8>;
-    bindings = <&kp LG(F)>;
+    bindings = <&kp F>;
       };
     STUDIOBRUSH {
     timeout-ms = <100>;
