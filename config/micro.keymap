@@ -427,7 +427,7 @@ combos {
     &mt5 LG(D) ENTER &kp P &E_CUT &kp B        
     &kp M &kp W &kp F &mt5 LG(U) LG(B) &mt LALT C  
     &mt5 BACKSLASH SLASH &mt1 LSHFT K &mt LGUI T>;       
-    sensor-bindings = <&rot_kp LBKT RBKT>; };/
+    sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     FRESCO {
     bindings = <
