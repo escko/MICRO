@@ -254,13 +254,18 @@ combos {
     key-positions = <0 1 2 3>;
     bindings = <&mo VIEW>;
       };
+    MOVE {
+    timeout-ms = <120>;
+    key-positions = <1 2>;
+    bindings = <&kp J>;
+      };
     ZOOM_ROTATE {
     timeout-ms = <120>;
     key-positions = <0 1 2>;
     bindings = <&mo ZOOM_ROTATE>;
       };
     LAYERS {
-    timeout-ms = <100>;
+    timeout-ms = <120>;
     key-positions = <0 1>;
     bindings = <&mo LAYERS>;
       };
@@ -308,11 +313,6 @@ combos {
     timeout-ms = <100>;
     key-positions = <0 2>;
     bindings = <&kp M>;
-      };
-    MOVE {
-    timeout-ms = <100>;
-    key-positions = <1 2>;
-    bindings = <&kp J>;
       };
     LAYERSELECT {
     timeout-ms = <100>;
