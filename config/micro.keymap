@@ -344,6 +344,11 @@ combos {
     key-positions = <2 3 8 11>;
     bindings = <&kp Y>;
       };
+    COMBO_LG_E {
+    timeout-ms = <50>;
+    key-positions = <2 8>;
+    bindings = <&kp LG(E)>;
+      };
     COMBO_U {
     timeout-ms = <100>;
     key-positions = <2 11>;
@@ -384,6 +389,11 @@ combos {
     key-positions = <8 11>;
     bindings = <&mt LA(LGUI) LS(B)>;
       };
+    SETTINGS {
+    timeout-ms = <100>;
+    key-positions = <9 11>;
+    bindings = <&kp LG(COMMAND)>;
+      };
     SAVE {
     timeout-ms = <100>;
     key-positions = <1 10>;
@@ -409,7 +419,7 @@ combos {
     bindings = <
     &mt1 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
     &mt1 LCTRL A &kp D &kp F &mt5 LG(U) LG(B) &mt RALT C 
-    &mt5 BACKSLASH SLASH &mt1 LSHFT T &mt RGUI X>;   
+    &mt5 PERIOD SLASH &mt1 LSHFT T &mt RGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
@@ -417,7 +427,7 @@ combos {
     &mt5 LG(D) ENTER &kp P &E_CUT &kp B        
     &kp M &kp W &kp F &mt5 LG(U) LG(B) &mt LALT C  
     &mt5 BACKSLASH SLASH &mt1 LSHFT K &mt LGUI T>;       
-    sensor-bindings = <&rot_kp LBKT RBKT>; };
+    sensor-bindings = <&rot_kp LBKT RBKT>; };/
 
     FRESCO {
     bindings = <
