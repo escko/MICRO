@@ -357,7 +357,7 @@ combos {
     ENCLOSEFILL {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
-    bindings = <&kp LS(F)>;
+    bindings = <&kp LG(F)>;
       };
     PATHTOOLFILL {
     timeout-ms = <50>;
