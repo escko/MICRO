@@ -299,12 +299,6 @@ combos {
     key-positions = <0 3 8 11>;
     bindings = <&kp LC(LA(LS(Z)))>;
       };
-    COMBO_S {
-    timeout-ms = <50>;
-    key-positions = <4 6>;
-    bindings = <&kp S>;
-      };
-
     ELLIPSE {
     timeout-ms = <50>;
     key-positions = <1 3>;
@@ -419,14 +413,14 @@ combos {
     KRITA {
     bindings = <
     &mt1 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
-    &mt1 LCTRL A &kp D &kp F &mt5 LG(U) LG(B) &mt RALT C 
+    &mt1 LCTRL A &kp S &kp D &mt5 LG(U) LG(B) &mt RALT C 
     &mt5 PERIOD SLASH &mt1 LSHFT T &mt RGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
-    &mt5 LG(D) ENTER &kp P &E_CUT &kp B        
-    &kp M &kp W &kp F &mt5 LG(U) LG(B) &mt LALT C  
+    &kp LG(D) &kp ENTER &E_CUT &kp B       
+    &mo MEDIA &mt5 P G &mt5 M W &mt5 LG(U) LG(B) &mt LALT C  
     &mt5 BACKSLASH SLASH &mt1 LSHFT K &mt LGUI T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
