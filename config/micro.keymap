@@ -294,11 +294,6 @@ combos {
     key-positions = <9 10>;
     bindings = <&mo BLUE>;
       };
-    HUION {
-    timeout-ms = <50>;
-    key-positions = <0 3 8 11>;
-    bindings = <&kp LC(LA(LS(Z)))>;
-      };
     ELLIPSE {
     timeout-ms = <50>;
     key-positions = <1 3>;
@@ -475,9 +470,9 @@ combos {
 
     MEDIA {
     bindings = <
-    &none &none &bt BT_SEL 1 &bt BT_SEL 0 
+    &none &kp LC(LA(LS(Z))) &bt BT_SEL 1 &bt BT_SEL 0 
     &none &none &none &kp LC(LA(LS(P))) &lt VOLUME C_PLAY_PAUSE
-    &kp LC(LA(LS(V)))  &kp LC(LA(LS(C))) &mt4 LC(LA(LS(W))) LC(LA(LS(X)))>;    
+    &none &mt5 LC(LA(LS(V))) LC(LA(LS(C))) &mt4 LC(LA(LS(W))) LC(LA(LS(X)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
         
     VOLUME {
