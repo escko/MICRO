@@ -429,8 +429,8 @@ combos {
     LAYERS {     
     bindings = <
     &none &none &mt5 LA(LG(M)) LA(LG(C)) &mt5 LS(M) LS(N)  
-    &none &none &none &mt5 LG(U) LG(B) &mt5 LS(LG(I)) LG(D)                       
-    &kp COMMA &mt5 LS(LG(G)) LG(G) &mt5 ESCAPE ENTER >;
+    &none &none &none &mt5 LG(U) LG(B) &mt5 ESCAPE ENTER                      
+    &kp COMMA &mt5 LS(LG(G)) LG(G) &mt5 LS(LG(I)) LG(D)>;
     sensor-bindings = <&rot_kp LS(LG(LBKT)) LS(LG(RBKT))>; };
 
     ZOOM_ROTATE {
