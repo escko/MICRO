@@ -420,7 +420,7 @@ combos {
     INFINITE {
     bindings = <     
     &kp LG(D) &kp ENTER &E_CUT &kp B       
-    &mo MEDIA &mt5 P G &mt5 M W &mt5 LG(U) LG(B) &mt LALT C  
+    &mo MEDIA &mt5 M W &mt5 P F &mt5 LG(U) LG(B) &mt LALT C  
     &mt5 BACKSLASH SLASH &mt1 LSHFT K &mt LGUI T>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -475,7 +475,7 @@ combos {
 
     MEDIA {
     bindings = <
-    &none &kp LC(LA(LS(Z))) &bt BT_SEL 1 &bt BT_SEL 0 
+    &none &bt BT_SEL 1 &bt BT_SEL 0 &mt5 F4 LC(LA(LS(Z)))
     &none &none &none &kp LC(LA(LS(P))) &lt VOLUME C_PLAY_PAUSE
     &none &mt5 LC(LA(LS(V))) LC(LA(LS(C))) &mt4 LC(LA(LS(W))) LC(LA(LS(X)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
