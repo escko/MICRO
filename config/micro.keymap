@@ -419,7 +419,7 @@ combos {
     bindings = <
     &mt1 LSHFT Q &W_WPASTE &E_CUT &R_RCOPY
     &mt1 LCTRL A &kp D &kp F &mt5 LG(U) LG(B) &mt RALT C 
-    &mt5 LG(N1) N1 &mt1 LSHFT T &mt RGUI X>;   
+    &mt5 Z X &mt1 LSHFT T &mt RGUI N1>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
