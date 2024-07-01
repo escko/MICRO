@@ -393,20 +393,10 @@ combos {
     key-positions = <9 11>;
     bindings = <&kp LG(COMMA)>;
       };
-    SAVE {
+    MEH_TAB {
     timeout-ms = <50>;
-    key-positions = <1 10>;
-    bindings = <&kp LG(S)>;
-      };
-    OPEN {
-    timeout-ms = <50>;
-    key-positions = <2 10>;
-    bindings = <&kp LG(O)>;
-      };
-    NEW {
-    timeout-ms = <50>;
-    key-positions = <3 10>;
-    bindings = <&kp LG(N)>;
+    key-positions = <4 9>;
+    bindings = <&mt5 LC(LA(LS(LGUI))) TAB>;
       };
     };
     // | SW1 - 0 | SW2 -  1 | SW3 - 2 | SW4 - 3 |
@@ -440,14 +430,14 @@ combos {
     &none &none &none &mt5 LG(M) LG(N)  
     &none &none &none &mt5 LG(U) LG(B) &mt5 ESCAPE ENTER                      
     &mt5 LA(Z) LA(X) &kp LS(LG(I)) &kp LG(D) >;
-    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON))>; };
+    sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     ROTATE {
     bindings = <
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &mt0 SPACE LG(N0)
     &kp LS(EQUAL) &kp LC(EQUAL) &mt4 H LG(EQUAL)>;
-    sensor-bindings = <&rot_kp LEFT RIGHT>; };
+    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON))>; };
 
     VIEW {
     bindings = <
