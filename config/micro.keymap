@@ -246,7 +246,7 @@ combos {
     INFINITE {
     timeout-ms = <50>;
     key-positions = <4 5 6 10>;
-    bindings = <&tog 1>;
+    bindings = <&tog 2>;
       };
     LAYERS {
     timeout-ms = <50>;
@@ -343,16 +343,6 @@ combos {
     key-positions = <2 8>;
     bindings = <&kp LG(E)>;
       };
-    COMBO_6 {
-    timeout-ms = <50>;
-    key-positions = <1 11>;
-    bindings = <&mt5 LG(N6) N6>;
-      };
-    COMBO_5 {
-    timeout-ms = <50>;
-    key-positions = <2 11>;
-    bindings = <&mt5 LG(N5) N5>;
-      };
     COMBO_O {
     timeout-ms = <50>;
     key-positions = <2 3 11>;
@@ -361,7 +351,17 @@ combos {
     LG_F {
     timeout-ms = <50>;
     key-positions = <3 8>;
-    bindings = <&kp F>;
+    bindings = <&kp LG(F)>;
+      };
+    LA_W {
+    timeout-ms = <50>;
+    key-positions = <1 11>;
+    bindings = <&mt5 LA(W)>;
+      };
+    LA_E {
+    timeout-ms = <50>;
+    key-positions = <2 11>;
+    bindings = <&mt5 LA(E)>;
       };
     LA_R {
     timeout-ms = <50>;
@@ -407,14 +407,14 @@ combos {
     ARTSTUDIO {
     bindings = <
     &mt1 LSHFT Q &kp W &kp E &mt LC(RALT) N4
-    &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LALT C 
+    &lt MEDIA A &kp D &kp F &mt5 LS(LG(B)) LG(B) &mt LALT C 
     &mt1 LCTRL Z &mt1 LSHFT T &mt LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
     &mt1 LSHFT Q &kp W &kp E &mt LC(RALT) N4
-    &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LGUI C 
+    &lt MEDIA A &kp D &kp F &mt5 LS(LG(B)) LG(B) &mt LGUI C 
     &mt1 LCTRL Z &mt1 LSHFT T &mt LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
