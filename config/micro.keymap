@@ -237,10 +237,15 @@ behaviors {
     //  | SW5 - 4 | SW6 -  5 | SW7 - 6 | SW8 - 7 | SW9 - 8 |
     //            | SW10 - 9 | SW11-10 | SW12-11 |
 combos {
-    compatible = "zmk,combos"; 
-    INFINITE {
+    compatible = "zmk,combos";
+    KRITA {
     timeout-ms = <50>;
     key-positions = <0 1 2 10>;
+    bindings = <&tog 1>;
+      }; 
+    INFINITE {
+    timeout-ms = <50>;
+    key-positions = <4 5 6 10>;
     bindings = <&tog 1>;
       };
     LAYERS {
