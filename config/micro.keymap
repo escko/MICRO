@@ -259,7 +259,7 @@ combos {
       };
     HISTORY {
     timeout-ms = <50>;
-    key-positions = <0 4 8 11>;
+    key-positions = <0 4>;
     bindings = <&mo HISTORY>;
       };
     VIEW {
@@ -367,20 +367,20 @@ combos {
     key-positions = <5 6>;
     bindings = <&kp G>;
       };
-    COMBO_P_U {
+    COMBO_P {
     timeout-ms = <50>;
     key-positions = <4 6>;
-    bindings = <&mt5 P U>;
+    bindings = <&kp P>;
       };
     COMBO_S {
     timeout-ms = <50>;
     key-positions = <4 5 6>;
     bindings = <&kp S>;
       };
-    LA_LG_H {
+    LA_LG {
     timeout-ms = <50>;
     key-positions = <8 11>;
-    bindings = <&mt1 LA(LGUI) H>;
+    bindings = <&kp LA(LGUI)>;
       };
     SETTINGS {
     timeout-ms = <50>;
@@ -400,15 +400,15 @@ combos {
     compatible = "zmk,keymap";
     ARTSTUDIO {
     bindings = <
-    &mt1 LSHFT Q &kp W &E_CMDZ &mt LC(RALT) R
-    &A_ACUT &D_DPASTE &F_FCOPY &mt5 LG(U) LG(B) &mt RALT C 
-    &mt1 LCTRL X &mt1 LSHFT T &mt RGUI N1>;   
+    &mt1 LSHFT Q &kp W &kp E &mt LC(RALT) N4
+    &lt MEDIA A &kp D &kp F &mt5 LS(LG(B)) LG(B) &mt LALT C 
+    &mt1 LCTRL Z &mt1 LSHFT T &mt LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
     &kp LG(D) &kp ENTER &E_CMDZ &mt1 LS(B) B       
-    &M_MCUT &W_WPASTE &F_FCOPY &mt5 LG(U) LG(B) &mt LALT C  
+    &lt MEDIA M &kp W &kp F &mt5 LG(U) LG(B) &mt LALT C  
     &mt5 BACKSLASH SLASH &mt1 LSHFT T &mt LGUI K>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -423,14 +423,14 @@ combos {
     bindings = <
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &mt0 SPACE LG(N0)
-    &kp LS(EQUAL) &kp LC(EQUAL) &kp LG(EQUAL)>;
-    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMICOLON))>; };
+    &kp LS(EQUAL) &kp LC(EQUAL) &mt4 H LG(EQUAL)>;
+    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMI))>; };
 
     VIEW {
     bindings = <
     &none &none &none &none
     &none &none &none &kp TAB &mt0 SPACE LG(N0)
-    &mt4 LCTRL LS(V) &kp LS(H) &kp LS(LG(N0))>;
+    &mt4 LCTRL LS(V) &kp LS(H) &mt4 LS(LG(N0)) H>;
     sensor-bindings = <&rot_scroll SCRL_UP SCRL_DOWN>; };
 
     HISTORY {
@@ -443,7 +443,7 @@ combos {
     CENTERLEFT {
     bindings = <
     &none &none &kp LC(LA(LS(LEFT))) &kp LC(LA(LS(RIGHT))) 
-    &none &none &mt5 LC(LA(LS(LG(DOWN)))) LC(LA(LS(LG(UP)))) &none &mt5 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMICOLON)))  
+    &none &none &mt5 LC(LA(LS(LG(DOWN)))) LC(LA(LS(LG(UP)))) &none &mt5 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMI)))  
     &kp LC(LA(LS(INT1))) &kp LC(LA(LS(UP))) &kp LC(LA(LS(DOWN)))>;      
     sensor-bindings = <&rot_kp LC(LA(LS(N))) LC(LA(LS(M)))>; };
 
