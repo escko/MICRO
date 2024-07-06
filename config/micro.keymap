@@ -356,12 +356,12 @@ combos {
     LA_W {
     timeout-ms = <50>;
     key-positions = <1 11>;
-    bindings = <&mt5 LA(W)>;
+    bindings = <&kp LA(W)>;
       };
     LA_E {
     timeout-ms = <50>;
     key-positions = <2 11>;
-    bindings = <&mt5 LA(E)>;
+    bindings = <&kp LA(E)>;
       };
     LA_R {
     timeout-ms = <50>;
