@@ -351,7 +351,7 @@ combos {
     LG_F {
     timeout-ms = <50>;
     key-positions = <3 8>;
-    bindings = <&kp LG(F)>;
+    bindings = <&kp F >;
       };
     LA_W {
     timeout-ms = <50>;
@@ -407,14 +407,14 @@ combos {
     ARTSTUDIO {
     bindings = <
     &mt1 LSHFT Q &kp W &kp E &mt LC(RALT) N4
-    &lt MEDIA A &kp D &kp F &mt5 LS(LG(B)) LG(B) &mt LALT C 
+    &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LALT C 
     &mt1 LCTRL Z &mt1 LSHFT T &mt LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
     &mt1 LSHFT Q &kp W &kp E &mt LC(RALT) N4
-    &lt MEDIA A &kp D &kp F &mt5 LS(LG(B)) LG(B) &mt LGUI C 
+    &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LGUI C 
     &mt1 LCTRL Z &mt1 LSHFT T &mt LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
