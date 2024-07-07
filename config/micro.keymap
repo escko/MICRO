@@ -406,14 +406,14 @@ combos {
     compatible = "zmk,keymap";
     ARTSTUDIO {
     bindings = <
-    &mt1 LSHFT Q &kp W &mt E U &mt LC(RALT) N4
+    &mt1 LSHFT Q &kp W &mt U E &mt LC(RALT) N4
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LALT C 
     &mt1 LCTRL Z &mt1 LSHFT T &mt LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
-    &mt1 LSHFT Q &kp W &mt E U &mt LC(RALT) N4
+    &mt1 LSHFT Q &kp W &mt U E &mt LC(RALT) N4
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LGUI C 
     &mt1 LCTRL Z &mt1 LSHFT T &mt LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
