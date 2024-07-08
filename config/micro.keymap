@@ -415,7 +415,7 @@ combos {
     bindings = <
     &mt1 LSHFT Q &kp W &mt U E &mt LC(RALT) N4
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LGUI C 
-    &mt1 LCTRL Z &mt1 LSHFT T &mt LALT X>;   
+    &mt2 LCTRL Z &mt1 LSHFT T &mt LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
@@ -428,7 +428,7 @@ combos {
     LAYERS {     
     bindings = <
     &none &none &none &mt5 LG(M) LG(N)  
-    &none &none &kp LS(LG(LA(Z))) &mt5 LG(U) LG(B) &mt5 ESCAPE ENTER                      
+    &none &none &kp LS(LG(LA(Z))) &mt5 LG(U) LG(B) &mt3 ESCAPE ENTER                      
     &mt5 LA(Z) LA(X) &kp LS(LG(I)) &kp LG(D)>;
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
@@ -436,14 +436,14 @@ combos {
     bindings = <
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &mt0 SPACE LG(N0)
-    &kp LS(EQUAL) &kp LC(EQUAL) &mt4 H LG(EQUAL)>;
+    &kp LS(EQUAL) &kp LC(EQUAL) &mt3 H LG(EQUAL)>;
     sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMI))>; };
 
     VIEW {
     bindings = <
     &none &none &none &none
     &none &none &none &kp TAB &mt0 SPACE LG(N0)
-    &mt4 LCTRL LS(V) &kp LS(H) &mt4 LS(LG(N0)) H>;
+    &mt4 LCTRL LS(V) &kp LS(H) &mt3 LS(LG(N0)) H>;
     sensor-bindings = <&rot_scroll SCRL_UP SCRL_DOWN>; };
 
     HISTORY {
@@ -456,15 +456,15 @@ combos {
     CENTERLEFT {
     bindings = <
     &none &none &kp LC(LA(LS(LEFT))) &kp LC(LA(LS(RIGHT))) 
-    &none &none &mt5 LC(LA(LS(LG(DOWN)))) LC(LA(LS(LG(UP)))) &none &mt5 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMI)))  
-    &kp LC(LA(LS(INT1))) &kp LC(LA(LS(SLASH))) &mt5 LC(LA(LS(DOWN))) LC(LA(LS(UP)))>;      
+    &none &none &mt3 LC(LA(LS(LG(DOWN)))) LC(LA(LS(LG(UP)))) &none &mt3 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMI)))  
+    &kp LC(LA(LS(INT1))) &kp LC(LA(LS(SLASH))) &mt3 LC(LA(LS(DOWN))) LC(LA(LS(UP)))>;      
     sensor-bindings = <&rot_kp LC(LA(LS(N))) LC(LA(LS(M)))>; };
 
     MEDIA {
     bindings = <
     &none &bt BT_SEL 1 &bt BT_SEL 0 &mt5 F4 LC(LA(LS(Z)))
     &none &none &none &kp LC(LA(LS(P))) &lt VOLUME C_PLAY_PAUSE
-    &none &mt5 LC(LA(LS(V))) LC(LA(LS(W))) &mt2 LC(LA(LS(C))) LC(LA(LS(X)))>;    
+    &none &mt1 LC(LA(LS(V))) LC(LA(LS(W))) &mt LC(LA(LS(C))) LC(LA(LS(X)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
         
     VOLUME {
