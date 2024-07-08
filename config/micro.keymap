@@ -408,7 +408,7 @@ combos {
     bindings = <
     &mt1 LSHFT Q &kp W &mt U E &mt LC(RALT) N4
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LALT C 
-    &mt1 LCTRL Z &mt1 LSHFT T &mt LGUI X>;   
+    &mt2 LCTRL Z &mt1 LSHFT T &mt LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
@@ -457,14 +457,14 @@ combos {
     bindings = <
     &none &none &kp LC(LA(LS(LEFT))) &kp LC(LA(LS(RIGHT))) 
     &none &none &mt5 LC(LA(LS(LG(DOWN)))) LC(LA(LS(LG(UP)))) &none &mt5 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMI)))  
-    &kp LC(LA(LS(INT1))) &kp LC(LA(LS(UP))) &kp LC(LA(LS(DOWN)))>;      
+    &kp LC(LA(LS(INT1))) &kp LC(LA(LS(SLASH))) &mt5 LC(LA(LS(DOWN))) LC(LA(LS(UP)))>;      
     sensor-bindings = <&rot_kp LC(LA(LS(N))) LC(LA(LS(M)))>; };
 
     MEDIA {
     bindings = <
     &none &bt BT_SEL 1 &bt BT_SEL 0 &mt5 F4 LC(LA(LS(Z)))
     &none &none &none &kp LC(LA(LS(P))) &lt VOLUME C_PLAY_PAUSE
-    &none &mt5 LC(LA(LS(V))) LC(LA(LS(C))) &mt4 LC(LA(LS(W))) LC(LA(LS(X)))>;    
+    &none &mt5 LC(LA(LS(V))) LC(LA(LS(W))) &mt2 LC(LA(LS(C))) LC(LA(LS(X)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
         
     VOLUME {
