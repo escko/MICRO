@@ -393,11 +393,6 @@ combos {
     key-positions = <9 11>;
     bindings = <&kp LG(COMMA)>;
       };
-    MEH_TAB {
-    timeout-ms = <50>;
-    key-positions = <4 9>;
-    bindings = <&mt5 LC(LA(LS(LGUI))) TAB>;
-      };
     };
     // | SW1 - 0 | SW2 -  1 | SW3 - 2 | SW4 - 3 |
     // | SW5 - 4 | SW6 -  5 | SW7 - 6 | SW8 - 7 | SW9 - 8 |
