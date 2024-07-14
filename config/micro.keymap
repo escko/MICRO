@@ -338,6 +338,11 @@ combos {
     key-positions = <2 3 8>;
     bindings = <&kp Y>;
       };
+    COMBO_LS_LG {
+    timeout-ms = <50>;
+    key-positions = <0 8>;
+    bindings = <&kp LS(LGUI)>;
+      };
     COMBO_LG_E {
     timeout-ms = <50>;
     key-positions = <2 8>;
@@ -401,14 +406,14 @@ combos {
     compatible = "zmk,keymap";
     ARTSTUDIO {
     bindings = <
-    &mt1 LSHFT Q &kp W &mt U E &mt LC(RALT) N4
+    &kp Q &kp W &mt U E &mt LC(RALT) R
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LALT C 
     &mt2 LCTRL Z &mt1 LSHFT T &mt LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
-    &mt1 LSHFT Q &kp W &mt U E &mt LC(RALT) N4
+    &kp Q &kp W &mt U E &mt LSHFT R
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LGUI C 
     &mt2 LCTRL Z &mt1 LSHFT T &mt LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
