@@ -11,12 +11,12 @@
 #define INFINITE 2
 #define LAYERS 3
 #define ROTATE 4
-#define VIEW 5
-#define HISTORY 6
-#define CENTERLEFT 7
-#define MEDIA 8
-#define VOLUME 9
-#define BLUE 10
+#define HISTORY 5
+#define CENTERLEFT 6
+#define MEDIA 7
+#define VOLUME 8
+#define BLUE 9
+// #define VIEW 5
 
 &lt {
     tapping-term-ms = <170>;
@@ -271,17 +271,17 @@ combos {
     VIEW {
     timeout-ms = <50>;
     key-positions = <0 1 2 3>;
-    bindings = <&mo VIEW>;
+    bindings = <&mto O LG(N0)>;
       };
     ROTATE {
     timeout-ms = <50>;
     key-positions = <0 3>;
     bindings = <&mo ROTATE>;
       };
-    TRANSFORM {
+    COMBO_SPACE {
     timeout-ms = <50>;
     key-positions = <1 2 3>;
-    bindings = <&kp V>;
+    bindings = <&mt0 SPACE H>;
       };
     CENTERLEFT {
     timeout-ms = <50>;
@@ -323,6 +323,11 @@ combos {
     key-positions = <3 8 11>;
     bindings = <&kp LS(LG(N4))>;
       };
+    COMBO_LG_L {
+    timeout-ms = <50>;
+    key-positions = <2 3 8>;
+    bindings = <&kp LG(L)>;
+      };
     LG_T {
     timeout-ms = <50>;
     key-positions = <1 2 3 8>;
@@ -335,7 +340,7 @@ combos {
       };
     ELASTIFY {
     timeout-ms = <50>;
-    key-positions = <2 3 8>;
+    key-positions = <1 2 8>;
     bindings = <&kp Y>;
       };
     COMBO_LS_LG {
@@ -403,21 +408,21 @@ combos {
     bindings = <
     &kp Q &kp W &mt U E &mt LC(RALT) R
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LALT C 
-    &mt2 LCTRL Z &mt1 LSHFT T &mt LGUI X>;   
+    &mt2 LCTRL Z &mt1 LSHFT V &mt LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
     &kp Q &kp W &mt U E &mt LSHFT R
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LGUI C 
-    &mt2 LCTRL Z &mt1 LSHFT T &mt LALT X>;   
+    &mt2 LCTRL Z &mt1 LSHFT V &mt LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
-    &kp LG(D) &kp ENTER &E_CMDZ &mt1 LS(B) B       
+    &kp LS(B) &kp K &E_CMDZ &mt O B       
     &lt MEDIA M &kp W &kp F &mt5 LG(U) LG(B) &mt LALT C  
-    &mt5 BACKSLASH SLASH &mt1 LSHFT T &mt LGUI K>;       
+    &mt5 BACKSLASH SLASH &mt1 LSHFT T &mt LGUI V>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
@@ -433,13 +438,6 @@ combos {
     &none &none &none &kp LA(LG(N0)) &mt0 SPACE LG(N0)
     &kp LS(EQUAL) &kp LC(EQUAL) &mt3 H LG(EQUAL)>;
     sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMI))>; };
-
-    VIEW {
-    bindings = <
-    &none &none &none &none
-    &none &none &none &kp TAB &mt0 SPACE LG(N0)
-    &mt4 LCTRL LS(V) &kp LS(H) &mt3 LS(LG(N0)) H>;
-    sensor-bindings = <&rot_scroll SCRL_UP SCRL_DOWN>; };
 
     HISTORY {
     bindings = <
@@ -478,3 +476,9 @@ combos {
     };
 };
 
+// VIEW {
+// bindings = <
+// &none &none &none &none
+// &none &none &none &kp TAB &mt0 SPACE LG(N0)
+// &mt4 LCTRL LS(V) &kp LS(H) &mt3 LS(LG(N0)) H>;
+// sensor-bindings = <&rot_scroll SCRL_UP SCRL_DOWN>; };
