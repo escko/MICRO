@@ -271,7 +271,7 @@ combos {
     VIEW {
     timeout-ms = <50>;
     key-positions = <0 1 2 3>;
-    bindings = <&mto O LG(N0)>;
+    bindings = <&mt0 O LG(N0)>;
       };
     ROTATE {
     timeout-ms = <50>;
