@@ -414,16 +414,16 @@ combos {
 
     KRITA {
     bindings = <
-    &kp Q &kp W &mt U E &mt LSHFT R
-    &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LGUI C 
-    &mt2 LCTRL Z &mt1 LSHFT V &mt LALT X>;   
+    &kp Q &kp W &mt U E &HWU LSHFT R
+    &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &HWU LGUI C 
+    &mt2 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
     bindings = <     
-    &kp LS(B) &kp K &E_CMDZ &mt O B       
-    &lt MEDIA M &kp W &kp F &mt5 LG(U) LG(B) &mt LALT C  
-    &mt5 BACKSLASH SLASH &mt1 LSHFT T &mt LGUI V>;       
+    &kp LS(B) &kp K &E_CMDZ &HWU O B       
+    &lt MEDIA M &kp W &kp F &mt5 LG(U) LG(B) &HWU LALT C  
+    &mt5 BACKSLASH SLASH &HWU LSHFT T &HWU LGUI V>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
