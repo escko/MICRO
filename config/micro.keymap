@@ -232,7 +232,7 @@ behaviors {
             bindings = <&kp E>, <&kp LG(Z)>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
       };
-    HWU: HWU {
+    hold_while_undecided: hold_while_undecided {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_WHILE_UNDECIDED";
             bindings = <&kp>, <&kp>;
@@ -407,7 +407,7 @@ combos {
     compatible = "zmk,keymap";
     ARTSTUDIO {
     bindings = <
-    &kp Q &kp W &mt U E &HWU LC(RALT) R
+    &kp Q &kp W &mt U E &hold_while_undecided LC(RALT) R
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &mt LALT C 
     &mt2 LCTRL Z &mt1 LSHFT V &mt LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
