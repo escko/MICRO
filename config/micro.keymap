@@ -241,7 +241,7 @@ behaviors {
             tapping-term-ms = <200>;
             require-prior-idle-ms = <120>;
             hold-while-undecided;
-        };
+      };
   };
 
     //  | SW1 - 0 | SW2 -  1 | SW3 - 2 | SW4 - 3 |
@@ -272,7 +272,7 @@ combos {
     MOVE_TRANS {
     timeout-ms = <50>;
     key-positions = <1 2>;
-    bindings = <&HWU J T>;
+    bindings = <&mt J T>;
       };
     HISTORY {
     timeout-ms = <50>;
@@ -409,14 +409,14 @@ combos {
     bindings = <
     &kp Q &kp W &mt U E &HWU LC(RALT) R
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &HWU LALT C 
-    &mt2 LCTRL Z &HWU LSHFT V &HWU LGUI X>;   
+    &HWU LCTRL Z &HWU LSHFT V &HWU LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
     &kp Q &kp W &mt U E &HWU LSHFT R
     &lt MEDIA A &kp D &kp LG(F) &mt5 LS(LG(B)) LG(B) &HWU LGUI C 
-    &mt2 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
+    &HWU LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     INFINITE {
@@ -436,7 +436,7 @@ combos {
     ROTATE {
     bindings = <
     &none &none &none &none
-    &none &none &none &kp LA(LG(N0)) &mt0 SPACE LG(N0)
+    &none &none &none &kp LA(LG(N0)) &HWU SPACE LG(N0)
     &kp LS(EQUAL) &kp LC(EQUAL) &mt3 H LG(EQUAL)>;
     sensor-bindings = <&rot_kp LS(LBKT) LS(RBKT)>; };
 
