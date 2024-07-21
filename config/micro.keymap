@@ -31,7 +31,7 @@
 };
 
 // time to max speed ms was 1000 //
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 300    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 60    // 10
 //#define MOUSE_SCROLL_MAX 250
 &msc {
     acceleration-exponent = <0>;      // 0
@@ -81,6 +81,7 @@ behaviors {
       label = "ROT_SCROLL";
       #sensor-binding-cells = <2>;
       bindings = <&msc>, <&msc>;
+      tap-ms = <33>;
       }; 
     rot_kp: rot_kp {
       compatible = "zmk,behavior-sensor-rotate-var";
@@ -329,6 +330,11 @@ combos {
     key-positions = <2 3>;
     bindings = <&kp L>;
       };
+    COMBO_LG_L {
+    timeout-ms = <50>;
+    key-positions = <2 3 8>;
+    bindings = <&kp LG(L)>;
+      };
     BRUSH_EDITOR {
     timeout-ms = <50>;
     key-positions = <3 8 11>;
@@ -438,7 +444,7 @@ combos {
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &HWU SPACE LG(N0)
     &kp LS(EQUAL) &kp LC(EQUAL) &mt3 H LG(EQUAL)>;
-    sensor-bindings = <&rot_kp LS(LBKT) LS(RBKT)>; };
+    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMI))>; };
 
     HISTORY {
     bindings = <
