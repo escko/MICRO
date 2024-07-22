@@ -31,7 +31,7 @@
 };
 
 // time to max speed ms was 1000 //
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 120    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 130    // 10
 //#define MOUSE_SCROLL_MAX 250
 &msc {
     acceleration-exponent = <0>;      // 0
@@ -314,10 +314,15 @@ combos {
     key-positions = <2 3 8 11>;
     bindings = <&kp Y>;
       };
-    COMBO_LS_LG {
+    COMBO_LS_LGUI {
     timeout-ms = <50>;
     key-positions = <0 8>;
     bindings = <&kp LS(LGUI)>;
+      };
+    COMBO_LS_LALT {
+    timeout-ms = <50>;
+    key-positions = <0 11>;
+    bindings = <&kp LS(LALT)>;
       };
     COMBO_LG_E {
     timeout-ms = <50>;
