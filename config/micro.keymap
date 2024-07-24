@@ -218,7 +218,7 @@ combos {
     KRITA {
     timeout-ms = <50>;
     key-positions = <0 1 2 10>;
-    bindings = <&tog KRTIA>;
+    bindings = <&tog KRITA>;
       }; 
     INFINITE {
     timeout-ms = <50>;
@@ -400,7 +400,7 @@ combos {
     &trans &trans &trans &trans
     &trans &trans &trans &trans &trans
     &trans &trans &trans>;
-    sensor-bindings = <&rot_kp LEFT RIGHT>; };
+    sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT)>; };
 
     INFINITE {
     bindings = <     
