@@ -8,15 +8,16 @@
 
 #define ARTSTUDIO 0
 #define KRITA 1
-#define INFINITE 2
-#define LAYERS 3
-#define ROTATE 4
-#define VIEW 5
-#define HISTORY 6
-#define CENTERLEFT 7
-#define MEDIA 8
-#define VOLUME 9
-#define BLUE 10
+#define ENCODER 2
+#define INFINITE 3
+#define LAYERS 4
+#define ROTATE 5
+#define VIEW 6
+#define HISTORY 7
+#define CENTERLEFT 8
+#define MEDIA 9
+#define VOLUME 10
+#define BLUE 11
 
 
 &lt {
@@ -90,7 +91,7 @@ behaviors {
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
       flavor = "tap-preferred"; // was hold-preferred
-      tapping-term-ms = <200>;
+      tapping-term-ms = <170>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
       }; 
@@ -204,7 +205,7 @@ behaviors {
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <75>;
             hold-while-undecided;
       };
   };
@@ -217,12 +218,12 @@ combos {
     KRITA {
     timeout-ms = <50>;
     key-positions = <0 1 2 10>;
-    bindings = <&tog 1>;
+    bindings = <&tog KRTIA>;
       }; 
     INFINITE {
     timeout-ms = <50>;
     key-positions = <4 5 6 10>;
-    bindings = <&tog 2>;
+    bindings = <&tog INFINITE>;
       };
     LAYERS {
     timeout-ms = <50>;
@@ -383,16 +384,23 @@ combos {
     ARTSTUDIO {
     bindings = <
     &kp Q &kp W &mt U E &HWU LC(LALT) R
-    &lt MEDIA A &kp D &kp LG(F) &mt1 LS(LG(B)) LG(B) &HWU LALT C 
-    &HWU LCTRL Z &HWU LSHFT V &HWU LGUI X>;   
+    &lt MEDIA A &kp D &kp LG(F) &tog ENCODER &HWU LALT C 
+    &mt1 LCTRL Z &HWU LSHFT V &HWU LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
     &kp Q &kp W &mt U E &HWU LSHFT R
-    &lt MEDIA A &kp D &kp LG(F) &mt1 LS(LG(B)) LG(B) &HWU LGUI C 
-    &HWU LCTRL Z &HWU LSHFT V &HWU LALT X>;   
+    &lt MEDIA A &kp D &kp LG(F) &tog ENCODER &HWU LGUI C 
+    &mt1 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
+
+    ENCODER {
+    bindings = <
+    &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans
+    &trans &trans &trans>;
+    sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     INFINITE {
     bindings = <     
@@ -404,8 +412,8 @@ combos {
     LAYERS {     
     bindings = <
     &none &none &none &mt1 LG(M) N  
-    &none &none &kp LS(LG(LA(Z))) &mt1 LG(U) LG(B) &mt1 ESCAPE ENTER                      
-    &mt1 LA(Z) LA(X) &kp LS(LG(I)) &kp LG(D)>;
+    &none &none &kp LS(LG(LA(Z))) &mt1 LS(LG(B)) LG(B) &mt LG(D) ENTER                      
+    &mt1 LA(Z) LA(X) &kp ESCAPE &kp LS(LG(I)) >;
     sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
 
     ROTATE {
