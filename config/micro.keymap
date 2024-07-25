@@ -383,14 +383,14 @@ combos {
     compatible = "zmk,keymap";
     ARTSTUDIO {
     bindings = <
-    &HWU LALT Q &kp W &mt U E &HWU LC(LALT) R
+    &kp Q &kp W &mt U E &HWU LC(LALT) R
     &lt MEDIA A &kp D &kp LG(F) &tog ENCODER &HWU LALT C 
     &mt1 LCTRL Z &HWU LSHFT V &HWU LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
-    &HWU LALT Q &kp W &mt U E &HWU LSHFT R
+    &kp Q &kp W &mt U E &HWU LSHFT R
     &lt MEDIA A &kp D &kp LG(F) &tog ENCODER &HWU LGUI C 
     &mt1 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
