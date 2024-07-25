@@ -233,7 +233,7 @@ combos {
     POLYGON_LASSO {
     timeout-ms = <50>;
     key-positions = <0 1>;
-    bindings = <&kp I>;
+    bindings = <&mt1 I LA(I)>;
       };
     MOVE_TRANS {
     timeout-ms = <50>;
@@ -366,7 +366,7 @@ combos {
     bindings = <&kp S>;
       };
     LA_LGUI {
-    timeout-ms = <50>;
+    timeout-ms = <100>;
     key-positions = <8 11>;
     bindings = <&HWU LA(LGUI) N0>;
       };
@@ -383,14 +383,14 @@ combos {
     compatible = "zmk,keymap";
     ARTSTUDIO {
     bindings = <
-    &kp Q &kp W &mt U E &HWU LC(LALT) R
+    &HWU LALT Q &kp W &mt U E &HWU LC(LALT) R
     &lt MEDIA A &kp D &kp LG(F) &tog ENCODER &HWU LALT C 
     &mt1 LCTRL Z &HWU LSHFT V &HWU LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
-    &kp Q &kp W &mt U E &HWU LSHFT R
+    &HWU LALT Q &kp W &mt U E &HWU LSHFT R
     &lt MEDIA A &kp D &kp LG(F) &tog ENCODER &HWU LGUI C 
     &mt1 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
@@ -411,9 +411,9 @@ combos {
 
     LAYERS {     
     bindings = <
-    &none &none &none &mt1 LG(M) N  
-    &none &none &kp LS(LG(LA(Z))) &mt1 LS(LG(B)) LG(B) &mt LG(D) ENTER                      
-    &mt1 LA(Z) LA(X) &kp ESCAPE &kp LS(LG(I)) >;
+    &none &none &none &mt LG(D) ENTER
+    &none &none &mt1 LA(X) LA(C) &mt1 LS(LG(B)) LG(B) &mt1 LS(N) N                       
+    &kp LS(LG(LA(Z))) &mt1 ESCAPE LS(LG(I)) &mt1 LS(M) LG(M) >;
     sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
 
     ROTATE {
