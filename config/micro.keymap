@@ -395,7 +395,7 @@ combos {
 
     KRITA {
     bindings = <
-    &kp Q &kp W &mt U E &HWU LSHFT R
+    &kp Q &kp W &mt U E &HWU RSHFT R
     &lt MEDIA A &kp D &kp LG(F) &tog ENCODER &HWU LGUI C 
     &mt1 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
