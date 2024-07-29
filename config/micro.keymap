@@ -295,15 +295,20 @@ combos {
     key-positions = <2 3>;
     bindings = <&kp L>;
       };
-    COMBO_LG_L {
+    LS_LG_R {
+    timeout-ms = <50>;
+    key-positions = <3 8 11>;
+    bindings = <&kp LS(LG(R))>;
+      };
+    LG_L {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
     bindings = <&kp LA(L)>;
       };
-    BRUSH_EDITOR {
+    INVERT {
     timeout-ms = <50>;
-    key-positions = <3 8 11>;
-    bindings = <&kp LS(LG(R))>;
+    key-positions = <2 3 11>;
+    bindings = <&kp LS(LG(I))>;
       };
     LG_W {
     timeout-ms = <50>;
@@ -315,22 +320,22 @@ combos {
     key-positions = <2 3 8 11>;
     bindings = <&kp Y>;
       };
-    COMBO_LS_LGUI {
+    LS_LGUI {
     timeout-ms = <50>;
     key-positions = <0 8>;
     bindings = <&kp LS(LGUI)>;
       };
-    COMBO_LS_LALT {
+    LS_LALT {
     timeout-ms = <50>;
     key-positions = <0 11>;
     bindings = <&kp LS(LALT)>;
       };
-    COMBO_LS_LA_LGUI {
+    LS_LA_LGUI {
     timeout-ms = <50>;
     key-positions = <0 8 11>;
     bindings = <&kp LS(LA(LGUI))>;
       };
-    COMBO_LG_E {
+    LG_E {
     timeout-ms = <50>;
     key-positions = <2 8>;
     bindings = <&kp LG(E)>;
@@ -409,16 +414,16 @@ combos {
 
     INFINITE {
     bindings = <     
-    &kp LS(B) &kp K &E_CMDZ &HWU O B       
+    &kp LS(B) &kp V &E_CMDZ &HWU O B       
     &lt MEDIA M &kp W &kp F &mt1 LG(U) LG(B) &HWU LALT C  
-    &mt1 BACKSLASH SLASH &HWU LSHFT T &HWU LGUI V>;       
+    &mt1 BACKSLASH SLASH &HWU LSHFT T &HWU LGUI K>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
     bindings = <
     &none &none &none &mt LG(D) ENTER
     &none &none &mt1 LA(X) LA(C) &mt1 LS(LG(B)) LG(B) &mt1 LS(N) N                       
-    &kp LS(LG(LA(Z))) &mt1 ESCAPE LS(LG(I)) &mt1 LS(M) LG(M) >;
+    &kp LS(LG(LA(Z))) &HWU LSHFT ESCAPE &mt1 LS(M) LG(M) >;
     sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
 
     ROTATE {
