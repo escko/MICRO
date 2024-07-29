@@ -350,7 +350,7 @@ combos {
     key-positions = <1 11>;
     bindings = <&kp LG(W)>;
       };
-    LG_E {
+    COMBO_LG_E {
     timeout-ms = <50>;
     key-positions = <2 11>;
     bindings = <&kp LG(E)>;
