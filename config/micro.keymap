@@ -265,11 +265,6 @@ combos {
     key-positions = <4 5>;
     bindings = <&mo CENTERLEFT>;
       };
-    MEDIA {
-    timeout-ms = <50>;
-    key-positions = <0 4>;
-    bindings = <&mo MEDIA>;
-      };
     BLUE {
     timeout-ms = <50>;
     key-positions = <9 10>;
@@ -423,7 +418,7 @@ combos {
     bindings = <
     &none &none &none &mt LG(D) ENTER
     &none &none &mt1 LA(X) LA(C) &mt1 LS(LG(B)) LG(B) &mt1 LS(N) N                       
-    &kp LS(LG(LA(Z))) &HWU LSHFT ESCAPE &mt1 LS(M) LG(M) >;
+    &mt1 ESCAPE BACKSLASH &HWU LSHFT SLASH &mt1 LS(M) LG(M) >;
     sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
 
     ROTATE {

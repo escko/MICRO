@@ -21,8 +21,8 @@
 
         kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
         diode-direction = "col2row";
+        wakeup-source;
 
         col-gpios
             = <&pro_micro 19 GPIO_ACTIVE_HIGH>
@@ -41,7 +41,6 @@
     
     encoder: encoder {
         compatible = "alps,ec11";
-        label = "ENCODER";
         a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <18>;
