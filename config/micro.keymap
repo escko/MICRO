@@ -94,7 +94,25 @@ behaviors {
       tapping-term-ms = <170>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
-      }; 
+      };
+    mt2: mt2 {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_TAP1";
+      #binding-cells = <2>;
+      flavor = "tap-preferred"; // was hold-preferred
+      tapping-term-ms = <200>;
+      quick-tap-ms = <100>;
+      bindings = <&kp>, <&kp>;
+      };
+    mt3: mt3 {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_TAP1";
+      #binding-cells = <2>;
+      flavor = "tap-preferred"; // was hold-preferred
+      tapping-term-ms = <300>;
+      quick-tap-ms = <100>;
+      bindings = <&kp>, <&kp>;
+      };
     kp_mkp: kp_mkp {
       compatible = "zmk,behavior-hold-tap";
       label = "KP_MKP";
@@ -183,7 +201,7 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(Z)>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LGUI)>;
       };
     rot_scroll: rot_scroll {
       compatible = "zmk,behavior-sensor-rotate-var";
@@ -273,12 +291,12 @@ combos {
     ELLIPSE {
     timeout-ms = <50>;
     key-positions = <1 3>;
-    bindings = <&mt1 K LA(K)>;
+    bindings = <&mt2 K LA(K)>;
       };
     MARQUEE {
     timeout-ms = <50>;
     key-positions = <0 2>;
-    bindings = <&mt1 M LA(M)>;
+    bindings = <&mt2 M LA(M)>;
       };
     LASSO {
     timeout-ms = <50>;
@@ -293,7 +311,7 @@ combos {
     LG_L {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
-    bindings = <&kp LA(L)>;
+    bindings = <&kp LG(L)>;
       };
     INVERT {
     timeout-ms = <50>;
@@ -303,7 +321,7 @@ combos {
     LG_W {
     timeout-ms = <50>;
     key-positions = <1 8>;
-    bindings = <&kp LA(W)>;
+    bindings = <&kp LG(W)>;
       };
     LA_LG_J {
     timeout-ms = <50>;
@@ -333,22 +351,22 @@ combos {
     LG_E {
     timeout-ms = <50>;
     key-positions = <2 8>;
-    bindings = <&kp LA(E)>;
+    bindings = <&kp LG(E)>;
       };
     LA_W {
     timeout-ms = <50>;
     key-positions = <1 11>;
-    bindings = <&kp LG(W)>;
+    bindings = <&kp LA(W)>;
       };
     LG_R {
     timeout-ms = <50>;
     key-positions = <3 8>;
-    bindings = <&kp LA(R)>;
+    bindings = <&kp LG(R)>;
       };
     LA_R {
     timeout-ms = <50>;
     key-positions = <3 11>;
-    bindings = <&kp LG(R)>;
+    bindings = <&kp LA(R)>;
       };
     COMBO_G {
     timeout-ms = <50>;
@@ -383,14 +401,14 @@ combos {
     compatible = "zmk,keymap";
     ARTSTUDIO {
     bindings = <
-    &HWU LSHFT Q &kp W &mt U E &HWU LC(LALT) R
-    &lt MEDIA A &kp D &kp F &tog ENCODER &HWU LALT C 
-    &mt1 LCTRL Z &HWU LSHFT V &HWU LGUI X>;   
+    &mt LSHFT Q &kp W &mt U E &HWU LC(LGUI) R
+    &lt MEDIA A &kp D &kp F &tog ENCODER &HWU LGUI C 
+    &mt1 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
-    &HWU LSHFT Q &kp W &mt U E &HWU R N5
+    &mt LSHFT Q &kp W &mt U E &HWU R N5
     &lt MEDIA A &kp D &kp F &tog ENCODER &HWU LGUI C 
     &mt1 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
@@ -400,20 +418,20 @@ combos {
     &trans &trans &trans &trans
     &trans &trans &trans &trans &trans
     &trans &trans &trans>;
-    sensor-bindings = <&rot_kp LS(LEFT) LS(RIGHT)>; };
+    sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     INFINITE {
     bindings = <     
-    &kp LS(B) &kp V &E_CMDZ &HWU O B       
-    &lt MEDIA M &kp W &kp F &mt1 LG(U) LG(B) &HWU LALT C  
-    &mt1 BACKSLASH SLASH &HWU LSHFT T &HWU LGUI K>;       
+    &mt LSHFT LS(B) &kp V &E_CMDZ &HWU O B       
+    &lt MEDIA M &kp W &kp F &mt1 LA(U) LA(B) &HWU LGUI C  
+    &mt1 BACKSLASH SLASH &HWU LSHFT T &HWU LALT K>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
     bindings = <
-    &none &none &none &mt LG(D) ENTER
-    &none &none &mt1 LA(X) LA(C) &mt1 LS(LG(B)) LG(B) &mt1 LS(N) N                       
-    &mt1 ESCAPE N7 &HWU LSHFT N6 &mt1 LS(M) LG(M) >;
+    &none &none &none &mt0 LG(D) ENTER
+    &none &none &mt3 LS(LA(LG(E))) LS(LA(E)) &mt2 LS(LG(B)) LG(B) &mt2 LS(N) N                       
+    &mt2 ESCAPE N7 &HWU LSHFT N6 &mt2 LS(M) LG(M) >;
     sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
 
     ROTATE {
@@ -421,14 +439,14 @@ combos {
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &HWU SPACE LG(N0)
     &kp LS(EQUAL) &kp LC(EQUAL) &mt1 H LG(EQUAL)>;
-    sensor-bindings = <&rot_kp N1 N4>; };
+    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMI))>; };
 
     VIEW {
     bindings = <
     &none &none &none &none
     &none &none &none &kp TAB &HWU SPACE LG(N0)
     &HWU LCTRL LS(V) &kp LS(H) &mt1 LS(LG(N0)) H>;
-    sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMI))>; };
+    sensor-bindings = <&rot_scroll SCRL_UP SCRL_DOWN>; };
 
     HISTORY {
     bindings = <
