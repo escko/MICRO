@@ -276,7 +276,7 @@ combos {
     ZOOM_100 {
     timeout-ms = <50>;
     key-positions = <1 2 3>;
-    bindings = <&HWU LA(SPACE) LG(N0)>;
+    bindings = <&HWU LG(SPACE) LG(N0)>;
       };
     CENTERLEFT {
     timeout-ms = <50>;
