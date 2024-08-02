@@ -386,7 +386,7 @@ combos {
     LA_LGUI {
     timeout-ms = <100>;
     key-positions = <8 11>;
-    bindings = <&HWU LA(LGUI) N0>;
+    bindings = <&HWU LA(LGUI) B>;
       };
     SETTINGS {
     timeout-ms = <50>;
@@ -422,9 +422,9 @@ combos {
 
     INFINITE {
     bindings = <     
-    &mt LSHFT LS(B) &mt3 LS(LG(I)) V &E_CMDZ &HWU O B       
+    &mt LSHFT LS(B) &kp K &E_CMDZ &HWU O B       
     &lt MEDIA M &kp W &kp F &mt1 LG(U) LG(B) &HWU LALT C  
-    &mt1 BACKSLASH SLASH &HWU LSHFT T &HWU LGUI K>;       
+    &mt1 BACKSLASH SLASH &kp T &HWU LGUI V>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
