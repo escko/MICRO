@@ -255,7 +255,7 @@ combos {
       };
     MOVE_TRANS {
     timeout-ms = <50>;
-    key-positions = <1 2>;
+    key-positions = <1 2 3>;
     bindings = <&mt J T>;
       };
     HISTORY {
@@ -275,7 +275,7 @@ combos {
       };
     ZOOM_100 {
     timeout-ms = <50>;
-    key-positions = <1 2 3>;
+    key-positions = <1 2>;
     bindings = <&HWU LA(SPACE) LG(N0)>;
       };
     CENTERLEFT {
