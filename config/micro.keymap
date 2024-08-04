@@ -429,9 +429,9 @@ combos {
 
     LAYERS {     
     bindings = <
-    &none &none &none &mt0 LG(D) ENTER
-    &none &none &mt3 LS(LA(LG(E))) LS(LA(E)) &mt2 LS(LG(B)) LG(B) &mt2 LS(N) N                       
-    &mt2 ESCAPE N7 &HWU LSHFT N6 &mt2 LS(M) LG(M) >;
+    &none &none &none &mt1 LG(D) ENTER
+    &none &none &mt3 LS(LA(LG(E))) LS(LA(E)) &mt2 LS(LG(B)) LG(B) &mt3 LS(N) N                       
+    &mt2 ESCAPE N7 &HWU LSHFT N6 &mt3 LS(M) LG(M) >;
     sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
 
     ROTATE {
