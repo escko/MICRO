@@ -408,7 +408,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt LSHFT Q &kp W &mt U E &HWU R N5
+    &mt LSHFT Q &kp W &mt U E &HWU R N1
     &lt MEDIA A &kp D &kp F &tog ENCODER &HWU LGUI C 
     &mt1 LCTRL Z &HWU LSHFT V &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
@@ -432,14 +432,14 @@ combos {
     &none &none &none &mt1 LG(D) ENTER
     &none &none &mt3 LS(LA(LG(E))) LS(LA(E)) &mt2 LS(LG(B)) LG(B) &mt3 LS(N) N                       
     &mt2 ESCAPE N7 &HWU LSHFT N6 &mt3 LS(M) LG(M) >;
-    sensor-bindings = <&rot_kp LG(N1) LG(N4)>; };
+    sensor-bindings = <&rot_kp LG(N2) LG(N5)>; };
 
     ROTATE {
     bindings = <
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &HWU SPACE LG(N0)
     &kp LS(EQUAL) &kp LC(EQUAL) &mt1 H LG(EQUAL)>;
-    sensor-bindings = <&rot_kp N1 N4>; };
+    sensor-bindings = <&rot_kp N2 N5>; };
 
     VIEW {
     bindings = <
