@@ -402,14 +402,14 @@ combos {
     ARTSTUDIO {
     bindings = <
     &mt LSHFT Q &kp W &mt U E &HWU LC(LALT) R
-    &lt MEDIA A &kp D &kp F &tog ENCODER &HWU LALT C 
+    &lt MEDIA A &kp D &kp F &lt ENCODER N0 &HWU LALT C 
     &mt1 LCTRL P &HWU LSHFT Z &HWU LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     KRITA {
     bindings = <
     &mt LSHFT Q &kp W &mt U E &HWU R N1
-    &lt MEDIA A &kp D &kp F &tog ENCODER &HWU LGUI C 
+    &lt MEDIA A &kp D &kp F &lt ENCODER N0 &HWU LGUI C 
     &mt1 LCTRL P &HWU LSHFT Z &HWU LALT X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
