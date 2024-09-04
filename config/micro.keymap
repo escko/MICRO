@@ -32,7 +32,7 @@
 };
 
 // time to max speed ms was 1000 //
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 130   // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 130  // 10
 //#define MOUSE_SCROLL_MAX 250
 &msc {
     acceleration-exponent = <0>;      // 0
@@ -228,9 +228,9 @@ behaviors {
       };
   };
 
-    //  | SW1 - 0 | SW2 -  1 | SW3 - 2 | SW4 - 3 |
-    //  | SW5 - 4 | SW6 -  5 | SW7 - 6 | SW8 - 7 | SW9 - 8 |
-    //            | SW10 - 9 | SW11-10 | SW12-11 |
+    // | SW1 - 0 | SW2 -  1 | SW3 - 2 |
+    // | SW4 - 3 | SW5 -  4 | SW6 - 5 | SW7 - 6 |
+    // | SW8 - 7 | SW9-8 | SW10-9 
 combos {
     compatible = "zmk,combos";
     KRITA {
@@ -308,14 +308,14 @@ combos {
     key-positions = <3 8 11>;
     bindings = <&kp LA(LG(R))>;
       };
-    LG_L {
+    COMBO_I {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
-    bindings = <&kp LA(L)>;
+    bindings = <&kp I>;
       };
     INVERT {
     timeout-ms = <50>;
-    key-positions = <2 3 11>;
+    key-positions = <2 3 10>;
     bindings = <&kp LS(LG(I))>;
       };
     LG_W {
@@ -330,8 +330,13 @@ combos {
       };
     COMBO_Y {
     timeout-ms = <50>;
-    key-positions = <2 3 8 11>;
+    key-positions = <0 1 2 3 11>;
     bindings = <&kp Y>;
+      };
+    LA_I {
+    timeout-ms = <50>;
+    key-positions = <2 3 8 11>;
+    bindings = <&kp LA(I)>;
       };
     LS_LGUI {
     timeout-ms = <50>;
@@ -394,9 +399,9 @@ combos {
     bindings = <&kp LG(COMMA)>;
       };
     };
-    // | SW1 - 0 | SW2 -  1 | SW3 - 2 | SW4 - 3 |
-    // | SW5 - 4 | SW6 -  5 | SW7 - 6 | SW8 - 7 | SW9 - 8 |
-    //           | SW10 - 9 | SW11-10 | SW12-11 |
+    // | SW1 - 0 | SW2 -  1 | SW3 - 2 |
+    // | SW4 - 3 | SW5 -  4 | SW6 - 5 | SW7 - 6 |
+    // | SW8 - 7 | SW9-8 | SW10-9 |
  keymap {
     compatible = "zmk,keymap";
     ARTSTUDIO {
