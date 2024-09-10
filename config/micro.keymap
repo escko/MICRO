@@ -503,8 +503,8 @@ combos {
     bindings = <
     &bt BT_SEL 0 &rgb_ug RGB_BRI &rgb_ug RGB_SAI
     &bt BT_SEL 1 &rgb_ug RGB_BRD &rgb_ug RGB_SAD 
-    &none &rgb_ug RGB_EFF &bt BT_CLR_ALL    
-    &none &out OUT_TOG &ext_power EP_TOG>;    
+    &none &none &bt BT_CLR_ALL    
+    &rgb_ug RGB_EFF &out OUT_TOG &ext_power EP_TOG>;    
     sensor-bindings = <&rgb_encoder>; };
     };
 };
