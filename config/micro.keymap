@@ -323,7 +323,7 @@ combos {
     key-positions = <0 1 2 11>;
     bindings = <&kp Y>;
       };
-    SPACE {
+    COMBO_SPACE {
     timeout-ms = <50>;
     key-positions = <0 1 2 10 11>;
     bindings = <&kp SPACE>;
