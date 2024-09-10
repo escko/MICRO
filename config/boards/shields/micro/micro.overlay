@@ -16,7 +16,7 @@
 			RC(1,0) RC(1,1) RC(1,2)
 			RC(2,0) RC(2,1) RC(2,2)
 		    RC(3,0) RC(3,1) RC(3,2)
-            RC(4,0) RC(4,1) RC(4,3)
+            RC(4,0) RC(4,1) RC(4,2)
         >;
     };
 
@@ -26,9 +26,9 @@
         wakeup-source;
 
         col-gpios
-            = <&pro_micro 6 GPIO_ACTIVE_HIGH>
+            = <&pro_micro 16 GPIO_ACTIVE_HIGH>
             , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 6 GPIO_ACTIVE_HIGH>
             ; 
 
         row-gpios
