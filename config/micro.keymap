@@ -21,7 +21,7 @@
 
 
 &lt {
-    tapping-term-ms = <120>;
+    tapping-term-ms = <180>;
     quick-tap-ms = <120>;
 };
 
@@ -318,7 +318,7 @@ combos {
     key-positions = <0 2 10 11>;
     bindings = <&kp LA(LG(J))>;
       };
-    COMBO_Y {
+    COMBO_ZOOM {
     timeout-ms = <50>;
     key-positions = <0 1 2 11>;
     bindings = <&kp Y>;
