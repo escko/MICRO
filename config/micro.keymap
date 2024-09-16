@@ -390,7 +390,7 @@ combos {
     bindings = <&kp S>;
       };
     LA_LGUI {
-    timeout-ms = <100>;
+    timeout-ms = <50>;
     key-positions = <10 11>;
     bindings = <&HWU LA(LGUI) B>;
       };
