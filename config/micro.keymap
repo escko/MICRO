@@ -33,7 +33,7 @@
 };
 
 // time to max speed ms was 1000 //
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 130  // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 130   // 10
 //#define MOUSE_SCROLL_MAX 250
 &msc {
     acceleration-exponent = <0>;      // 0
