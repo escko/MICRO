@@ -22,13 +22,13 @@
 
 
 &lt {
-    tapping-term-ms = <180>;
+    tapping-term-ms = <150>;
     quick-tap-ms = <120>;
 };
 
 &mt {
     tapping-term-ms = <140>;
-    quick-tap-ms = <120>;
+    quick-tap-ms = <100>;
     flavor = "tap-preferred";
 };
 
@@ -395,7 +395,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt W Q &mt U E &HWU R N4
+    &mt W Q &mt U E &mt0 R N4
     &mt1 LCTRL A &kp D &kp F
     &lt MEDIA LA(N1) &mt1 PERIOD COMMA &lt ENCODER N0 
     &HWU LSHFT Z &HWU LALT X &HWU LGUI C>;   
@@ -419,7 +419,7 @@ combos {
 
     INFINITE {
     bindings = <     
-    &mt1 LS(B) K &E_CMDZ &HWU O B       
+    &mt1 LS(B) K &E_CMDZ &mt0 O B       
     &mt1 P M &kp W &kp F
     &lt MEDIA SLASH &kp BACKSLASH &mt1 LG(U) LG(B)  
     &HWU LSHFT T &HWU LGUI V &HWU LALT C>;       
@@ -438,7 +438,7 @@ combos {
     &none &none &none
     &none &none &none
     &none &none &kp LA(LG(N0))
-    &mt1 LS(EQUAL) LC(EQUAL) &mt1 H LG(EQUAL) &mt SPACE LG(N0)>;
+    &mt1 LS(EQUAL) LC(EQUAL) &mt1 H LG(EQUAL) &mt0 SPACE LG(N0)>;
     sensor-bindings = <&rot_kp N8 N9>; };
 
     VIEW {
@@ -446,7 +446,7 @@ combos {
     &none &none &none
     &none &none &none
     &none &none &kp TAB
-    &mt1 LS(V) LS(H) &mt1 LS(LG(N0)) H &mt SPACE LG(N0)>;
+    &mt1 LS(V) LS(H) &mt1 LS(LG(N0)) H &mt0 SPACE LG(N0)>;
     sensor-bindings = <&rot_scroll SCRL_UP SCRL_DOWN>; };
 
     VIEW2 {
@@ -454,7 +454,7 @@ combos {
     &none &none &kp LA(SPACE)
     &none &none &none
     &none &none &kp TAB
-    &mt1 LS(V) LS(H) &mt1 LS(LG(N0)) H &mt SPACE LG(N0)>;
+    &mt1 LS(V) LS(H) &mt1 LS(LG(N0)) H &mt0 SPACE LG(N0)>;
     sensor-bindings = <&rot_kp LG(MINUS) LS(LG(SEMI))>; };
 
     HISTORY {
