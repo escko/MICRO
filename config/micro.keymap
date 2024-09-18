@@ -431,7 +431,7 @@ combos {
     &none &none &kp ESCAPE
     &kp N9 &kp N8 &mt2 LS(LG(B)) LG(B)                       
     &mt1 LS(LA(LG(X))) LA(LG(X)) &mt3 LS(M) LG(M) &mt3 LS(N) N>;
-    sensor-bindings = <&rot_kp N1 N5>; };
+    sensor-bindings = <&rot_kp N5 N1>; };
 
     ROTATE {
     bindings = <
