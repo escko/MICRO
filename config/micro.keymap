@@ -48,8 +48,8 @@
 &pinctrl {
     qdec_default: qdec_default {
         group1 {
-            psels = <NRF_PSEL(QDEC_A, 0, 22)>,
-                    <NRF_PSEL(QDEC_B, 0, 24)>;
+            psels = <NRF_PSEL(QDEC_A, 0, 24)>,
+                    <NRF_PSEL(QDEC_B, 0, 22)>;
             bias-pull-up;
         };
     };
@@ -58,8 +58,8 @@
 // need second set of pins defined if deep sleep is enabled
     qdec_sleep: qdec_sleep {
         group1 {
-            psels = <NRF_PSEL(QDEC_A, 0, 22)>,
-                    <NRF_PSEL(QDEC_B, 0, 24)>;
+            psels = <NRF_PSEL(QDEC_A, 0, 24)>,
+                    <NRF_PSEL(QDEC_B, 0, 22)>;
             bias-pull-up; // TODO: find out if this makes sense with low-power-enable
             low-power-enable;
         };
