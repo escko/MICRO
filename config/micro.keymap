@@ -92,7 +92,7 @@ behaviors {
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
       flavor = "tap-preferred"; // was hold-preferred
-      tapping-term-ms = <170>;
+      tapping-term-ms = <150>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
       };
