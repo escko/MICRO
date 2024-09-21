@@ -22,12 +22,12 @@
 
 
 &lt {
-    tapping-term-ms = <130>;
+    tapping-term-ms = <135>;
     quick-tap-ms = <100>;
 };
 
 &mt {
-    tapping-term-ms = <130>;
+    tapping-term-ms = <135>;
     quick-tap-ms = <100>;
     flavor = "tap-preferred";
 };
