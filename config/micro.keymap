@@ -396,7 +396,7 @@ combos {
     KRITA {
     bindings = <
     &mt W Q &mt U E &mt0 R N4
-    &mt1 LCTRL A &kp D &kp F
+    &HWU LCTRL A &kp D &kp F
     &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
     &HWU LSHFT LA(N1) &HWU LALT X &HWU LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
@@ -404,7 +404,7 @@ combos {
     ARTSTUDIO {
     bindings = <
     &mt Q W &mt U E &HWU LC(LALT) R
-    &mt1 LCTRL A &kp D &kp F
+    &HWU LCTRL A &kp D &kp F
     &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
     &HWU LSHFT LA(N1) &HWU LGUI X &HWU LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
