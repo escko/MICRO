@@ -91,7 +91,7 @@ behaviors {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
-      flavor = "hold-preferred"; // was hold-preferred
+      flavor = "tap-preferred"; // was hold-preferred
       tapping-term-ms = <150>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -395,7 +395,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt1 W Q &mt U E &mt0 R N4
+    &mt W Q &mt U E &mt0 R N4
     &HWU LCTRL A &kp D &kp F
     &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
     &HWU LSHFT LA(N1) &HWU LALT X &HWU LGUI C>;   
@@ -403,7 +403,7 @@ combos {
 
     ARTSTUDIO {
     bindings = <
-    &mt1 Q W &mt U E &HWU LC(LALT) R
+    &mt0 Q W &mt U E &HWU LC(LALT) R
     &HWU LCTRL A &kp D &kp F
     &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
     &HWU LSHFT LA(N1) &HWU LGUI X &HWU LALT C>;   
