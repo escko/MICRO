@@ -413,7 +413,7 @@ combos {
     &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
     &HWU LSHFT LA(N1) &HWU LGUI X &HWU LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
-c
+
     ENCODER {
     bindings = <
     &trans &trans &trans
