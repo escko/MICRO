@@ -78,7 +78,7 @@ encoder: &qdec0 {
 
 / { 
 behaviors {
-TUI {
+    TUI: TUI {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP0";
       #binding-cells = <2>;
