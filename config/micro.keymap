@@ -78,6 +78,15 @@ encoder: &qdec0 {
 
 / { 
 behaviors {
+  MTR: MTR {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_TAP0";
+      #binding-cells = <2>;
+      flavor = "hold-preferred"; // was hold-preferred
+      tapping-term-ms = <125>;
+      quick-tap-ms = <100>;
+      bindings = <&kp>, <&kp>;
+      };
     mt0: mt0 {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP0";
