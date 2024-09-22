@@ -78,6 +78,15 @@ encoder: &qdec0 {
 
 / { 
 behaviors {
+TUI {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_TAP0";
+      #binding-cells = <2>;
+      flavor = "tap-unless-interrupted"; // was hold-preferred
+      tapping-term-ms = <200>;
+      quick-tap-ms = <100>;
+      bindings = <&kp>, <&kp>;
+      };
     mt0: mt0 {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP0";
@@ -396,16 +405,16 @@ combos {
     KRITA {
     bindings = <
     &mt W Q &mt U E &mt0 R N4
-    &HWU LCTRL A &kp D &kp F
-    &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
+    &TUI LCTRL A &kp D &kp F
+    &TUI MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
     &HWU LSHFT LA(N1) &HWU LALT X &HWU LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <
-    &mt0 Q W &mt U E &HWU LC(LALT) R
-    &HWU LCTRL A &kp D &kp F
-    &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
+    &mt Q W &mt U E &HWU LC(LALT) R
+    &TUI LCTRL A &kp D &kp F
+    &TUI MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
     &HWU LSHFT LA(N1) &HWU LGUI X &HWU LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -421,7 +430,7 @@ combos {
     bindings = <     
     &mt1 LS(B) K &E_CMDZ &mt0 O B       
     &mt1 P M &kp W &kp F
-    &lt MEDIA SLASH &kp BACKSLASH &mt1 LG(U) LG(B)  
+    &TUI MEDIA SLASH &kp BACKSLASH &mt1 LG(U) LG(B)  
     &HWU LSHFT T &HWU LGUI V &HWU LALT C>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
