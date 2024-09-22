@@ -78,15 +78,6 @@ encoder: &qdec0 {
 
 / { 
 behaviors {
-    lt1: lt1 {
-      compatible = "zmk,behavior-hold-tap";
-      label = "MOD_TAP_TAP0";
-      #binding-cells = <2>;
-      flavor = "hold-preferred"; // was hold-preferred
-      tapping-term-ms = <300>;
-      quick-tap-ms = <100>;
-      bindings = <&lt>, <&kp>;
-      };
     mt0: mt0 {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP0";
@@ -411,7 +402,7 @@ combos {
     bindings = <
     &mt W Q &mt U E &mt0 R N4
     &kp A &kp D &kp F
-    &lt1 MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
+    &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
     &HWU LSHFT LA(N1) &HWU LALT X &HWU LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -419,7 +410,7 @@ combos {
     bindings = <
     &mt Q W &mt U E &HWU LC(LALT) R
     &kp A &kp D &kp F
-    &lt1 MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
+    &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
     &HWU LSHFT LA(N1) &HWU LGUI X &HWU LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -435,7 +426,7 @@ combos {
     bindings = <     
     &mt1 LS(B) K &E_CMDZ &mt0 O B       
     &mt1 P M &kp W &kp F
-    &lt1 MEDIA SLASH &kp BACKSLASH &mt1 LG(U) LG(B)  
+    &lt MEDIA SLASH &kp BACKSLASH &mt1 LG(U) LG(B)  
     &HWU LSHFT T &HWU LGUI V &HWU LALT C>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
