@@ -91,7 +91,7 @@ behaviors {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
-      flavor = "tap-preferred"; // was hold-preferred
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <150>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
