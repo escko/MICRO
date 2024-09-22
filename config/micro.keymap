@@ -293,12 +293,12 @@ combos {
     ELLIPSE {
     timeout-ms = <50>;
     key-positions = <0 5>;
-    bindings = <&mt2 K LA(K)>;
+    bindings = <&mt1 K LA(K)>;
       };
     MARQUEE {
     timeout-ms = <50>;
     key-positions = <2 3>;
-    bindings = <&mt2 M LA(M)>;
+    bindings = <&mt1 M LA(M)>;
       };
     LASSO {
     timeout-ms = <50>;
@@ -343,6 +343,11 @@ combos {
     timeout-ms = <50>;
     key-positions = <0 10 11>;
     bindings = <&kp LS(LA(LGUI))>;
+      };
+    COMBO_CONTROL {
+    timeout-ms = <50>;
+    key-positions = <3 11>;
+    bindings = <&kp LCTRL>;
       };
     LG_E {
     timeout-ms = <50>;
@@ -396,7 +401,7 @@ combos {
     KRITA {
     bindings = <
     &mt W Q &mt U E &mt0 R N4
-    &HWU LCTRL A &kp D &kp F
+    &kp A &kp D &kp F
     &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
     &HWU LSHFT LA(N1) &HWU LALT X &HWU LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
@@ -404,11 +409,11 @@ combos {
     ARTSTUDIO {
     bindings = <
     &mt Q W &mt U E &HWU LC(LALT) R
-    &HWU LCTRL A &kp D &kp F
+    &kp A &kp D &kp F
     &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
     &HWU LSHFT LA(N1) &HWU LGUI X &HWU LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
-
+c
     ENCODER {
     bindings = <
     &trans &trans &trans
