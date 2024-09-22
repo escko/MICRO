@@ -92,7 +92,7 @@ behaviors {
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
       flavor = "hold-preferred"; // was hold-preferred
-      tapping-term-ms = <150>;
+      tapping-term-ms = <145>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
       };
@@ -426,7 +426,7 @@ combos {
     bindings = <     
     &mt1 LS(B) K &E_CMDZ &mt0 O B       
     &mt1 P M &kp W &kp F
-    &lt MEDIA SLASH &kp BACKSLASH &mt1 LG(U) LG(B)  
+    &lt MEDIA SLASH &kp BACKSLASH &mt2 LG(U) LG(B)  
     &HWU LSHFT T &HWU LGUI V &HWU LALT C>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
