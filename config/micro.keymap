@@ -409,7 +409,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt W Q &mt U E &mt0 R N4
+    &mt W Q &mt U E &MTR R N4
     &kp A &kp D &kp F
     &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
     &HWU LSHFT LA(N1) &HWU LALT X &HWU LGUI C>;   
@@ -433,7 +433,7 @@ combos {
 
     INFINITE {
     bindings = <     
-    &mt1 LS(B) K &E_CMDZ &mt0 O B       
+    &mt1 LS(B) K &E_CMDZ &MTR O B       
     &mt1 P M &kp W &kp F
     &lt MEDIA SLASH &kp BACKSLASH &mt2 LG(U) LG(B)  
     &HWU LSHFT T &HWU LGUI V &HWU LALT C>;       
