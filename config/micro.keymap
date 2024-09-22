@@ -78,20 +78,11 @@ encoder: &qdec0 {
 
 / { 
 behaviors {
-    TUI: TUI {
-      compatible = "zmk,behavior-hold-tap";
-      label = "MOD_TAP_TAP0";
-      #binding-cells = <2>;
-      flavor = "tap-unless-interrupted"; // was hold-preferred
-      tapping-term-ms = <200>;
-      quick-tap-ms = <100>;
-      bindings = <&kp>, <&kp>;
-      };
     mt0: mt0 {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP0";
       #binding-cells = <2>;
-      flavor = "tap-preferred"; // was hold-preferred
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <120>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -100,7 +91,7 @@ behaviors {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
-      flavor = "tap-preferred"; // was hold-preferred
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <150>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -109,7 +100,7 @@ behaviors {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
-      flavor = "tap-preferred"; // was hold-preferred
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <200>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -118,7 +109,7 @@ behaviors {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_TAP1";
       #binding-cells = <2>;
-      flavor = "tap-preferred"; // was hold-preferred
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <300>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -129,7 +120,7 @@ behaviors {
       #binding-cells = <2>;
       tapping-term-ms = <130>;
       quick-tap-ms = <100>;
-      flavor = "tap-preferred";
+      flavor = "hold-preferred";
       bindings = <&kp>, <&mkp>;
       };
     kp_mkp0: kp_mkp0 {
@@ -138,7 +129,7 @@ behaviors {
       #binding-cells = <2>;
       tapping-term-ms = <180>;
       quick-tap-ms = <100>;
-      flavor = "tap-preferred";
+      flavor = "hold-preferred";
       bindings = <&kp>, <&mkp>;
       };
     mkp_kp: mkp_kp {
@@ -147,7 +138,7 @@ behaviors {
       #binding-cells = <2>;
       tapping-term-ms = <200>;
       quick-tap-ms = <100>;
-      flavor = "tap-preferred";
+      flavor = "hold-preferred";
       bindings = <&mkp>, <&kp>;
       };
     mkp_mkp: mkp_mkp {
@@ -156,7 +147,7 @@ behaviors {
       #binding-cells = <2>;
       tapping-term-ms = <200>;
       quick-tap-ms = <100>;
-      flavor = "tap-preferred";
+      flavor = "hold-preferred";
       bindings = <&mkp>, <&mkp>;
       };        
     rgb_encoder: rgb_encoder {
@@ -302,12 +293,12 @@ combos {
     ELLIPSE {
     timeout-ms = <50>;
     key-positions = <0 5>;
-    bindings = <&mt2 K LG(K)>;
+    bindings = <&mt2 K LA(K)>;
       };
     MARQUEE {
     timeout-ms = <50>;
     key-positions = <2 3>;
-    bindings = <&mt2 M LG(M)>;
+    bindings = <&mt2 M LA(M)>;
       };
     LASSO {
     timeout-ms = <50>;
@@ -405,16 +396,16 @@ combos {
     KRITA {
     bindings = <
     &mt W Q &mt U E &mt0 R N4
-    &TUI LCTRL A &kp D &kp F
-    &TUI MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
+    &HWU LCTRL A &kp D &kp F
+    &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
     &HWU LSHFT LA(N1) &HWU LALT X &HWU LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <
     &mt Q W &mt U E &HWU LC(LALT) R
-    &TUI LCTRL A &kp D &kp F
-    &TUI MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
+    &HWU LCTRL A &kp D &kp F
+    &lt MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
     &HWU LSHFT LA(N1) &HWU LGUI X &HWU LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -430,13 +421,13 @@ combos {
     bindings = <     
     &mt1 LS(B) K &E_CMDZ &mt0 O B       
     &mt1 P M &kp W &kp F
-    &TUI MEDIA SLASH &kp BACKSLASH &mt1 LG(U) LG(B)  
+    &lt MEDIA SLASH &kp BACKSLASH &mt1 LG(U) LG(B)  
     &HWU LSHFT T &HWU LGUI V &HWU LALT C>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
     bindings = <
-    &none &none &mt1 LG(D) ENTER
+    &none &none &mt LG(D) ENTER
     &none &kp PERIOD &kp COMMA
     &none &none &mt2 LS(LG(B)) LG(B)                       
     &mt1 LS(LA(LG(X))) LA(LG(X)) &mt3 LS(M) LG(M) &mt3 LS(N) N>;
