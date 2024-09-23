@@ -444,7 +444,7 @@ combos {
     &none &none &mt LG(D) ENTER
     &none &kp PERIOD &kp COMMA
     &none &none &mt2 LS(LG(B)) LG(B)                       
-    &mt1 LS(LA(LG(X))) LA(LG(X)) &mt3 LS(M) LG(M) &mt3 LS(N) N>;
+    &mt3 LS(LA(LG(X))) LA(LG(X)) &mt3 LS(M) LG(M) &mt3 LS(N) N>;
     sensor-bindings = <&rot_kp N5 N1>; };
 
     ROTATE {
