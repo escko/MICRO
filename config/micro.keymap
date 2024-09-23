@@ -78,7 +78,7 @@ encoder: &qdec0 {
 
 / { 
 behaviors {
-    LT1: LT1 {
+    lt1: lt1 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred"; // was hold-preferred
@@ -86,7 +86,7 @@ behaviors {
       quick-tap-ms = <100>;
       bindings = <&mo>, <&kp>;
       };
-    MTR: MTR {
+    mtr: mtr {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred"; // was hold-preferred
@@ -205,7 +205,7 @@ behaviors {
             bindings = <&kp F>, <&kp LG(C)>;
             mods = <(MOD_LSFT)>;
       };
-    E_CMDZ: E_CMDZ {
+    e_cmdz: e_cmdz {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(Z)>;
@@ -222,7 +222,7 @@ behaviors {
       #sensor-binding-cells = <2>;
       bindings = <&kp>, <&kp>;
       };
-    HWU: HWU {
+    hwu: hwu {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_WHILE_UNDECIDED";
             bindings = <&kp>, <&kp>;
@@ -387,7 +387,7 @@ combos {
     LA_LGUI {
     timeout-ms = <50>;
     key-positions = <10 11>;
-    bindings = <&HWU LA(LGUI) B>;
+    bindings = <&hwu LA(LGUI) B>;
       };
     SETTINGS {
     timeout-ms = <50>;
@@ -405,18 +405,18 @@ combos {
 
     KRITA {
     bindings = <
-    &mt W Q &mt U E &MTR R N4
+    &mt W Q &mt U E &mtr R N4
     &kp A &kp D &kp F
     &lt1 MEDIA Z &mt1 COLON SEMI &lt ENCODER N0 
-    &HWU LSHFT LA(N1) &HWU LALT X &HWU LGUI C>;   
+    &hwu LSHFT LA(N1) &hwu LALT X &hwu LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <
-    &mt Q W &mt U E &HWU LC(LALT) R
+    &mt Q W &mt U E &hwu LC(LALT) R
     &kp A &kp D &kp F
     &lt1 MEDIA Z &mt1 COLON SEMI &lt ENCODER N0  
-    &HWU LSHFT LA(N1) &HWU LGUI X &HWU LALT C>;   
+    &hwu LSHFT LA(N1) &hwu LGUI X &hwu LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ENCODER {
@@ -429,10 +429,10 @@ combos {
 
     INFINITE {
     bindings = <     
-    &mt1 LS(B) K &E_CMDZ &MTR O B       
+    &mt1 LS(B) K &e_cmdz &mtr O B       
     &mt1 P M &kp W &kp F
     &lt1 MEDIA SLASH &kp BACKSLASH &mt2 LG(U) LG(B)  
-    &HWU LSHFT T &HWU LGUI V &HWU LALT C>;       
+    &hwu LSHFT T &hwu LGUI V &hwu LALT C>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
