@@ -162,7 +162,13 @@ behaviors {
       compatible = "zmk,behavior-sensor-rotate";
       #sensor-binding-cells = <0>;
       bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-      };      
+      };
+    e_cmdz: e_cmdz {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp LG(Z)>;
+            mods = <(MOD_LALT)>;
+      };     
     EE_CUTUNDO: EE_CUT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -174,42 +180,6 @@ behaviors {
             #binding-cells = <0>;
             bindings = <&EE_CUTUNDO>, <&kp LG(Z)>;
             mods = <(MOD_LGUI|MOD_RALT)>;
-      };
-    A_ACUT: A_ACUT {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp A>, <&kp LG(X)>;
-            mods = <(MOD_LSFT)>;
-      };
-    M_MCUT: M_MCUT {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp M>, <&kp LG(X)>;
-            mods = <(MOD_LSFT)>;
-      };
-    D_DPASTE: S_SPASTE {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp D>, <&kp LG(V)>;
-            mods = <(MOD_LSFT)>;
-      };
-    W_WPASTE: W_WPASTE {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp W>, <&kp LG(V)>;
-            mods = <(MOD_LSFT)>;
-      };
-    F_FCOPY: F_FCOPY {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&kp LG(C)>;
-            mods = <(MOD_LSFT)>;
-      };
-    e_cmdz: e_cmdz {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&kp LG(Z)>;
-            mods = <(MOD_LALT)>;
       };
     rot_scroll: rot_scroll {
       compatible = "zmk,behavior-sensor-rotate-var";
@@ -312,7 +282,7 @@ combos {
       };
     INVERT {
     timeout-ms = <50>;
-    key-positions = <1 2 10 11>;
+    key-positions = <1 2 9>;
     bindings = <&kp LS(LG(I))>;
       };
     // | SW1 -  0 | SW2 -   1 | SW3 - 2 |
