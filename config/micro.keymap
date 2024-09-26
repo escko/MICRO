@@ -473,5 +473,3 @@ combos {
     sensor-bindings = <&rgb_encoder>; };
     };
 };
-
-
