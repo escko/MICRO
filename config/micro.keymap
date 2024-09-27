@@ -227,7 +227,7 @@ combos {
       };
     MOVE {
     timeout-ms = <50>;
-    key-positions = <0 2>;
+    key-positions = <3 4 5>;
     bindings = <&kp J>;
       };
     HISTORY {
@@ -247,7 +247,7 @@ combos {
       };
     ROTATE {
     timeout-ms = <50>;
-    key-positions = <3 4 5>;
+    key-positions = <0 2>;
     bindings = <&mo ROTATE>;
       };
     TRANSFORM {
