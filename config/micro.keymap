@@ -86,12 +86,31 @@ behaviors {
       quick-tap-ms = <100>;
       bindings = <&mo>, <&kp>;
       };
+    rpi: require_prior_idle {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <300>;
+      quick-tap-ms = <200>;
+      require-prior-idle-ms = <0>;
+      bindings = <&kp>, <&kp>;
+};
+    hwu: hwu {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOLD_WHILE_UNDECIDED";
+      bindings = <&kp>, <&kp>;
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      require-prior-idle-ms = <125>;
+      hold-while-undecided;
+      };
     mtr: mtr {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred"; // was hold-preferred
-      tapping-term-ms = <125>;
-      quick-tap-ms = <100>;
+      tapping-term-ms = <300>;
+      quick-tap-ms = <125>;
+      hold-while-undecided;
       bindings = <&kp>, <&kp>;
       };
     mt0: mt0 {
@@ -370,7 +389,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt W Q &kp E &mtr R N4
+    &mt W Q &rpi R N4 &mtr R N4
     &kp A &kp D &kp F
     &lt1 MEDIA LS(X) &mt1 COLON SEMI &lt ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
