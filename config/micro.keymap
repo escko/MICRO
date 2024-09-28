@@ -204,10 +204,10 @@ behaviors {
       };
   };
 
-    // | SW1 -  0 | SW2 -   1 | SW3 - 2 |
-    // | SW4 -  3 | SW5 -   4 | SW6 - 5 |
-    // | SW7 -  6 | SW8 -   7 | SW9-  8 |
-    // | SW10 - 9 | SW11 - 10 | SW12-11 | 
+    // |SW1- 0 |SW2- 1 |SW3- 2 |
+    // |SW4- 3 |SW5- 4 |SW6- 5 |
+    // |SW7- 6 |SW8- 7 |SW9- 8 |SW12- 11 |
+    //                |SW10- 9 |SW11- 10 | 
 combos {
     compatible = "zmk,combos";
     ARTSTUDIO {
@@ -234,6 +234,11 @@ combos {
     timeout-ms = <50>;
     key-positions = <0 1 2 11>;
     bindings = <&kp J>;
+      };
+    LAYER_SELECT {
+    timeout-ms = <50>;
+    key-positions = <0 1 2 10 11>;
+    bindings = <&kp LA(LG(J))>;
       };
     HISTORY {
     timeout-ms = <50>;
@@ -290,16 +295,16 @@ combos {
     key-positions = <1 2 11>;
     bindings = <&kp LS(LG(I))>;
       };
-    // | SW1 -  0 | SW2 -   1 | SW3 - 2 |
-    // | SW4 -  3 | SW5 -   4 | SW6 - 5 |
-    // | SW7 -  6 | SW8 -   7 | SW9-  8 |
-    // | SW10 - 9 | SW11 - 10 | SW12-11 | 
+    // |SW1- 0 |SW2- 1 |SW3- 2 |
+    // |SW4- 3 |SW5- 4 |SW6- 5 |
+    // |SW7- 6 |SW8- 7 |SW9- 8 |SW12- 11 |
+    //                |SW10- 9 |SW11- 10 | 
     LA_I {
     timeout-ms = <50>;
     key-positions = <1 2 10>;
     bindings = <&kp LA(I)>;
       };
-    LS_LGUI {
+    LS_LCTRL {
     timeout-ms = <50>;
     key-positions = <0 9>;
     bindings = <&kp LS(LCTRL)>;
@@ -318,11 +323,6 @@ combos {
     timeout-ms = <50>;
     key-positions = <0 10 11>;
     bindings = <&kp LS(LA(LGUI))>;
-      };
-    COMBO_CONTROL {
-    timeout-ms = <50>;
-    key-positions = <3 11>;
-    bindings = <&kp LCTRL>;
       };
     LG_E {
     timeout-ms = <50>;
@@ -365,10 +365,10 @@ combos {
     bindings = <&kp LG(COMMA)>;
       };
     };
-    // | SW1 -  0 | SW2 -   1 | SW3 - 2 |
-    // | SW4 -  3 | SW5 -   4 | SW6 - 5 |
-    // | SW7 -  6 | SW8 -   7 | SW9-  8 |
-    // | SW10 - 9 | SW11 - 10 | SW12-11 | 
+    // |SW1- 0 |SW2- 1 |SW3- 2 |
+    // |SW4- 3 |SW5- 4 |SW6- 5 |
+    // |SW7- 6 |SW8- 7 |SW9- 8 |SW12- 11 |
+    //                |SW10- 9 |SW11- 10 |
 
  keymap {
     compatible = "zmk,keymap";
@@ -377,7 +377,7 @@ combos {
     bindings = <
     &mt W Q &kp E &mtr R N4
     &kp A &kp D &kp F
-    &lt1 MEDIA LS(X) &mt1 COLON SEMI &lt ENCODER N0 
+    &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -385,7 +385,7 @@ combos {
     bindings = <
     &mt Q W &kp E &hwu LC(LALT) R
     &kp A &kp D &kp F
-    &lt1 MEDIA LS(X) &mt1 COLON SEMI &lt ENCODER N0  
+    &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0  
     &hwu LSHFT Z &hwu LGUI X &hwu LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -398,10 +398,10 @@ combos {
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     INFINITE {
-    bindings = <     
+    bindings = <
     &mt1 LS(B) K &e_cmdz &mtr O B       
     &mt1 P M &kp W &kp F
-    &lt1 MEDIA SLASH &kp BACKSLASH &mt2 LG(U) LG(B)  
+    &lt1 MEDIA SLASH &mt1 TAB BACKSLASH &mt2 LG(U) LG(B)  
     &hwu LSHFT T &hwu LGUI V &hwu LALT C>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -425,16 +425,16 @@ combos {
     bindings = <
     &none &none &none
     &none &none &none
-    &none &none &kp TAB
+    &none &mt1 COLON SEMI &none
     &mt3 PERIOD COMMA &mt3 LS(LG(N0)) H &mt0 SPACE LG(N0)>;
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
     VIEW2 {
     bindings = <
-    &none &none &kp LA(SPACE)
+    &none &none &mt3 LS(LG(N0)) H
     &none &none &none
-    &none &none &kp TAB
-    &mt3 PERIOD COMMA &mt3 LS(LG(N0)) H &mt0 SPACE LG(N0)>;
+    &none &mt1 COLON SEMI &none
+    &mt3 PERIOD COMMA &mt0 SPACE LG(N0) &kp LA(SPACE)>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
     HISTORY {
