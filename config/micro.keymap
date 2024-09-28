@@ -86,15 +86,6 @@ behaviors {
       quick-tap-ms = <100>;
       bindings = <&mo>, <&kp>;
       };
-    rpi: require_prior_idle {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <125>;
-      quick-tap-ms = <200>;
-      require-prior-idle-ms = <125>;
-      bindings = <&kp>, <&kp>;
-};
     hwu: hwu {
       compatible = "zmk,behavior-hold-tap";
       label = "HOLD_WHILE_UNDECIDED";
@@ -239,6 +230,11 @@ combos {
     key-positions = <3 4 5>;
     bindings = <&kp J>;
       };
+    MOVE2 {
+    timeout-ms = <50>;
+    key-positions = <0 1 2 11>;
+    bindings = <&kp J>;
+      };
     HISTORY {
     timeout-ms = <50>;
     key-positions = <1 10>;
@@ -263,7 +259,7 @@ combos {
     timeout-ms = <50>;
     key-positions = <1 5>;
     bindings = <&kp T>;
-      }; 
+      };
     CENTERLEFT {
     timeout-ms = <50>;
     key-positions = <3 4>;
@@ -298,11 +294,6 @@ combos {
     // | SW4 -  3 | SW5 -   4 | SW6 - 5 |
     // | SW7 -  6 | SW8 -   7 | SW9-  8 |
     // | SW10 - 9 | SW11 - 10 | SW12-11 | 
-    LAYER_SELECT {
-    timeout-ms = <50>;
-    key-positions = <0 2 10 11>;
-    bindings = <&kp LA(LG(J))>;
-      };
     LA_I {
     timeout-ms = <50>;
     key-positions = <1 2 10>;
@@ -310,13 +301,18 @@ combos {
       };
     LS_LGUI {
     timeout-ms = <50>;
-    key-positions = <0 11>;
-    bindings = <&kp LS(LGUI)>;
+    key-positions = <0 9>;
+    bindings = <&kp LS(LCTRL)>;
       };
     LS_LALT {
     timeout-ms = <50>;
     key-positions = <0 10>;
     bindings = <&kp LS(LALT)>;
+      };
+    LS_LGUI {
+    timeout-ms = <50>;
+    key-positions = <0 11>;
+    bindings = <&kp LS(LGUI)>;
       };
     LS_LA_LGUI {
     timeout-ms = <50>;
@@ -379,7 +375,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt W Q &rpi R N4 &mtr R N4
+    &mt W Q &kp E &mtr R N4
     &kp A &kp D &kp F
     &lt1 MEDIA LS(X) &mt1 COLON SEMI &lt ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
@@ -414,7 +410,7 @@ combos {
     &none &none &mt LG(D) ENTER
     &none &kp N7 &kp N6
     &none &none &mt3 LS(LG(B)) LG(B)                       
-    &mt3 LS(LA(LG(X))) LA(LG(X)) &mt3 LS(M) LG(M) &mt3 LS(N) N>;
+    &mt3 LS(LA(LG(X))) LA(LG(X)) &mt3 LA(LS(LG(X))) LG(M) &mt3 LG(J) N>;
     sensor-bindings = <&rot_kp N1 N5>; };
 
     ROTATE {
