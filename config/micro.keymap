@@ -81,7 +81,7 @@ behaviors {
     lt1: lt1 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred"; // was hold-preferred
+      flavor = "hold-preferred";
       tapping-term-ms = <300>;
       quick-tap-ms = <100>;
       bindings = <&mo>, <&kp>;
@@ -107,7 +107,7 @@ behaviors {
     mtr: mtr {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred"; // was hold-preferred
+      flavor = "hold-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -115,15 +115,15 @@ behaviors {
     mtr1: mtr1 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "tap-preferred"; // was hold-preferred
+      flavor = "tap-preferred";
       tapping-term-ms = <125>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
       };
     mtrv: mtrv {
       compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;r
-      flavor = "hold-preferred"; // was hold-preferred
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <125>;
       hold-while-undecided;
@@ -132,7 +132,7 @@ behaviors {
     mt0: mt0 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred"; // was hold-preferred
+      flavor = "hold-preferred";
       tapping-term-ms = <120>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -140,7 +140,7 @@ behaviors {
     mt1: mt1 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred"; // was hold-preferred
+      flavor = "hold-preferred";
       tapping-term-ms = <145>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -148,7 +148,7 @@ behaviors {
     mt2: mt2 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred"; // was hold-preferred
+      flavor = "hold-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -156,7 +156,7 @@ behaviors {
     mt3: mt3 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred"; // was hold-preferred
+      flavor = "hold-preferred";
       tapping-term-ms = <300>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
