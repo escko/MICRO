@@ -378,15 +378,15 @@ combos {
     &mt W Q &kp E &mtr R N4
     &kp A &kp D &kp F
     &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0 
-    &hwu LSHFT Z &hwu LALT X &mtr LGUI C>;   
+    &mtr LSHFT Z &mtr LALT X &mtr LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ARTSTUDIO {
     bindings = <
-    &mt Q W &kp E &hwu LC(LALT) R
+    &mt Q W &kp E &mtr LC(LALT) R
     &kp A &kp D &kp F
     &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0  
-    &hwu LSHFT Z &hwu LGUI X &hwu LALT C>;   
+    &mtr LSHFT Z &mtr LGUI X &mtr LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ENCODER {
@@ -402,7 +402,7 @@ combos {
     &mt1 LS(B) K &e_cmdz &mtr O B       
     &mt1 P M &kp W &kp F
     &lt1 MEDIA SLASH &mt1 TAB BACKSLASH &mt2 LG(U) LG(B)  
-    &hwu LSHFT T &hwu LGUI V &hwu LALT C>;       
+    &mtr LSHFT T &mtr LGUI V &mtr LALT C>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
@@ -426,7 +426,7 @@ combos {
     &none &none &none
     &none &none &none
     &none &mt1 COLON SEMI &none
-    &mt3 PERIOD COMMA &mt3 LS(LG(N0)) H &mt0 SPACE LG(N0)>;
+    &mt3 PERIOD COMMA &mt3 LS(LG(N0)) H &mtr SPACE LG(N0)>;
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
     VIEW2 {
@@ -434,7 +434,7 @@ combos {
     &none &none &mt3 LS(LG(N0)) H
     &none &none &none
     &none &mt1 COLON SEMI &none
-    &mt3 PERIOD COMMA &mt0 SPACE LG(N0) &kp LA(SPACE)>;
+    &mt3 PERIOD COMMA &mtr SPACE LG(N0) &kp LA(SPACE)>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
     HISTORY {
