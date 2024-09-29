@@ -88,7 +88,6 @@ behaviors {
       };
     hwu: hwu {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOLD_WHILE_UNDECIDED";
       bindings = <&kp>, <&kp>;
       #binding-cells = <2>;
       tapping-term-ms = <200>;
@@ -97,18 +96,11 @@ behaviors {
     mtr: mtr {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred";
-      tapping-term-ms = <150>;
-      quick-tap-ms = <100>;
-      bindings = <&kp>, <&kp>;
-      };
-    mtr1: mtr1 {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
       flavor = "tap-preferred";
-      tapping-term-ms = <150>;
+      tapping-term-ms = <300>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
+      hold-while-undecided;
       };
     mtrv: mtrv {
       compatible = "zmk,behavior-hold-tap";
@@ -390,7 +382,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt W Q &mtr1 R N4 &mtr R N4
+    &mt W Q &kp E &mtr R N4
     &kp A &kp D &kp F
     &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
