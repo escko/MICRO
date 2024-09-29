@@ -98,7 +98,15 @@ behaviors {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred"; // was hold-preferred
-      tapping-term-ms = <120>;
+      tapping-term-ms = <200>;
+      quick-tap-ms = <100>;
+      bindings = <&kp>, <&kp>;
+      };
+    mtr1: mtr1 {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred"; // was hold-preferred
+      tapping-term-ms = <200>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
       };
@@ -382,7 +390,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt W Q &kp E &mtr R N4
+    &mt W Q &mtr1 R N4 &mtr R N4
     &kp A &kp D &kp F
     &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
