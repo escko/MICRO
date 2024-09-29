@@ -94,6 +94,16 @@ behaviors {
       tapping-term-ms = <200>;
       hold-while-undecided;
       };
+    gqt: global-quick-tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "GLOBAL_QUICK_TAP";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <180>;
+      global-quick-tap;
+      bindings = <&kp>, <&kp>;
+      };
     mtr: mtr {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -101,21 +111,18 @@ behaviors {
       tapping-term-ms = <200>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
-      hold-while-undecided;
-      require-prior-idle-ms = <0>;
       };
     mtr1: mtr1 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "tap-preferred"; // was hold-preferred
-      tapping-term-ms = <200>;
+      tapping-term-ms = <125>;
       quick-tap-ms = <100>;
-      require-prior-idle-ms = <0>;
       bindings = <&kp>, <&kp>;
       };
     mtrv: mtrv {
       compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
+      #binding-cells = <2>;r
       flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <200>;
       quick-tap-ms = <125>;
@@ -393,7 +400,7 @@ combos {
 
     KRITA {
     bindings = <
-    &mt W Q &mtr1 R N4 &mtr R N4
+    &mt W Q &mtr1 R N4 &gqt R N4
     &kp A &kp D &kp F
     &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
