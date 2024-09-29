@@ -100,7 +100,7 @@ behaviors {
       flavor = "tap-preferred"; // was hold-preferred
       tapping-term-ms = <200>;
       quick-tap-ms = <125>;
-      hold-while-undecided;
+      require-prior-idle-ms = <125>;
       bindings = <&kp>, <&kp>;
       };
     mtrv: mtrv {
