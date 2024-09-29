@@ -97,10 +97,9 @@ behaviors {
     mtr: mtr {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "balanced"; // was hold-preferred
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <200>;
-      quick-tap-ms = <125>;
-      require-prior-idle-ms = <125>;
+      quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
       };
     mtrv: mtrv {
