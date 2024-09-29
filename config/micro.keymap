@@ -357,7 +357,7 @@ combos {
     LA_LGUI {
     timeout-ms = <50>;
     key-positions = <10 11>;
-    bindings = <&hwu LA(LGUI) B>;
+    bindings = <&mtr LA(LGUI) B>;
       };
     SETTINGS {
     timeout-ms = <50>;
