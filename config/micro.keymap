@@ -101,6 +101,16 @@ behaviors {
       flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <200>;
       quick-tap-ms = <125>;
+      require-prior-idle-ms = <125>;
+      hold-while-undecided;
+      bindings = <&kp>, <&kp>;
+      };
+    mtrv: mtrv {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "hold-preferred"; // was hold-preferred
+      tapping-term-ms = <200>;
+      quick-tap-ms = <125>;
       hold-while-undecided;
       bindings = <&kp>, <&kp>;
       };
