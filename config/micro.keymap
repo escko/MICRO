@@ -464,9 +464,9 @@ combos {
 
     MEDIA {
     bindings = <
-    &bt BT_SEL 1 &bt BT_SEL 0 &mt1 F4 LC(LA(LS(Z)))
+    &bt BT_SEL 1 &bt BT_SEL 0 &kp LC(LA(LS(Z)))
     &none &none &kp F4
-    &none &none &kp LC(LA(LS(P)))
+    &none &none &kp LA(F)
     &mt1 LC(LA(LS(V))) LC(LA(LS(W))) &mt LC(LA(LS(C))) LC(LA(LS(X))) &lt1 VOLUME C_PLAY_PAUSE>;   
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
         
