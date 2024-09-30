@@ -388,7 +388,7 @@ combos {
     &kp A &kp D &kp F
     &lt1 MEDIA LC(R) &mt1 LCTRL I &lt1 ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
-    sensor-bindings = <&rot_kp LBKT RBKT>; };
+    sensor-bindings = <&rot_kp UP DOWN>; };
 
     ARTSTUDIO {
     bindings = <
