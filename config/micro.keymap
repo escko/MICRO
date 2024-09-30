@@ -99,8 +99,8 @@ behaviors {
     hwu: hwu {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <180>;
       hold-while-undecided;
       bindings = <&kp>, <&kp>;
       };
