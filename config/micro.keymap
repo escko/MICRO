@@ -87,6 +87,15 @@ behaviors {
       hold-while-undecided;
       bindings = <&mo>, <&kp>;
       };
+    lt2: lt2 {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <0>;
+      hold-while-undecided;
+      bindings = <&mo>, <&kp>;
+      };
     hwu: hwu {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -339,15 +348,20 @@ combos {
     key-positions = <1 11>;
     bindings = <&kp LG(E)>;
       };
-    LG_R {
+    LS_R {
     timeout-ms = <50>;
-    key-positions = <2 11>;
-    bindings = <&kp LG(R)>;
+    key-positions = <2 9>;
+    bindings = <&kp LS(R)>;
       };
     LA_R {
     timeout-ms = <50>;
     key-positions = <2 10>;
     bindings = <&kp LA(R)>;
+      };
+    LG_R {
+    timeout-ms = <50>;
+    key-positions = <2 11>;
+    bindings = <&kp LG(R)>;
       };
     COMBO_G {
     timeout-ms = <50>;
