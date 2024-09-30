@@ -386,7 +386,7 @@ combos {
     bindings = <
     &mt W Q &kp E &mtr R N4
     &kp A &kp D &kp F
-    &lt1 MEDIA I &mt1 LCTRL LS(X) &lt1 ENCODER N0 
+    &lt1 MEDIA LC(R) &mt1 LCTRL I &lt1 ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -394,7 +394,7 @@ combos {
     bindings = <
     &mt Q W &kp E &hwu LC(LALT) R
     &kp A &kp D &kp F
-    &lt1 MEDIA I &mt1 LCTRL LS(X) &lt1 ENCODER N0  
+    &lt1 MEDIA LC(R) &mt1 LCTRL I &lt1 ENCODER N0  
     &hwu LSHFT Z &hwu LGUI X &hwu LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
