@@ -87,15 +87,6 @@ behaviors {
       hold-while-undecided;
       bindings = <&mo>, <&kp>;
       };
-    lt2: lt2 {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "hold-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <0>;
-      hold-while-undecided;
-      bindings = <&mo>, <&kp>;
-      };
     hwu: hwu {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -117,8 +108,8 @@ behaviors {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <125>;
+      tapping-term-ms = <300>;
+      quick-tap-ms = <0>;
       hold-while-undecided;
       bindings = <&kp>, <&kp>;
       };
@@ -260,7 +251,7 @@ combos {
       };
     HISTORY {
     timeout-ms = <50>;
-    key-positions = <1 10>;
+    key-positions = <0 1 5>;
     bindings = <&mo HISTORY>;
       };
     VIEW {
@@ -321,11 +312,6 @@ combos {
     timeout-ms = <50>;
     key-positions = <1 2 10>;
     bindings = <&kp LA(I)>;
-      };
-    LS_LCTRL {
-    timeout-ms = <50>;
-    key-positions = <0 9>;
-    bindings = <&kp LS(LCTRL)>;
       };
     LS_LALT {
     timeout-ms = <50>;
@@ -400,7 +386,7 @@ combos {
     bindings = <
     &mt W Q &kp E &mtr R N4
     &kp A &kp D &kp F
-    &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0 
+    &lt1 MEDIA I &mt1 LCTRL LS(X) &lt1 ENCODER N0 
     &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -408,7 +394,7 @@ combos {
     bindings = <
     &mt Q W &kp E &hwu LC(LALT) R
     &kp A &kp D &kp F
-    &lt1 MEDIA I &mt1 LCTRL TAB &lt ENCODER N0  
+    &lt1 MEDIA I &mt1 LCTRL LS(X) &lt1 ENCODER N0  
     &hwu LSHFT Z &hwu LGUI X &hwu LALT C>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -433,7 +419,7 @@ combos {
     &none &none &mt LG(D) ENTER
     &none &kp N7 &kp N6
     &none &none &mt3 LS(LG(B)) LG(B)                       
-    &mt3 LS(LA(LG(X))) LA(LG(X)) &mt3 LA(LS(LG(X))) LG(M) &mt3 LG(J) N>;
+    &mt3 LS(LA(LG(X))) LA(LG(X)) &mt3 LA(X) LG(M) &mt3 LG(J) N>;
     sensor-bindings = <&rot_kp N1 N5>; };
 
     ROTATE {
@@ -441,14 +427,14 @@ combos {
     &none &none &none
     &none &none &none
     &none &none &kp LA(LG(N0))
-    &mt1 LS(EQUAL) LC(EQUAL) &mt1 H LG(EQUAL) &mt0 SPACE LG(N0)>;
+    &mt1 LS(EQUAL) LC(EQUAL) &mt1 H LG(EQUAL) &mtrv SPACE LG(N0)>;
     sensor-bindings = <&rot_kp N8 N9>; };
 
     VIEW {
     bindings = <
     &none &none &none
     &none &none &none
-    &none &mt1 COLON SEMI &none
+    &none &mt1 COLON SEMI &kp TAB
     &mt3 PERIOD COMMA &mt3 LS(LG(N0)) H &mtrv SPACE LG(N0)>;
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
@@ -456,7 +442,7 @@ combos {
     bindings = <
     &none &none &mt3 LS(LG(N0)) H
     &none &none &none
-    &none &mt1 COLON SEMI &none
+    &none &mt1 COLON SEMI &kp TAB
     &mt3 PERIOD COMMA &mtrv SPACE LG(N0) &kp LA(SPACE)>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
