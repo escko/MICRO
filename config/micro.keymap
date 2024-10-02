@@ -20,7 +20,6 @@
 #define VOLUME 11
 #define BLUE 12
 
-
 &lt {
     tapping-term-ms = <135>;
     quick-tap-ms = <100>;
@@ -33,12 +32,12 @@
 };
 
 // time to max speed ms was 1000 //
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 130  //10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 130  // 10
 //#define MOUSE_SCROLL_MAX 250
 &msc {
-    acceleration-exponent = <0>;     // 0
-    time-to-max-speed-ms = <0>;      // 300
-    delay-ms = <0>;                  // 0
+    acceleration-exponent = <0>;      // 0
+    time-to-max-speed-ms = <0>;       // 300
+    delay-ms = <0>;                   // 0
 };
 
 / {
@@ -48,8 +47,8 @@
 &pinctrl {
     qdec_default: qdec_default {
         group1 {
-            psels = <NRF_PSEL(QDEC_A, 0, 24)>,
-                    <NRF_PSEL(QDEC_B, 0, 22)>;
+            psels = <NRF_PSEL(QDEC_A, 1, 4)>,
+                    <NRF_PSEL(QDEC_B, 1, 6)>;
             bias-pull-up;
         };
     };
@@ -58,8 +57,8 @@
 // need second set of pins defined if deep sleep is enabled
     qdec_sleep: qdec_sleep {
         group1 {
-            psels = <NRF_PSEL(QDEC_A, 0, 24)>,
-                    <NRF_PSEL(QDEC_B, 0, 22)>;
+            psels = <NRF_PSEL(QDEC_A, 1, 4)>,
+                    <NRF_PSEL(QDEC_B, 1, 6)>;
             bias-pull-up; // TODO: find out if this makes sense with low-power-enable
             low-power-enable;
         };
@@ -75,6 +74,7 @@ encoder: &qdec0 {
     pinctrl-1 = <&qdec_sleep>;
     pinctrl-names = "default", "sleep";
 };
+
 
 / { 
 behaviors {
@@ -124,7 +124,7 @@ behaviors {
     mt1: mt1 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred";
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <145>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -132,7 +132,7 @@ behaviors {
     mt2: mt2 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred";
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <200>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -140,7 +140,7 @@ behaviors {
     mt3: mt3 {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred";
+      flavor = "hold-preferred"; // was hold-preferred
       tapping-term-ms = <300>;
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
@@ -176,7 +176,15 @@ behaviors {
       quick-tap-ms = <100>;
       flavor = "hold-preferred";
       bindings = <&mkp>, <&mkp>;
-      };        
+      };
+    bt01: bt01 {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred"; // was hold-preferred
+      tapping-term-ms = <300>;
+      quick-tap-ms = <100>;
+      bindings = <&bt>, <&bt>;
+      };         
     rgb_encoder: rgb_encoder {
       compatible = "zmk,behavior-sensor-rotate";
       #sensor-binding-cells = <0>;
@@ -213,10 +221,9 @@ behaviors {
       };
   };
 
-    // |SW1- 0 |SW2- 1 |SW3- 2 |
-    // |SW4- 3 |SW5- 4 |SW6- 5 |
-    // |SW7- 6 |SW8- 7 |SW9- 8 |SW12- 11 |
-    //                |SW10- 9 |SW11- 10 | 
+    //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
+    //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
+    //                 |SW10- 9 |SW11- 10 |SW12- 11 |
 combos {
     compatible = "zmk,combos";
     ARTSTUDIO {
@@ -226,7 +233,7 @@ combos {
       }; 
     INFINITE {
     timeout-ms = <50>;
-    key-positions = <3 4 5 9>;
+    key-positions = <4 5 6 9>;
     bindings = <&tog INFINITE>;
       };
     LAYERS {
@@ -234,256 +241,240 @@ combos {
     key-positions = <0 1>;
     bindings = <&mo LAYERS>;
       };
+    COMBO_A {
+    timeout-ms = <50>;
+    key-positions = <0 4>;
+    bindings = <&kp A>;
+      };
     MOVE {
     timeout-ms = <50>;
-    key-positions = <3 4 5>;
-    bindings = <&kp J>;
-      };
-    MOVE2 {
-    timeout-ms = <50>;
-    key-positions = <0 1 2 11>;
+    key-positions = <1 2>;
     bindings = <&kp J>;
       };
     LAYER_SELECT {
     timeout-ms = <50>;
-    key-positions = <0 1 2 10 11>;
+    key-positions = <0 1 2 3 8>;
     bindings = <&kp LA(LG(J))>;
       };
     HISTORY {
     timeout-ms = <50>;
-    key-positions = <1 3>;
+    key-positions = <2 5>;
     bindings = <&mo HISTORY>;
       };
     VIEW {
     timeout-ms = <50>;
-    key-positions = <0 1 2>;
+    key-positions = <0 1 2 3>;
     bindings = <&mo VIEW>;
       };
     VIEW2 {
     timeout-ms = <50>;
-    key-positions = <0 6>;
+    key-positions = <0 1 2>;
     bindings = <&mo VIEW2>;
       };
     ROTATE {
     timeout-ms = <50>;
-    key-positions = <0 2>;
+    key-positions = <0 3>;
     bindings = <&mo ROTATE>;
       };
     TRANSFORM {
     timeout-ms = <50>;
-    key-positions = <1 5>;
+    key-positions = <1 2 3>;
     bindings = <&kp T>;
-      };
+      }; 
     CENTERLEFT {
     timeout-ms = <50>;
-    key-positions = <3 4>;
+    key-positions = <4 5>;
     bindings = <&mo CENTERLEFT>;
       };
     BLUE {
     timeout-ms = <50>;
-    key-positions = <6 9>;
+    key-positions = <4 9>;
     bindings = <&mo BLUE>;
       };
     ELLIPSE {
     timeout-ms = <50>;
-    key-positions = <0 5>;
+    key-positions = <1 3>;
     bindings = <&mt1 K LA(K)>;
       };
     MARQUEE {
     timeout-ms = <50>;
-    key-positions = <2 3>;
+    key-positions = <0 2>;
     bindings = <&mt1 M LA(M)>;
       };
     LASSO {
     timeout-ms = <50>;
-    key-positions = <1 2>;
+    key-positions = <2 3>;
     bindings = <&kp L>;
       };
     INVERT {
     timeout-ms = <50>;
-    key-positions = <1 2 11>;
+    key-positions = <2 3 8>;
     bindings = <&kp LS(LG(I))>;
       };
-    // |SW1- 0 |SW2- 1 |SW3- 2 |
-    // |SW4- 3 |SW5- 4 |SW6- 5 |
-    // |SW7- 6 |SW8- 7 |SW9- 8 |SW12- 11 |
-    //                |SW10- 9 |SW11- 10 | 
+    //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
+    //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
+    //                 |SW10- 9 |SW11- 10 |SW12- 11 |
     LA_I {
     timeout-ms = <50>;
-    key-positions = <1 2 10>;
+    key-positions = <2 3 11>;
     bindings = <&kp LA(I)>;
-      };
-    LS_LALT {
-    timeout-ms = <50>;
-    key-positions = <0 10>;
-    bindings = <&kp LS(LALT)>;
       };
     LS_LGUI {
     timeout-ms = <50>;
-    key-positions = <0 11>;
+    key-positions = <0 8>;
     bindings = <&kp LS(LGUI)>;
+      };
+    LS_LALT {
+    timeout-ms = <50>;
+    key-positions = <0 11>;
+    bindings = <&kp LS(LALT)>;
       };
     LS_LA_LGUI {
     timeout-ms = <50>;
-    key-positions = <0 10 11>;
+    key-positions = <0 8 11>;
     bindings = <&kp LS(LA(LGUI))>;
       };
     LG_E {
     timeout-ms = <50>;
-    key-positions = <1 11>;
+    key-positions = <2 8>;
     bindings = <&kp LG(E)>;
+      };
+    LG_R {
+    timeout-ms = <50>;
+    key-positions = <3 8>;
+    bindings = <&kp LG(R)>;
       };
     LS_R {
     timeout-ms = <50>;
-    key-positions = <2 9>;
+    key-positions = <3 10>;
     bindings = <&kp LS(R)>;
       };
     LA_R {
     timeout-ms = <50>;
-    key-positions = <2 10>;
+    key-positions = <3 11>;
     bindings = <&kp LA(R)>;
-      };
-    LG_R {
-    timeout-ms = <50>;
-    key-positions = <2 11>;
-    bindings = <&kp LG(R)>;
       };
     COMBO_G {
     timeout-ms = <50>;
-    key-positions = <4 5>;
+    key-positions = <5 6>;
     bindings = <&kp G>;
       };
     COMBO_P {
     timeout-ms = <50>;
-    key-positions = <3 5>;
+    key-positions = <4 6>;
     bindings = <&kp P>;
       };
     COMBO_S {
     timeout-ms = <50>;
-    key-positions = <0 1 5>;
+    key-positions = <4 5 6>;
     bindings = <&kp S>;
       };
     LA_LGUI {
     timeout-ms = <50>;
-    key-positions = <10 11>;
+    key-positions = <8 11>;
     bindings = <&hwu LA(LGUI) B>;
       };
     SETTINGS {
     timeout-ms = <50>;
-    key-positions = <6 7>;
+    key-positions = <9 10>;
     bindings = <&kp LG(COMMA)>;
       };
     };
-    // |SW1- 0 |SW2- 1 |SW3- 2 |
-    // |SW4- 3 |SW5- 4 |SW6- 5 |
-    // |SW7- 6 |SW8- 7 |SW9- 8 |SW12- 11 |
-    //                |SW10- 9 |SW11- 10 |
-
+    //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
+    //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
+    //                 |SW10- 9 |SW11- 10 |SW12- 11 |
  keymap {
     compatible = "zmk,keymap";
 
     KRITA {
     bindings = <
-    &mt W Q &kp E &mtr R N4
-    &kp A &kp D &kp F
-    &lt1 MEDIA LC(R) &mt1 LCTRL I &lt1 ENCODER N0 
-    &hwu LSHFT Z &hwu LALT X &hwu LGUI C>;   
+    &mt LSHFT Q &kp W &kp E &mtr R N4
+    &lt1 MEDIA LC(R) &kp D &kp F &lt1 ENCODER N0 &hwu LGUI C 
+    &hwu LCTRL I &hwu LSHFT Z &hwu LALT X>;
     sensor-bindings = <&rot_kp UP DOWN>; };
 
     ARTSTUDIO {
     bindings = <
-    &mt Q W &kp E &hwu LC(LALT) R
-    &kp A &kp D &kp F
-    &lt1 MEDIA LC(R) &mt1 LCTRL I &lt1 ENCODER N0  
-    &hwu LSHFT Z &hwu LGUI X &hwu LALT C>;   
+    &mt LSHFT Q &kp W &kp E &hwu LC(LALT) R
+    &lt1 MEDIA LC(R) &kp D &kp F &lt1 ENCODER N0 &hwu LALT C
+    &hwu LCTRL I &hwu LSHFT Z &hwu LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ENCODER {
     bindings = <
-    &trans &trans &trans
-    &trans &trans &trans
-    &trans &trans &trans
+    &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans
     &trans &trans &trans>;
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     INFINITE {
-    bindings = <
-    &mt1 LS(B) K &e_cmdz &mtr O B       
-    &mt1 P M &kp W &kp F
-    &lt1 MEDIA SLASH &mt1 TAB BACKSLASH &mt2 LG(U) LG(B)  
-    &hwu LSHFT T &hwu LGUI V &hwu LALT C>;       
+    bindings = <     
+    &mt1 P LS(B) &kp K &e_cmdz &mtr O B       
+    &lt1 MEDIA M &kp W &kp F &mt2 LG(U) LG(B) &hwu LALT C  
+    &mt1 BACKSLASH SLASH &hwu LSHFT T &hwu LGUI V>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
     bindings = <
-    &none &none &mt LG(D) ENTER
-    &none &kp N7 &kp N6
-    &none &none &mt3 LS(LG(B)) LG(B)                       
-    &mt3 LS(LA(LG(X))) LA(LG(X)) &mt3 LA(X) LG(M) &mt3 LG(J) N>;
+    &none &none &kp ENTER &kp LG(D)
+    &none &kp N7 &kp N6 &mt3 LS(LG(B)) LG(B) &mt3 LG(J) N                       
+    &kp LS(LA(LG(X))) &mt3 LSHFT LA(LG(X)) &mt3 LA(X) LG(M)>;
     sensor-bindings = <&rot_kp N1 N5>; };
 
     ROTATE {
     bindings = <
-    &none &none &none
-    &none &none &none
-    &none &none &kp LA(LG(N0))
-    &mt1 LS(EQUAL) LC(EQUAL) &mt1 H LG(EQUAL) &mtrv SPACE LG(N0)>;
+    &none &none &none &none
+    &none &none &none &kp LA(LG(N0)) &mtrv SPACE LG(N0)
+    &kp LS(EQUAL) &kp LC(EQUAL) &mt1 H LG(EQUAL)>;
     sensor-bindings = <&rot_kp N8 N9>; };
 
     VIEW {
     bindings = <
-    &none &none &none
-    &none &none &none
-    &none &mt1 COLON SEMI &kp TAB
-    &mt3 PERIOD COMMA &mt3 LS(LG(N0)) H &mtrv SPACE LG(N0)>;
+    &none &none &none &none
+    &none &kp COLON &kp SEMI &kp TAB &mtrv SPACE LG(N0)
+    &hwu LCTRL PERIOD &mt3 LS(H) COMMA &mt3 LS(LG(N0)) H>;
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
     VIEW2 {
     bindings = <
-    &none &none &mt3 LS(LG(N0)) H
-    &none &none &none
-    &none &mt1 COLON SEMI &kp TAB
-    &mt3 PERIOD COMMA &mtrv SPACE LG(N0) &kp LA(SPACE)>;
+    &none &none &none &mt3 LS(LG(N0)) H
+    &none &kp COLON &kp SEMI &kp TAB &kp LA(SPACE)
+    &hwu LCTRL PERIOD &mt3 LS(H) COMMA &mtrv SPACE LG(N0)>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
     HISTORY {
     bindings = <
-    &none &none &none
-    &none &none &none
-    &none &none &none
+    &none &none &none &none
+    &none &none &none &none &none
     &none &none &none>;
     sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
 
     CENTERLEFT {
     bindings = <
-    &none &none &mt1 LC(LA(LS(RIGHT))) LC(LA(LS(LEFT))) 
-    &none &none &mt1 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMI)))
-    &none &none &none  
-    &mt1 LC(LA(LS(PERIOD))) LC(LA(LS(SLASH))) &mt1 LC(LA(LS(DOWN))) LC(LA(LS(UP))) &mt1 LC(LA(LS(LG(DOWN)))) LC(LA(LS(LG(UP))))>;      
+    &none &none &kp LC(LA(LS(LEFT))) &kp LC(LA(LS(RIGHT)))
+    &none &none &mt1 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMI))) &none &mt1 LC(LA(LS(LG(DOWN)))) LC(LA(LS(LG(UP))))  
+    &mt1 LC(LA(LS(PERIOD))) LC(LA(LS(SLASH))) &kp LC(LA(LS(DOWN))) &kp LC(LA(LS(UP)))>;      
     sensor-bindings = <&rot_kp LC(LA(LS(N))) LC(LA(LS(M)))>; };
 
     MEDIA {
     bindings = <
-    &bt BT_SEL 1 &bt BT_SEL 0 &kp LC(LA(LS(Z)))
-    &none &none &kp F4
-    &none &none &kp LA(F)
-    &mt1 LC(LA(LS(V))) LC(LA(LS(W))) &mt LC(LA(LS(C))) LC(LA(LS(X))) &lt1 VOLUME C_PLAY_PAUSE>;   
+    &none &bt BT_SEL 1 &bt BT_SEL 0 &kp LC(LA(LS(Z)))
+    &none &none &kp F4 &kp LA(F) &lt1 VOLUME C_PLAY_PAUSE
+    &none &mt1 LC(LA(LS(V))) LC(LA(LS(W))) &mt LC(LA(LS(C))) LC(LA(LS(X)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
         
     VOLUME {
     bindings = <
-    &none &none &none
-    &none &none &none
-    &none &none &none
+    &none &none &none &none 
+    &none &none &none &none &none
     &none &none &none>;    
     sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP>; };
             
     BLUE {
     bindings = <
-    &bt BT_SEL 0 &rgb_ug RGB_BRI &rgb_ug RGB_SAI
-    &bt BT_SEL 1 &rgb_ug RGB_BRD &rgb_ug RGB_SAD 
-    &none &rgb_ug RGB_EFF  &bt BT_CLR_ALL    
-    &none &out OUT_TOG &ext_power EP_TOG>;  
+    &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_EFF
+    &none &rgb_ug RGB_BRD &rgb_ug RGB_SAD &bt BT_CLR_ALL &ext_power EP_TOG    
+    &none &none &out OUT_TOG>;
     sensor-bindings = <&rgb_encoder>; };
     };
 };
