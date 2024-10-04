@@ -193,7 +193,7 @@ behaviors {
     e_cmdz: e_cmdz {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp E>, <&kp LG(Z)>;
+            bindings = <&kp E>, <&kp LC(Z)>;
             mods = <(MOD_LCTL)>;
       };     
     EE_CUTUNDO: EE_CUT {
@@ -410,7 +410,7 @@ combos {
     INFINITE {
     bindings = <     
     &mt1 P LS(B) &kp K &e_cmdz &mtr O B       
-    &lt1 MEDIA M &kp W &kp F &mt2 LG(U) LG(B) &hwu LCTRL C  
+    &lt1 MEDIA M &kp W &kp F &mt2 LC(U) LC(B) &hwu LCTRL C  
     &mt1 BACKSLASH SLASH &hwu LSHFT T &hwu LALT V>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
