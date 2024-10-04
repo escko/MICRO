@@ -194,7 +194,7 @@ behaviors {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LG(Z)>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LCTL)>;
       };     
     EE_CUTUNDO: EE_CUT {
             compatible = "zmk,behavior-mod-morph";
@@ -254,7 +254,7 @@ combos {
     LAYER_SELECT {
     timeout-ms = <50>;
     key-positions = <0 1 2 3 8>;
-    bindings = <&kp LA(LG(J))>;
+    bindings = <&kp LA(LC(J))>;
       };
     HISTORY {
     timeout-ms = <50>;
@@ -309,7 +309,7 @@ combos {
     INVERT {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
-    bindings = <&kp LS(LG(I))>;
+    bindings = <&kp LS(LC(I))>;
       };
     //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
     //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
@@ -322,7 +322,7 @@ combos {
     LS_LGUI {
     timeout-ms = <50>;
     key-positions = <0 8>;
-    bindings = <&kp LS(LGUI)>;
+    bindings = <&kp LS(LCTRL)>;
       };
     LS_LALT {
     timeout-ms = <50>;
@@ -332,17 +332,17 @@ combos {
     LS_LA_LGUI {
     timeout-ms = <50>;
     key-positions = <0 8 11>;
-    bindings = <&kp LS(LA(LGUI))>;
+    bindings = <&kp LS(LA(LCTRL))>;
       };
     LG_E {
     timeout-ms = <50>;
     key-positions = <2 8>;
-    bindings = <&kp LG(E)>;
+    bindings = <&kp LC(E)>;
       };
     LG_R {
     timeout-ms = <50>;
     key-positions = <3 8>;
-    bindings = <&kp LG(R)>;
+    bindings = <&kp LC(R)>;
       };
     LS_R {
     timeout-ms = <50>;
@@ -372,12 +372,12 @@ combos {
     LA_LGUI {
     timeout-ms = <50>;
     key-positions = <8 11>;
-    bindings = <&hwu LA(LGUI) B>;
+    bindings = <&hwu LA(LCTRL) B>;
       };
     SETTINGS {
     timeout-ms = <50>;
     key-positions = <9 10>;
-    bindings = <&kp LG(COMMA)>;
+    bindings = <&kp LC(COMMA)>;
       };
     };
     //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
@@ -389,8 +389,8 @@ combos {
     KRITA {
     bindings = <
     &mt LSHFT Q &kp W &kp E &mtr R N4
-    &lt1 MEDIA LC(R) &kp D &kp F &lt1 ENCODER N0 &hwu LGUI C 
-    &hwu LCTRL I &hwu LSHFT Z &hwu LALT X>;
+    &lt1 MEDIA LS(LC(R)) &kp D &kp F &lt1 ENCODER N0 &hwu LCTRL C 
+    &hwu LGUI I &hwu LSHFT Z &hwu LALT X>;
     sensor-bindings = <&rot_kp UP DOWN>; };
 
     ARTSTUDIO {
@@ -410,44 +410,44 @@ combos {
     INFINITE {
     bindings = <     
     &mt1 P LS(B) &kp K &e_cmdz &mtr O B       
-    &lt1 MEDIA M &kp W &kp F &mt2 LG(U) LG(B) &hwu LALT C  
-    &mt1 BACKSLASH SLASH &hwu LSHFT T &hwu LGUI V>;       
+    &lt1 MEDIA M &kp W &kp F &mt2 LG(U) LG(B) &hwu LCTRL C  
+    &mt1 BACKSLASH SLASH &hwu LSHFT T &hwu LALT V>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     LAYERS {     
     bindings = <
-    &none &none &kp ENTER &kp LG(D)
-    &none &kp N7 &kp N6 &mt3 LS(LG(B)) LG(B) &mt3 LG(J) N                       
-    &kp LS(LA(LG(X))) &mt3 LSHFT LA(LG(X)) &mt3 LA(X) LG(M)>;
+    &none &none &kp ENTER &kp LC(D)
+    &none &kp N7 &kp N6 &mt3 LS(LC(B)) LC(B) &mt3 LCTRL N                       
+    &kp LS(LA(LC(X))) &mt3 LSHFT LA(LC(X)) &mt3 LALT LC(M)>;
     sensor-bindings = <&rot_kp N1 N5>; };
 
     ROTATE {
     bindings = <
     &none &none &none &none
-    &none &none &none &kp LA(LG(N0)) &mtrv SPACE LG(N0)
-    &kp LS(EQUAL) &kp LC(EQUAL) &mt1 H LG(EQUAL)>;
+    &none &none &none &kp LA(LC(N0)) &mtrv SPACE LC(N0)
+    &kp LS(EQUAL) &kp LG(EQUAL) &mt1 H LC(EQUAL)>;
     sensor-bindings = <&rot_kp N8 N9>; };
 
     VIEW {
     bindings = <
     &none &none &none &none
-    &none &kp COLON &kp SEMI &kp TAB &mtrv SPACE LG(N0)
-    &hwu LCTRL PERIOD &mt3 LS(H) COMMA &mt3 LS(LG(N0)) H>;
+    &none &kp COLON &kp SEMI &kp TAB &mtrv SPACE LC(N0)
+    &hwu LGUI PERIOD &mt3 LS(H) COMMA &mt3 LS(LC(N0)) H>;
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
     VIEW2 {
     bindings = <
-    &none &none &none &mt3 LS(LG(N0)) H
+    &none &none &none &mt3 LS(LC(N0)) H
     &none &kp COLON &kp SEMI &kp TAB &kp LA(SPACE)
-    &hwu LCTRL PERIOD &mt3 LS(H) COMMA &mtrv SPACE LG(N0)>;
-    sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
+    &hwu LGUI PERIOD &mt3 LS(H) COMMA &mtrv SPACE LC(N0)>;
+    sensor-bindings = <&rot_kp LS(LC(SEMI)) LC(MINUS)>; };
 
     HISTORY {
     bindings = <
     &none &none &none &none
     &none &none &none &none &none
     &none &none &none>;
-    sensor-bindings = <&rot_kp LG(Z) LS(LG(Z))>; };
+    sensor-bindings = <&rot_kp LC(Z) LS(LC(Z))>; };
 
     CENTERLEFT {
     bindings = <
