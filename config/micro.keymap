@@ -251,9 +251,14 @@ combos {
     key-positions = <1 2>;
     bindings = <&kp J>;
       };
+    COMBO_TAB {
+    timeout-ms = <50>;
+    key-positions = <0 3 8 11>;
+    bindings = <&kp TAB>;
+      };
     LAYER_SELECT {
     timeout-ms = <50>;
-    key-positions = <0 1 2 3 8>;
+    key-positions = <1 2 8 11>;
     bindings = <&kp LA(LC(J))>;
       };
     HISTORY {
@@ -420,7 +425,7 @@ combos {
     &none &kp N7 &kp N6 &mt3 LS(LC(B)) LC(B) &mt3 LCTRL N                       
     &kp LS(BACKSPACE) &mt3 LSHFT LA(LC(X)) &mt3 LALT LC(M)>;
     sensor-bindings = <&rot_kp N1 N5>; };
-
+    
     ROTATE {
     bindings = <
     &none &none &none &none
