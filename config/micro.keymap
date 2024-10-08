@@ -311,10 +311,10 @@ combos {
     key-positions = <2 3>;
     bindings = <&kp L>;
       };
-    INVERT {
+    LG_L {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
-    bindings = <&kp LS(LC(I))>;
+    bindings = <&kp LG(L)>;
       };
     //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
     //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
@@ -421,7 +421,7 @@ combos {
 
     LAYERS {     
     bindings = <
-    &none &none &kp ENTER &kp LC(D)
+    &none &none &mt2 LS(LG(I)) LS(LG(D)) &mt LG(D) ENTER
     &none &kp N7 &kp N6 &mt3 LS(LC(B)) LC(B) &mt3 LCTRL N                       
     &kp LS(BACKSPACE) &mt3 LSHFT LA(LC(X)) &mt3 LALT LC(M)>;
     sensor-bindings = <&rot_kp N1 N5>; };
