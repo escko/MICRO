@@ -254,7 +254,7 @@ combos {
     COMBO_TAB {
     timeout-ms = <50>;
     key-positions = <0 3 11>;
-    bindings = <&mt3 ESCAPE TAB>;
+    bindings = <&kp ESCAPE>;
       };
     REFERENCE {
     timeout-ms = <50>;
@@ -334,6 +334,16 @@ combos {
     key-positions = <0 8>;
     bindings = <&kp LS(LGUI)>;
       };
+    COMBO_TAB {
+    timeout-ms = <50>;
+    key-positions = <0 9>;
+    bindings = <&kp TAB>;
+      };
+    CONTROL_OPTION {
+    timeout-ms = <50>;
+    key-positions = <0 10>;
+    bindings = <&kp LC(LALT)>;
+      };
     LS_LALT {
     timeout-ms = <50>;
     key-positions = <0 11>;
@@ -386,7 +396,7 @@ combos {
       };
     SETTINGS {
     timeout-ms = <50>;
-    key-positions = <9 10>;
+    key-positions = <5 9>;
     bindings = <&kp LG(COMMA)>;
       };
     };
