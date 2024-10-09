@@ -412,7 +412,7 @@ combos {
     &lt1 MEDIA LC(R) &kp D &kp F &lt1 ENCODER N0 &hwu LALT C
     &hwu LCTRL I &hwu LSHFT Z &hwu LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
-l
+
     ENCODER {
     bindings = <
     &trans &trans &trans &trans
