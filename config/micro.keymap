@@ -241,10 +241,10 @@ combos {
     key-positions = <0 1>;
     bindings = <&mo LAYERS>;
       };
-    COMBO_A {
+    MEDIA {
     timeout-ms = <50>;
     key-positions = <0 4>;
-    bindings = <&kp A>;
+    bindings = <&mo MEDIA>;
       };
     MOVE {
     timeout-ms = <50>;
@@ -255,6 +255,11 @@ combos {
     timeout-ms = <50>;
     key-positions = <0 3 11>;
     bindings = <&mt3 ESCAPE TAB>;
+      };
+    REFERENCE {
+    timeout-ms = <50>;
+    key-positions = <0 1 2 3 8>;
+    bindings = <&kp LC(R)>;
       };
     LAYER_SELECT {
     timeout-ms = <50>;
@@ -394,14 +399,14 @@ combos {
     KRITA {
     bindings = <
     &mt LSHFT Q &kp W &kp E &mtr R N4
-    &lt1 MEDIA LC(R) &kp D &kp F &lt1 ENCODER N0 &hwu LGUI C 
+    &kp A &kp D &kp F &lt1 ENCODER N0 &hwu LGUI C 
     &hwu LCTRL I &hwu LSHFT Z &hwu LALT X>;
     sensor-bindings = <&rot_kp UP DOWN>; };
 
     ARTSTUDIO {
     bindings = <
     &mt LSHFT Q &kp W &kp E &hwu LC(LALT) R
-    &lt1 MEDIA LC(R) &kp D &kp F &lt1 ENCODER N0 &hwu LALT C
+    &kp A &kp D &kp F &lt1 ENCODER N0 &hwu LALT C
     &hwu LCTRL I &hwu LSHFT Z &hwu LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
@@ -415,7 +420,7 @@ combos {
     INFINITE {
     bindings = <     
     &mt1 P LS(B) &kp K &e_cmdz &mtr O B       
-    &lt1 MEDIA M &kp W &kp F &mt2 LG(U) LG(B) &hwu LALT C  
+    &kp M &kp W &kp F &mt2 LG(U) LG(B) &hwu LALT C  
     &mt1 BACKSLASH SLASH &hwu LSHFT T &hwu LGUI V>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
