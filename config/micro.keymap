@@ -256,10 +256,10 @@ combos {
     key-positions = <0 3 11>;
     bindings = <&kp ESCAPE>;
       };
-    REFERENCE {
+    COMBO_TAB {
     timeout-ms = <50>;
     key-positions = <0 1 2 3 8>;
-    bindings = <&kp LC(R)>;
+    bindings = <&kp TAB>;
       };
     LAYER_SELECT {
     timeout-ms = <50>;
@@ -334,10 +334,10 @@ combos {
     key-positions = <0 8>;
     bindings = <&kp LS(LGUI)>;
       };
-    COMBO_TAB {
+    CONTROL_COMMAND {
     timeout-ms = <50>;
     key-positions = <0 9>;
-    bindings = <&kp TAB>;
+    bindings = <&kp LC(LGUI)>;
       };
     CONTROL_OPTION {
     timeout-ms = <50>;
