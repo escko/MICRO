@@ -251,15 +251,15 @@ combos {
     key-positions = <1 2>;
     bindings = <&kp J>;
       };
-    COMBO_ESCAPE {
+    ESCAPE_ {
     timeout-ms = <50>;
     key-positions = <0 3 11>;
     bindings = <&kp ESCAPE>;
       };
-    COMBO_TAB {
+    TAB_LC_LG_F {
     timeout-ms = <50>;
     key-positions = <0 1 2 3 8>;
-    bindings = <&kp TAB>;
+    bindings = <&mt3 TAB LC(LG(F))>;
       };
     LAYER_SELECT {
     timeout-ms = <50>;
@@ -316,7 +316,7 @@ combos {
     key-positions = <2 3>;
     bindings = <&kp L>;
       };
-    LG_L {
+    COMMAND_L {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
     bindings = <&kp LG(L)>;
@@ -324,12 +324,12 @@ combos {
     //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
     //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
     //                 |SW10- 9 |SW11- 10 |SW12- 11 |
-    LA_I {
+    OPTION_I {
     timeout-ms = <50>;
     key-positions = <2 3 11>;
     bindings = <&kp LA(I)>;
       };
-    LS_LGUI {
+    SHIFT_COMMAND {
     timeout-ms = <50>;
     key-positions = <0 8>;
     bindings = <&kp LS(LGUI)>;
@@ -344,52 +344,72 @@ combos {
     key-positions = <0 10>;
     bindings = <&kp LC(LALT)>;
       };
-    LS_LALT {
+    SHIFT_OPTION {
     timeout-ms = <50>;
     key-positions = <0 11>;
     bindings = <&kp LS(LALT)>;
       };
-    LS_LA_LGUI {
+    SHIFT_OPTION_COMMAND {
     timeout-ms = <50>;
     key-positions = <0 8 11>;
     bindings = <&kp LS(LA(LGUI))>;
       };
-    LG_E {
+    OPTION_COMMAND_R {
+    timeout-ms = <50>;
+    key-positions = <3 8 11>;
+    bindings = <&kp LA(LG(R))>;
+      };
+    OPTION_COMMAND_F {
+    timeout-ms = <50>;
+    key-positions = <6 8 11>;
+    bindings = <&kp LA(LG(F))>;
+      };
+    COMMAND_E {
     timeout-ms = <50>;
     key-positions = <2 8>;
     bindings = <&kp LG(E)>;
       };
-    LG_R {
+    COMMAND_R {
     timeout-ms = <50>;
     key-positions = <3 8>;
     bindings = <&kp LG(R)>;
       };
-    LS_R {
+    SHIFT_R {
     timeout-ms = <50>;
     key-positions = <3 10>;
     bindings = <&kp LS(R)>;
       };
-    LA_R {
+    OPTION_R {
     timeout-ms = <50>;
     key-positions = <3 11>;
     bindings = <&kp LA(R)>;
       };
-    COMBO_G {
+    G_ {
     timeout-ms = <50>;
     key-positions = <5 6>;
     bindings = <&kp G>;
       };
-    COMBO_P {
+    P_ {
     timeout-ms = <50>;
     key-positions = <4 6>;
     bindings = <&kp P>;
       };
-    COMBO_S {
+    COMMAND_F {
+    timeout-ms = <50>;
+    key-positions = <6 8>;
+    bindings = <&kp LG(F)>;
+      };
+    OPTION_F {
+    timeout-ms = <50>;
+    key-positions = <6 11>;
+    bindings = <&kp LA(F)>;
+      };
+    S_ {
     timeout-ms = <50>;
     key-positions = <4 5 6>;
     bindings = <&kp S>;
       };
-    LA_LGUI {
+    OPTION_COMMAND {
     timeout-ms = <50>;
     key-positions = <8 11>;
     bindings = <&hwu LA(LGUI) B>;
