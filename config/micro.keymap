@@ -456,7 +456,7 @@ combos {
 
     LAYERS {     
     bindings = <
-    &none &none &mt2 LS(LG(I)) LS(LG(D)) &mt LG(D) ENTER
+    &none &none &mt2 LS(LG(D)) LS(LG(I)) &mt LG(D) ENTER
     &none &kp N7 &kp N6 &mt3 LS(LG(B)) LG(B) &mt3 LGUI N                       
     &kp LS(BACKSPACE) &mt3 LSHFT LA(LG(X)) &mt3 LALT LG(M)>;
     sensor-bindings = <&rot_kp N1 N5>; };
