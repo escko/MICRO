@@ -457,7 +457,7 @@ combos {
     bindings = <
     &none &none &mt3 LS(LG(D)) LS(LG(I)) &mt LG(D) ENTER
     &none &kp COMMA &kp PERIOD &mt3 LS(LG(B)) LG(B) &mt3 LGUI N                       
-    &kp LS(BACKSPACE) &mt3 LSHFT LA(LG(X)) &mt3 LALT LG(M)>;
+    &mt3 Y U &mt3 LSHFT I &mt3 LALT LG(M)>;
     sensor-bindings = <&rot_kp N1 N5>; };
     
     ROTATE {
