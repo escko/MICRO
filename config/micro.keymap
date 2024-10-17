@@ -433,15 +433,15 @@ combos {
     KRITA {
     bindings = <
     &mt LSHFT Q &kp W &kp E &mtr R N4
-    &kp A &kp D &kp F &lt1 ENCODER N0 &hwu LGUI C 
-    &hwu LCTRL I &hwu LSHFT Z &hwu LALT X>;
+    &hwu LCTRL A &kp D &kp F &lt1 ENCODER N0 &hwu LGUI C 
+    &mt1 LS(LCTRL) Y &hwu LSHFT Z &hwu LALT X>;
     sensor-bindings = <&rot_kp UP DOWN>; };
 
     ARTSTUDIO {
     bindings = <
     &mt LSHFT Q &kp W &kp E &hwu LC(LALT) R
-    &kp A &kp D &kp F &lt1 ENCODER N0 &hwu LALT C
-    &hwu LCTRL I &hwu LSHFT Z &hwu LGUI X>;   
+    &hwu LCTRL A &kp D &kp F &lt1 ENCODER N0 &hwu LALT C
+    &mt1 LS(LCTRL) Y &hwu LSHFT Z &hwu LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     ENCODER {
