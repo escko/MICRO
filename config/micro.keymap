@@ -242,7 +242,7 @@ combos {
     MEDIA {
     timeout-ms = <50>;
     key-positions = <0 4>;
-    bindings = <&mo MEDIA>;
+    bindings = <&motap MEDIA B>;
       };
     MOVE {
     timeout-ms = <50>;
@@ -415,7 +415,7 @@ combos {
     OPTION_COMMAND {
     timeout-ms = <50>;
     key-positions = <8 11>;
-    bindings = <&hwu LA(LGUI) B>;
+    bindings = <&hwu LA(LGUI) N4>;
       };
     SETTINGS {
     timeout-ms = <50>;
