@@ -274,7 +274,7 @@ combos {
       };
     HISTORY {
     timeout-ms = <50>;
-    key-positions = <1 6>;
+    key-positions = <2 5>;
     bindings = <&mo HISTORY>;
       };
     VIEW {
