@@ -144,6 +144,14 @@ behaviors {
       quick-tap-ms = <100>;
       bindings = <&kp>, <&kp>;
       };
+    mt4: mt4 {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <380>;
+      quick-tap-ms = <100>;
+      bindings = <&kp>, <&kp>;
+      };
     kp_mkp: kp_mkp {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -252,7 +260,7 @@ combos {
     ESCAPE_PIN {
     timeout-ms = <50>;
     key-positions = <0 1 2 3 8>;
-    bindings = <&mt3 LS(LC(LA(LG(N1)))) ESCAPE>;
+    bindings = <&mt4 LS(LC(LA(LG(N1)))) ESCAPE>;
       };
     TAB_ {
     timeout-ms = <50>;
