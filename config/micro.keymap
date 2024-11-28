@@ -423,7 +423,7 @@ combos {
     OPTION_COMMAND {
     timeout-ms = <50>;
     key-positions = <8 11>;
-    bindings = <&hwu LA(LGUI) N4>;
+    bindings = <&hwu LA(LGUI) LG(N4)>;
       };
     SETTINGS {
     timeout-ms = <50>;
