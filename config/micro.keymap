@@ -439,14 +439,14 @@ combos {
 
     KRITA {
     bindings = <
-    &kp Q &kp W &mt E LS(E)  &mm_rshift
+    &kp Q &kp W &kp E &mm_rshift
     &hwu LCTRL A &kp D &kp F &motap ENCODER C_PLAY_PAUSE &hwu LGUI C 
     &mt1 LS(LCTRL) Y &hwu LSHFT V &hwu LALT X>;
     sensor-bindings = <&rot_kp UP DOWN>; };
 
     ARTSTUDIO {
     bindings = <
-    &kp Q &kp W &mt E LS(E) &hwu LC(LALT) R
+    &kp Q &kp W &kp E &hwu LC(LALT) R
     &hwu LCTRL A &kp D &kp F &motap ENCODER C_PLAY_PAUSE &hwu LALT C
     &mt1 LS(LCTRL) Y &hwu LSHFT V &hwu LGUI X>;   
     sensor-bindings = <&rot_kp LBKT RBKT>; };
