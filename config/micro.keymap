@@ -421,7 +421,7 @@ combos {
     bindings = <&kp S>;
       };
     OPTION_COMMAND {
-    timeout-ms = <50>;y
+    timeout-ms = <50>;
     key-positions = <8 11>;
     bindings = <&hwu LA(LGUI) N4>;
       };
