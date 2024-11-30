@@ -483,14 +483,14 @@ combos {
     bindings = <
     &none &none &none &none
     &none &kp N9 &kp N8 &kp TAB &mtrv SPACE LG(N0)
-    &hwu LCTRL N7 &mt3 LS(H) N6 &mtrv V H>;
+    &hwu LCTRL N7 &kp N6 &mtrv SLASH LG(EQUAL)>;
     sensor-bindings = <&rot_scroll SCRL_DOWN SCRL_UP>; };
 
     VIEW2 {
     bindings = <
     &none &none &none &mtrv SLASH LG(EQUAL)
-    &none &kp N9 &kp N8 &kp TAB &kp LA(SPACE)
-    &hwu LCTRL N7 &mt3 LS(H) N6 &mtrv SPACE LG(N0)>;
+    &none &kp N9 &kp N8 &kp TAB &mtrv LA(SPACE) LG(N0)
+    &hwu LCTRL N7 &kp N6 &kp SPACE>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
     HISTORY {
