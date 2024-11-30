@@ -274,7 +274,7 @@ combos {
       };
     HISTORY {
     timeout-ms = <50>;
-    key-positions = <2 5>;
+    key-positions = <1 4>;
     bindings = <&mo HISTORY>;
       };
     VIEW {
@@ -476,7 +476,7 @@ combos {
     bindings = <
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &mtrv SPACE LG(N0)
-    &kp LS(EQUAL) &kp LG(EQUAL) &mtrv LS(SPACE) LG(EQUAL)>;
+    &kp LS(EQUAL) &kp LG(EQUAL) &mtrv SLASH LG(EQUAL)>;
     sensor-bindings = <&rot_kp COMMA PERIOD>; };
 
     VIEW {
