@@ -509,9 +509,9 @@ combos {
 
     MEDIA {
     bindings = <
-    &none &bt BT_SEL 0 &kp F4 &kp LG(C_BRI_DN)
-    &none &bt BT_SEL 1 &none &kp LS(LA(LG(BACKSLASH))) &mt3 LC(LA(LS(W))) LC(LA(LS(X))) 
-    &mt3 LG(W) LA(P) &kp LC(LA(LS(V))) &kp LC(LA(LS(C)))>;    
+    &none &kp LS(LA(LG(BACKSLASH))) &mt3 LG(W) LA(P) &kp LG(C_BRI_DN)
+    &none &bt BT_SEL 0 &kp F4 &kp F4 &mt3 LC(LA(LS(W))) LC(LA(LS(X))) 
+    &bt BT_SEL 1 &kp LC(LA(LS(V))) &kp LC(LA(LS(C)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
             
     BLUE {
