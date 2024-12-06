@@ -260,7 +260,7 @@ combos {
     PIN {
     timeout-ms = <50>;
     key-positions = <0 1 2 3 8>;
-    bindings = <&mt4 LS(LC(LA(LG(N1))))>;
+    bindings = <&kp LS(LC(LA(LG(N1))))>;
       };
     TAB_ESCAPE {
     timeout-ms = <50>;
