@@ -257,15 +257,15 @@ combos {
     key-positions = <1 2>;
     bindings = <&kp J>;
       };
-    ESCAPE_PIN {
+    PIN {
     timeout-ms = <50>;
     key-positions = <0 1 2 3 8>;
-    bindings = <&mt4 LS(LC(LA(LG(N1)))) ESCAPE>;
+    bindings = <&mt4 LS(LC(LA(LG(N1))))>;
       };
-    TAB_ {
+    TAB_ESCAPE {
     timeout-ms = <50>;
     key-positions = <0 3 11>;
-    bindings = <&kp TAB>;
+    bindings = <&mt4 TAB ESCAPE>;
       };
     LAYER_SELECT {
     timeout-ms = <50>;
@@ -284,7 +284,7 @@ combos {
       };
     VIEW2 {
     timeout-ms = <50>;
-    key-positions = <0 1 2>;
+    key-positions = <1 2 3>;
     bindings = <&motap VIEW2 LG(N0)>;
       };
     ROTATE {
@@ -294,7 +294,7 @@ combos {
       };
     TRANSFORM {
     timeout-ms = <50>;
-    key-positions = <1 2 3>;
+    key-positions = <0 1 2>;
     bindings = <&kp T>;
       }; 
     CENTERLEFT {
@@ -326,6 +326,11 @@ combos {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
     bindings = <&kp LG(L)>;
+      };
+    OPTION_COMMAND_L {
+    timeout-ms = <50>;
+    key-positions = <2 3 8 11>;
+    bindings = <&kp LA(LG(L))>;
       };
     //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
     //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
@@ -488,9 +493,9 @@ combos {
 
     VIEW2 {
     bindings = <
-    &none &none &none &mtrv SLASH LG(EQUAL)
+    &mtrv SLASH LG(EQUAL) &none &none &none
     &none &kp N9 &kp N8 &kp TAB &mtrv LA(SPACE) LG(N0)
-    &hwu LCTRL N7 &kp N6 &kp SPACE>;
+    &hwu LCTRL N7 &kp N6 &mtrv SPACE LG(N0)>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
     HISTORY {
