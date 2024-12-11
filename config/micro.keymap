@@ -332,6 +332,11 @@ combos {
     key-positions = <2 3>;
     bindings = <&kp L>;
       };
+    POLYGONAL_SELECTION {
+    timeout-ms = <50>;
+    key-positions = <2 6>;
+    bindings = <&kp I>;
+      };
     COMMAND_L {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
@@ -446,7 +451,7 @@ combos {
     bindings = <&kp LG(COMMA)>;
       };
     };
-// 14-0s  10-1s 14-2s 15-3s 14-8s 12-11s  //
+// 14-0s  10-1s 15-2s 15-3s 14-8s 12-11s  //
 
     //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
     //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
