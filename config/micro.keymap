@@ -524,7 +524,7 @@ combos {
 
     CENTERLEFT {
     bindings = <
-    &none &none &kp LC(LA(LS(LEFT))) &kp LC(LA(LS(RIGHT)))
+    &none &none &mt3 LC(LA(LS(RBKT))) LC(LA(LS(LEFT))) &mt3 LC(LA(LS(BACKSLASH))) LC(LA(LS(RIGHT))) 
     &none &none &mt1 LC(LA(LS(SINGLE_QUOTE))) LC(LA(LS(SEMI))) &none &mt1 LC(LA(LS(LG(DOWN)))) LC(LA(LS(LG(UP))))  
     &mt1 LC(LA(LS(PERIOD))) LC(LA(LS(SLASH))) &kp LC(LA(LS(UP))) &kp LC(LA(LS(DOWN)))>;      
     sensor-bindings = <&rot_kp LC(LA(LS(N))) LC(LA(LS(M)))>; };
