@@ -492,8 +492,8 @@ combos {
 
     VIEW {
     bindings = <
-    &none &none &none &mtrv LA(SPACE) LG(N0)
-    &none &kp COLON &kp SEMI &kp TAB &mtrv SPACE LG(N0)
+    &none &none &none &mtrv SPACE LG(N0)
+    &none &kp COLON &kp SEMI &kp TAB &mtrv LA(SPACE) LG(N0)
     &mt3 N9 N8 &mt3 N7 N6 &mtrv SLASH LG(EQUAL)>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
