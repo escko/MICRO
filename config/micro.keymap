@@ -258,7 +258,7 @@ combos {
       };
     PIN_ {
     timeout-ms = <50>;
-    key-positions = <0 1 2 3 12>;
+    key-positions = <0 1 2 3 11>;
     bindings = <&kp LS(LC(LA(LG(N1))))>;
       };
     LAYER_SELECT {
@@ -326,9 +326,14 @@ combos {
     key-positions = <2 6>;
     bindings = <&kp I>;
       };
-    COMMAND_L {
+    OPTION_L {
     timeout-ms = <50>;
     key-positions = <2 3 8>;
+    bindings = <&kp LG(L)>;
+      };
+    COMMAND_L {
+    timeout-ms = <50>;
+    key-positions = <2 3 11>;
     bindings = <&kp LG(L)>;
       };
     OPTION_COMMAND_L {
@@ -386,12 +391,12 @@ combos {
       };
     COMMAND_E {
     timeout-ms = <50>;
-    key-positions = <2 8>;
+    key-positions = <2 11>;
     bindings = <&kp LG(E)>;
       };
     COMMAND_R {
     timeout-ms = <50>;
-    key-positions = <3 8>;
+    key-positions = <3 11>;
     bindings = <&kp LG(R)>;
       };
     SHIFT_R {
@@ -401,7 +406,7 @@ combos {
       };
     OPTION_R {
     timeout-ms = <50>;
-    key-positions = <3 11>;
+    key-positions = <3 8>;
     bindings = <&kp LA(R)>;
       };
     G_ {
@@ -416,12 +421,12 @@ combos {
       };
     COMMAND_F {
     timeout-ms = <50>;
-    key-positions = <6 8>;
+    key-positions = <6 11>;
     bindings = <&kp LG(F)>;
       };
     OPTION_F {
     timeout-ms = <50>;
-    key-positions = <6 11>;
+    key-positions = <6 8>;
     bindings = <&kp LA(F)>;
       };
     S_ {
@@ -440,7 +445,7 @@ combos {
     bindings = <&kp LG(COMMA)>;
       };
     };
-// 14-0s  10-1s 14-2s 14-3s 14-8s 12-11s  //
+// 11-0s  9-1s 14-2s 14-3s 13-8s 15-11s  //
 
     //  |SW1- 0 |SW2- 1 |SW3- 2 |SW4-   3 |
     //  |SW5- 4 |SW6- 5 |SW7- 6 |SW8-   7 |SW9-   8 |
@@ -492,8 +497,8 @@ combos {
 
     VIEW {
     bindings = <
-    &none &none &none &mtrv SPACE LG(N0)
-    &none &kp SEMI &kp SQT &kp TAB &mtrv LA(SPACE) LG(N0)
+    &none &none &none &mtrv LA(SPACE) LG(N0)
+    &none &kp SEMI &kp SQT &kp TAB &mtrv SPACE LG(N0)
     &mt3 N9 N8 &mt3 N7 N6 &mtrv SLASH LG(EQUAL)>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
@@ -513,7 +518,7 @@ combos {
 
     MEDIA {
     bindings = <
-    &kp TAB &mt3 LG(W) LA(P) &kp LS(LA(LG(BACKSLASH))) &bt BT_NXT
+    &none &mt3 LG(W) LA(P) &kp LS(LA(LG(BACKSLASH))) &bt BT_NXT
     &none &bt BT_SEL 0 &kp F4 &kp F4 &mt3 LC(LA(LS(W))) LC(LA(LS(X))) 
     &bt BT_SEL 1 &kp LC(LA(LS(V))) &kp LC(LA(LS(C)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
