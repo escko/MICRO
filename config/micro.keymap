@@ -513,7 +513,7 @@ combos {
 
     MEDIA {
     bindings = <
-    &none &kp LS(LA(LG(BACKSLASH))) &mt3 LG(W) LA(P) &kp LG(C_BRI_DN)
+    &kp TAB &mt3 LG(W) LA(P) &kp LS(LA(LG(BACKSLASH))) &bt BT_NXT
     &none &bt BT_SEL 0 &kp F4 &kp F4 &mt3 LC(LA(LS(W))) LC(LA(LS(X))) 
     &bt BT_SEL 1 &kp LC(LA(LS(V))) &kp LC(LA(LS(C)))>;    
     sensor-bindings = <&rot_kp LEFT RIGHT>; };
