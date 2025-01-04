@@ -441,7 +441,7 @@ combos {
     OPTION_COMMAND_R {
     timeout-ms = <50>;
     key-positions = <3 8 11>;
-    bindings = <&kp LA(LG(RSHFT))>;
+    bindings = <&kp LA(LG(R))>;
       };
     OPTION_COMMAND_F {
     timeout-ms = <50>;
@@ -456,7 +456,7 @@ combos {
     COMMAND_R {
     timeout-ms = <50>;
     key-positions = <3 8>;
-    bindings = <&kp LG(RSHFT)>;
+    bindings = <&kp LG(R)>;
       };
     SHIFT_R {
     timeout-ms = <50>;
