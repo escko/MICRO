@@ -234,7 +234,7 @@ behaviors {
     morph_rshft: morph_rshft {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&hwu LSHFT R>, <&kp R>;
+            bindings = <&hwu RSHFT R>, <&kp R>;
             mods = <(MOD_LALT|MOD_LSFT|MOD_LGUI)>;
             keep-mods = <(MOD_LALT|MOD_LSFT|MOD_LGUI)>;
       };   
@@ -456,7 +456,7 @@ combos {
     COMMAND_R {
     timeout-ms = <50>;
     key-positions = <3 8>;
-    bindings = <&kp LG(R)>;
+    bindings = <&kp LG(RSHFT)>;
       };
     SHIFT_R {
     timeout-ms = <50>;
