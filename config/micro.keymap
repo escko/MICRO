@@ -203,7 +203,7 @@ behaviors {
     morph_qnest: morph_qnest {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LG(Q)>, <&hwu LS(LA(LGUI)) LA(LG(Q))>;
+            bindings = <&hwu LS(LGUI) LG(Q)>, <&hwu LS(LA(LGUI)) LA(LG(Q))>;
             mods = <(MOD_LALT)>;
             keep-mods = <(MOD_LALT)>;
         };
