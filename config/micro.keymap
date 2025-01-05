@@ -212,6 +212,8 @@ behaviors {
             #binding-cells = <0>;
             bindings = <&kp Q>, <&morph_qnest>;
             mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+
         };
 
 
