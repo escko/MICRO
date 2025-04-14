@@ -38,6 +38,7 @@
     delay-ms = <0>;                   // 0
 };
 
+
 / {
     /delete-node/ encoder;
 };
@@ -294,7 +295,7 @@ combos {
     LAYERS {
     timeout-ms = <50>;
     key-positions = < 0 1 >;
-    bindings = <&motap LAYERS H>;
+    bindings = <&motap LAYERS N3>;
       };
     MEDIA {
     timeout-ms = <50>;
@@ -566,12 +567,12 @@ combos {
     &trans &trans &trans &trans
     &trans &trans &trans &trans &trans
     &trans &trans &trans>;
-    sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP>; };
+    sensor-bindings = <&rot_kp LEFT RIGHT>; };
 
     LAYERS {
     bindings = <
     &none &none &hwu LALT LA(LS(LG(I))) &hwu LSHFT LS(LG(I))
-    &none &mt3 LG(U) LG(B) &mt3 N7 N6 &mt3 LS(LG(B)) LS(LG(U)) &mt3 LGUI N                       
+    &none &mt3 LG(U) LG(B) &mt3 N7 N6 &mt3 LS(LG(B)) LS(LG(U)) &mt3 LS(DEL) N                       
     &kp LA(M) &mt3 LSHFT LG(M) &mt3 LALT M>;
     sensor-bindings = <&rot_kp N1 N4>; };
     
@@ -608,7 +609,7 @@ combos {
     &none &mt3 LG(W) LA(P) &kp LS(LA(LG(BACKSLASH))) &bt BT_NXT
     &none &bt BT_SEL 0 &kp F4 &kp F4 &mt3 LC(LA(LS(W))) LC(LA(LS(X))) 
     &bt BT_SEL 1 &kp LC(LA(LS(V))) &kp LC(LA(LS(C)))>;    
-    sensor-bindings = <&rot_kp LEFT RIGHT>; };
+    sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP>; };
             
     BLUE {
     bindings = <
