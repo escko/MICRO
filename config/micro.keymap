@@ -306,7 +306,7 @@ combos {
     MAC {
     timeout-ms = <50>;
     key-positions = < 0 1 9 >;
-    bindings = <&tog ARTSTUDIO>;
+    bindings = <&tog MAC>;
       }; 
     INFINITE {
     timeout-ms = <50>;
@@ -584,7 +584,7 @@ combos {
     INFINITE {
     bindings = <     
     &mt1 P LS(B) &kp K &e_cmdz &mtr O B       
-    &mt1 BACKSLASH SLASH &kp W &kp F &motap ENCODER N5 &mt1 LALT I  
+    &mt1 BACKSLASH SLASH &kp W &mt3 LS(LA(I)) F &motap ENCODER N5 &mt1 LALT I  
     &mt3 LG(U) LG(B) &mt1 LSHFT T &mt1 LGUI V>;       
     sensor-bindings = <&rot_kp LBKT RBKT>; };
 
