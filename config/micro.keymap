@@ -316,7 +316,7 @@ combos {
     LAYERS {
     timeout-ms = <50>;
     key-positions = < 0 1 >;
-    bindings = <&motap LAYERS Z>;
+    bindings = <&motap LAYERS H>;
       };
     MEDIA {
     timeout-ms = <50>;
@@ -571,14 +571,14 @@ combos {
     bindings = <
     &morph_q &kp W &kp E &morph_rshft
     &kp A &kp D &kp F &motap ENCODER N5 &mt1 LALT C 
-    &mt1 LS(LALT) H &mt1 LSHFT V &mt1 LGUI X>;
+    &mt1 LS(LALT) Z &mt1 LSHFT V &mt1 LGUI X>;
     sensor-bindings = <&rot_kp UP DOWN>; };
 
     MAC {
     bindings = <
     &morph_q &kp W &kp E &morph_rshft
     &hwu LCTRL A &kp D &kp F &motap ENCODER N5 &hwu LALT C 
-    &mt1 LS(LALT) H &hwu LSHFT V &hwu LGUI X>;
+    &mt1 LS(LALT) Z &hwu LSHFT V &hwu LGUI X>;
     sensor-bindings = <&rot_kp UP DOWN>; };
 
     INFINITE {
