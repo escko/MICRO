@@ -363,10 +363,10 @@ combos {
     key-positions = < 4 5 8 11 >;
     bindings = <&mt4 TAB ESCAPE>;
       };
-    DESELECT_ENTER {
+    ENTER_ {
     timeout-ms = <50>;
     key-positions = < 1 2 3 >;
-    bindings = <&mt LA(D) ENTER>;
+    bindings = <&kp ENTER>;
       };
     MESH {
     timeout-ms = <50>;
@@ -401,7 +401,7 @@ combos {
     POLYGONAL_SELECTION {
     timeout-ms = <50>;
     key-positions = < 2 6 >;
-    bindings = <&kp P>;
+    bindings = <&kp I>;
       };
     MAGENETIC_SELECTION {
     timeout-ms = <50>;
@@ -541,7 +541,7 @@ combos {
     I_ {
     timeout-ms = <50>;
     key-positions = < 4 6 >;
-    bindings = <&kp I>;
+    bindings = <&kp P>;
       };
     S_ {
     timeout-ms = <50>;
@@ -551,7 +551,7 @@ combos {
     OPTION_COMMAND {
     timeout-ms = <50>;
     key-positions = < 8 11 >;
-    bindings = <&hwu LA(LGUI) Q>;
+    bindings = <&hwu LA(LGUI) N4>;
       };
     SETTINGS {
     timeout-ms = <50>;
@@ -570,7 +570,7 @@ combos {
     ANDROID {
     bindings = <
     &morph_q &kp W &kp E &morph_rshft
-    &kp A &kp D &kp F &motap ENCODER N5 &mt1 LALT C 
+    &kp A &kp D &kp F &motap ENCODER N4 &mt1 LALT C 
     &mt1 LS(LALT) Z &mt1 LSHFT V &mt1 LGUI X>;
     sensor-bindings = <&rot_kp UP DOWN>; };
 
@@ -593,7 +593,7 @@ combos {
     &none &none &mt3 LALT N7 &mt3 LSHFT N6
     &none &kp LA(U) &kp LA(B) &mt3 LS(LA(B)) LS(LA(U)) &mt3 LA(N) N                      
     &kp LA(M) &mt3 LSHFT LS(DEL) &mt3 LA(M) M>;
-    sensor-bindings = <&rot_kp N1 N2>; };
+    sensor-bindings = <&rot_kp LBKT RBKT>; };
     
     ROTATE {
     bindings = <
@@ -626,7 +626,7 @@ combos {
     MEDIA {
     bindings = <
     &none &mt3 LA(W) LG(P) &kp LS(LA(LG(BACKSLASH))) &bt BT_NXT
-    &none &bt BT_SEL 0 &kp F4 &motap ENCODER C_PLAY_PAUSE &mt3 LC(LG(LS(W))) LC(LG(LS(X))) 
+    &none &bt BT_SEL 0 &kp F4 &kp C_PLAY_PAUSE &mt3 LC(LG(LS(W))) LC(LG(LS(X))) 
     &bt BT_SEL 1 &kp LC(LG(LS(V))) &kp LC(LG(LS(C)))>;    
     sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP>; };
 
