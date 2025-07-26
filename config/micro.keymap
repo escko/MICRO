@@ -330,7 +330,7 @@ combos {
       };
     PIN_ {
     timeout-ms = <50>;
-    key-positions = < 0 1 2 3 11 >;
+    key-positions = < 0 1 2 3 9 >;
     bindings = <&kp LS(LC(LA(LG(N1))))>;
       };
     LAYER_SELECT {
@@ -358,10 +358,15 @@ combos {
     key-positions = < 0 3 >;
     bindings = <&motap ROTATE LG(EQUAL)>;
       };
-    TAB_ESCAPE {
+    TAB_{
     timeout-ms = <50>;
     key-positions = < 4 5 8 11 >;
-    bindings = <&mt4 TAB ESCAPE>;
+    bindings = <&kp TAB>;
+      };
+    ESCAPE_ {
+    timeout-ms = <50>;
+    key-positions = < 3 4 5 8 11 >;
+    bindings = <&kp ESCAPE>;
       };
     ENTER_ {
     timeout-ms = <50>;
