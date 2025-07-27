@@ -598,27 +598,27 @@ combos {
     &none &none &mt3 LALT N7 &mt3 LSHFT N6
     &none &kp LA(U) &kp LA(B) &mt3 LS(LA(B)) LS(LA(U)) &mt3 LA(N) N                      
     &kp LA(M) &mt3 LSHFT LS(DEL) &mt3 LA(M) M>;
-    sensor-bindings = <&rot_kp LBKT RBKT>; };
+    sensor-bindings = <&rot_kp COMMA PERIOD>; };
     
     ROTATE {
     bindings = <
     &none &none &none &none
     &none &none &none &kp LA(LG(N0)) &kp SPACE
-    &kp LS(EQUAL) &kp LC(EQUAL) &mtrv LS(SPACE) LG(N0)>;
-    sensor-bindings = <&rot_kp COMMA PERIOD>; };
+    &kp LS(EQUAL) &kp LC(EQUAL) &kp MINUS>;
+    sensor-bindings = <&rot_kp LBKT RBKT>; };
 
     VIEW {
     bindings = <
     &none &none &none &none
-    &none &kp SEMI &kp SQT &kp TAB &kp SLASH
-    &mt3 N9 N8 &mt3 N7 N6 &kp SPACE>;
+    &none &kp SEMI &kp SQT &kp TAB &kp SPACE
+    &mt3 N9 N8 &mt3 N7 N6 &kp EQUAL>;
     sensor-bindings = <&rot_msc SCRL_DOWN SCRL_UP>; };
 
     VIEW2 {
     bindings = <
     &none &none &none &mtrv SLASH LA(N0)
     &none &kp N9 &kp N8 &kp TAB &kp SPACE
-    &kp N7 &kp N6 &kp SLASH>;
+    &kp N7 &kp N6 &kp EQUAL>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
 
     HISTORY {
