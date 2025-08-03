@@ -443,10 +443,10 @@ combos {
     key-positions = < 2 8 >;
     bindings = <&kp LA(E)>;
       };
-    COMMAND_R {
+    LSHIFT_LCOMMAND {
     timeout-ms = <50>;
     key-positions = < 3 8 >;
-    bindings = <&kp LA(R)>;
+    bindings = <&kp LS(LGUI)>;
       };
     COMMAND_F {
     timeout-ms = <50>;
@@ -626,7 +626,7 @@ combos {
     &none &none &none &none
     &none &none &none &none &none
     &none &none &none>;
-    sensor-bindings = <&rot_kp LA(Z) LS(LA(Z))>; };
+    sensor-bindings = <&rot_kp LA(Z) LG(LA(Z))>; };
 
     MEDIA {
     bindings = <
