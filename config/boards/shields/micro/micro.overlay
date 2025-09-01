@@ -53,7 +53,7 @@
       1 { triggers-per-rotation = <9>; };
       };
 
-/ {
+ {
     /delete-node/ encoder;
 };
 
