@@ -259,7 +259,6 @@ behaviors {
       compatible = "zmk,behavior-sensor-rotate-var";
       #sensor-binding-cells = <2>;
       bindings = <&kp>, <&kp>;
-      tap-ms = <20>;
       };
   };
 
@@ -281,7 +280,7 @@ combos {
       };
     LAYERS {
     timeout-ms = <50>;
-    key-positions = < 0 4 >;
+    key-positions = < 0 1 >;
     bindings = <&motap LAYERS N3>;
       };
     MEDIA {
@@ -316,7 +315,7 @@ combos {
       };
     VIEW2 {
     timeout-ms = <50>;
-    key-positions = < 0 1 >;
+    key-positions = < 0 4 >;
     bindings = <&motap VIEW2 LG(N0)>;
       };
     ROTATE {
@@ -557,7 +556,7 @@ combos {
     LAYERS {
     bindings = <
     &none &none &mt3 LALT N7 &mt3 LSHFT N6
-    &none &kp LG(U) &kp LG(B) &mt3 LS(LG(B)) LS(LG(U)) &mt3 LG(N) N                      
+    &none &kp LG(U) &kp LG(B) &mt3 LS(LG(B)) LS(LG(U)) &mt3 LG(N) N              
     &kp LA(M) &mt3 LSHFT LS(DEL) &mt3 LG(M) M>;
     sensor-bindings = <&rot_kp COMMA PERIOD>; };
     
@@ -571,13 +570,13 @@ combos {
     VIEW {
     bindings = <
     &none &none &none &none
-    &none &kp SEMI &kp SQT &kp TAB &kp SPACE
-    &mt3 N9 N8 &mt3 N7 N6 &kp SLASH>;
+    &none &kp SEMI &kp SQT &kp TAB &kp SLASH
+    &mt3 N9 N8 &mt3 N7 N6 &kp SPACE>;
     sensor-bindings = <&rot_msc SCRL_DOWN SCRL_UP>; };
 
     VIEW2 {
     bindings = <
-    &none &none &mt3 N9 N8 &kp SLASH
+    &none &none &none &kp SLASH
     &none &kp N9 &kp N8 &kp TAB &kp SPACE
     &kp N7 &kp N6 &kp SLASH>;
     sensor-bindings = <&rot_kp LS(LG(SEMI)) LG(MINUS)>; };
