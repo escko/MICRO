@@ -39,41 +39,6 @@
 };
 
 
-/ {
-    /delete-node/ encoder;
-};
-
-&pinctrl {
-    qdec0_default: qdec0_default {
-        group1 {
-            psels = <NRF_PSEL(QDEC_A, 1, 4)>,
-                    <NRF_PSEL(QDEC_B, 1, 6)>;
-            bias-pull-up;
-        };
-    };
-
-
-// need second set of pins defined if deep sleep is enabled
-    qdec0_sleep: qdec0_sleep {
-        group1 {
-            psels = <NRF_PSEL(QDEC_A, 1, 4)>,
-                    <NRF_PSEL(QDEC_B, 1, 6)>;
-            bias-pull-up; // TODO: find out if this makes sense with low-power-enable
-            low-power-enable;
-        };
-    };
-};
-
-  // Set up the QDEC hardware based driver and give it the same label as the deleted node.
-encoder: &qdec0 {
-    status = "okay";
-    led-pre = <0>;
-    steps = <18>;
-    pinctrl-0 = <&qdec0_default>;
-    pinctrl-1 = <&qdec0_sleep>;
-    pinctrl-names = "default", "sleep";
-};
-
 / { 
 behaviors {
     motap: motap {
@@ -294,6 +259,7 @@ behaviors {
       compatible = "zmk,behavior-sensor-rotate-var";
       #sensor-binding-cells = <2>;
       bindings = <&kp>, <&kp>;
+      tap-ms = <20>;
       };
   };
 
