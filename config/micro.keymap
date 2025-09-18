@@ -281,7 +281,7 @@ combos {
     LAYERS {
     timeout-ms = <50>;
     key-positions = < 0 1 >;
-    bindings = <&motap LAYERS N3>;
+    bindings = <&motap LAYERS N1>;
       };
     MEDIA {
     timeout-ms = <50>;
